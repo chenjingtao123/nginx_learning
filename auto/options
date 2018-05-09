@@ -145,10 +145,11 @@ NGX_CPU_CACHE_LINE=
 
 opt=
 
-echo $option
+# 处在for循环中，当你没有in指定列表时，for会默认取命令行参数列表
 
 for option
 do
+    echo $option >>aa.txt
     opt="$opt `echo $option | sed -e \"s/\(--[^=]*=\)\(.* .*\)/\1'\2'/\"`"
 
     case "$option" in

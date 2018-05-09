@@ -1,4 +1,4 @@
-#define NGX_CONFIGURE " --prefix=/opt/nginx"
+#define NGX_CONFIGURE " --prefix=/opt"
 
 #ifndef NGX_COMPILER
 #define NGX_COMPILER  "gcc 4.9.2 20150212 (Red Hat 4.9.2-6) (GCC) "
@@ -294,7 +294,7 @@
 
 
 #ifndef NGX_PREFIX
-#define NGX_PREFIX  "/opt/nginx/"
+#define NGX_PREFIX  "/opt/"
 #endif
 
 
