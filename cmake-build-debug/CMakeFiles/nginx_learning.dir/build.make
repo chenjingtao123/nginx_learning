@@ -57,9 +57,33 @@ include CMakeFiles/nginx_learning.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/nginx_learning.dir/flags.make
 
+CMakeFiles/nginx_learning.dir/objs/ngx_modules.c.o: CMakeFiles/nginx_learning.dir/flags.make
+CMakeFiles/nginx_learning.dir/objs/ngx_modules.c.o: ../objs/ngx_modules.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/nginx_learning.dir/objs/ngx_modules.c.o"
+	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/objs/ngx_modules.c.o   -c /opt/nginx/nginx-1.0.14/objs/ngx_modules.c
+
+CMakeFiles/nginx_learning.dir/objs/ngx_modules.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/nginx_learning.dir/objs/ngx_modules.c.i"
+	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /opt/nginx/nginx-1.0.14/objs/ngx_modules.c > CMakeFiles/nginx_learning.dir/objs/ngx_modules.c.i
+
+CMakeFiles/nginx_learning.dir/objs/ngx_modules.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/nginx_learning.dir/objs/ngx_modules.c.s"
+	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /opt/nginx/nginx-1.0.14/objs/ngx_modules.c -o CMakeFiles/nginx_learning.dir/objs/ngx_modules.c.s
+
+CMakeFiles/nginx_learning.dir/objs/ngx_modules.c.o.requires:
+
+.PHONY : CMakeFiles/nginx_learning.dir/objs/ngx_modules.c.o.requires
+
+CMakeFiles/nginx_learning.dir/objs/ngx_modules.c.o.provides: CMakeFiles/nginx_learning.dir/objs/ngx_modules.c.o.requires
+	$(MAKE) -f CMakeFiles/nginx_learning.dir/build.make CMakeFiles/nginx_learning.dir/objs/ngx_modules.c.o.provides.build
+.PHONY : CMakeFiles/nginx_learning.dir/objs/ngx_modules.c.o.provides
+
+CMakeFiles/nginx_learning.dir/objs/ngx_modules.c.o.provides.build: CMakeFiles/nginx_learning.dir/objs/ngx_modules.c.o
+
+
 CMakeFiles/nginx_learning.dir/src/core/ngx_inet.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/core/ngx_inet.c.o: ../src/core/ngx_inet.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/nginx_learning.dir/src/core/ngx_inet.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/nginx_learning.dir/src/core/ngx_inet.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/core/ngx_inet.c.o   -c /opt/nginx/nginx-1.0.14/src/core/ngx_inet.c
 
 CMakeFiles/nginx_learning.dir/src/core/ngx_inet.c.i: cmake_force
@@ -83,7 +107,7 @@ CMakeFiles/nginx_learning.dir/src/core/ngx_inet.c.o.provides.build: CMakeFiles/n
 
 CMakeFiles/nginx_learning.dir/src/core/ngx_crc32.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/core/ngx_crc32.c.o: ../src/core/ngx_crc32.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/nginx_learning.dir/src/core/ngx_crc32.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/nginx_learning.dir/src/core/ngx_crc32.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/core/ngx_crc32.c.o   -c /opt/nginx/nginx-1.0.14/src/core/ngx_crc32.c
 
 CMakeFiles/nginx_learning.dir/src/core/ngx_crc32.c.i: cmake_force
@@ -107,7 +131,7 @@ CMakeFiles/nginx_learning.dir/src/core/ngx_crc32.c.o.provides.build: CMakeFiles/
 
 CMakeFiles/nginx_learning.dir/src/core/ngx_palloc.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/core/ngx_palloc.c.o: ../src/core/ngx_palloc.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/nginx_learning.dir/src/core/ngx_palloc.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/nginx_learning.dir/src/core/ngx_palloc.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/core/ngx_palloc.c.o   -c /opt/nginx/nginx-1.0.14/src/core/ngx_palloc.c
 
 CMakeFiles/nginx_learning.dir/src/core/ngx_palloc.c.i: cmake_force
@@ -131,7 +155,7 @@ CMakeFiles/nginx_learning.dir/src/core/ngx_palloc.c.o.provides.build: CMakeFiles
 
 CMakeFiles/nginx_learning.dir/src/core/ngx_rbtree.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/core/ngx_rbtree.c.o: ../src/core/ngx_rbtree.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/nginx_learning.dir/src/core/ngx_rbtree.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/nginx_learning.dir/src/core/ngx_rbtree.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/core/ngx_rbtree.c.o   -c /opt/nginx/nginx-1.0.14/src/core/ngx_rbtree.c
 
 CMakeFiles/nginx_learning.dir/src/core/ngx_rbtree.c.i: cmake_force
@@ -155,7 +179,7 @@ CMakeFiles/nginx_learning.dir/src/core/ngx_rbtree.c.o.provides.build: CMakeFiles
 
 CMakeFiles/nginx_learning.dir/src/core/ngx_times.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/core/ngx_times.c.o: ../src/core/ngx_times.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/nginx_learning.dir/src/core/ngx_times.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/nginx_learning.dir/src/core/ngx_times.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/core/ngx_times.c.o   -c /opt/nginx/nginx-1.0.14/src/core/ngx_times.c
 
 CMakeFiles/nginx_learning.dir/src/core/ngx_times.c.i: cmake_force
@@ -179,7 +203,7 @@ CMakeFiles/nginx_learning.dir/src/core/ngx_times.c.o.provides.build: CMakeFiles/
 
 CMakeFiles/nginx_learning.dir/src/core/ngx_log.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/core/ngx_log.c.o: ../src/core/ngx_log.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/nginx_learning.dir/src/core/ngx_log.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/nginx_learning.dir/src/core/ngx_log.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/core/ngx_log.c.o   -c /opt/nginx/nginx-1.0.14/src/core/ngx_log.c
 
 CMakeFiles/nginx_learning.dir/src/core/ngx_log.c.i: cmake_force
@@ -203,7 +227,7 @@ CMakeFiles/nginx_learning.dir/src/core/ngx_log.c.o.provides.build: CMakeFiles/ng
 
 CMakeFiles/nginx_learning.dir/src/core/ngx_spinlock.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/core/ngx_spinlock.c.o: ../src/core/ngx_spinlock.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/nginx_learning.dir/src/core/ngx_spinlock.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/nginx_learning.dir/src/core/ngx_spinlock.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/core/ngx_spinlock.c.o   -c /opt/nginx/nginx-1.0.14/src/core/ngx_spinlock.c
 
 CMakeFiles/nginx_learning.dir/src/core/ngx_spinlock.c.i: cmake_force
@@ -227,7 +251,7 @@ CMakeFiles/nginx_learning.dir/src/core/ngx_spinlock.c.o.provides.build: CMakeFil
 
 CMakeFiles/nginx_learning.dir/src/core/ngx_md5.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/core/ngx_md5.c.o: ../src/core/ngx_md5.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/nginx_learning.dir/src/core/ngx_md5.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/nginx_learning.dir/src/core/ngx_md5.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/core/ngx_md5.c.o   -c /opt/nginx/nginx-1.0.14/src/core/ngx_md5.c
 
 CMakeFiles/nginx_learning.dir/src/core/ngx_md5.c.i: cmake_force
@@ -251,7 +275,7 @@ CMakeFiles/nginx_learning.dir/src/core/ngx_md5.c.o.provides.build: CMakeFiles/ng
 
 CMakeFiles/nginx_learning.dir/src/core/ngx_slab.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/core/ngx_slab.c.o: ../src/core/ngx_slab.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/nginx_learning.dir/src/core/ngx_slab.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/nginx_learning.dir/src/core/ngx_slab.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/core/ngx_slab.c.o   -c /opt/nginx/nginx-1.0.14/src/core/ngx_slab.c
 
 CMakeFiles/nginx_learning.dir/src/core/ngx_slab.c.i: cmake_force
@@ -275,7 +299,7 @@ CMakeFiles/nginx_learning.dir/src/core/ngx_slab.c.o.provides.build: CMakeFiles/n
 
 CMakeFiles/nginx_learning.dir/src/core/ngx_crypt.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/core/ngx_crypt.c.o: ../src/core/ngx_crypt.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/nginx_learning.dir/src/core/ngx_crypt.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/nginx_learning.dir/src/core/ngx_crypt.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/core/ngx_crypt.c.o   -c /opt/nginx/nginx-1.0.14/src/core/ngx_crypt.c
 
 CMakeFiles/nginx_learning.dir/src/core/ngx_crypt.c.i: cmake_force
@@ -299,7 +323,7 @@ CMakeFiles/nginx_learning.dir/src/core/ngx_crypt.c.o.provides.build: CMakeFiles/
 
 CMakeFiles/nginx_learning.dir/src/core/nginx.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/core/nginx.c.o: ../src/core/nginx.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/nginx_learning.dir/src/core/nginx.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/nginx_learning.dir/src/core/nginx.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/core/nginx.c.o   -c /opt/nginx/nginx-1.0.14/src/core/nginx.c
 
 CMakeFiles/nginx_learning.dir/src/core/nginx.c.i: cmake_force
@@ -323,7 +347,7 @@ CMakeFiles/nginx_learning.dir/src/core/nginx.c.o.provides.build: CMakeFiles/ngin
 
 CMakeFiles/nginx_learning.dir/src/core/ngx_shmtx.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/core/ngx_shmtx.c.o: ../src/core/ngx_shmtx.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/nginx_learning.dir/src/core/ngx_shmtx.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/nginx_learning.dir/src/core/ngx_shmtx.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/core/ngx_shmtx.c.o   -c /opt/nginx/nginx-1.0.14/src/core/ngx_shmtx.c
 
 CMakeFiles/nginx_learning.dir/src/core/ngx_shmtx.c.i: cmake_force
@@ -347,7 +371,7 @@ CMakeFiles/nginx_learning.dir/src/core/ngx_shmtx.c.o.provides.build: CMakeFiles/
 
 CMakeFiles/nginx_learning.dir/src/core/ngx_cpuinfo.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/core/ngx_cpuinfo.c.o: ../src/core/ngx_cpuinfo.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/nginx_learning.dir/src/core/ngx_cpuinfo.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/nginx_learning.dir/src/core/ngx_cpuinfo.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/core/ngx_cpuinfo.c.o   -c /opt/nginx/nginx-1.0.14/src/core/ngx_cpuinfo.c
 
 CMakeFiles/nginx_learning.dir/src/core/ngx_cpuinfo.c.i: cmake_force
@@ -371,7 +395,7 @@ CMakeFiles/nginx_learning.dir/src/core/ngx_cpuinfo.c.o.provides.build: CMakeFile
 
 CMakeFiles/nginx_learning.dir/src/core/ngx_resolver.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/core/ngx_resolver.c.o: ../src/core/ngx_resolver.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/nginx_learning.dir/src/core/ngx_resolver.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/nginx_learning.dir/src/core/ngx_resolver.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/core/ngx_resolver.c.o   -c /opt/nginx/nginx-1.0.14/src/core/ngx_resolver.c
 
 CMakeFiles/nginx_learning.dir/src/core/ngx_resolver.c.i: cmake_force
@@ -395,7 +419,7 @@ CMakeFiles/nginx_learning.dir/src/core/ngx_resolver.c.o.provides.build: CMakeFil
 
 CMakeFiles/nginx_learning.dir/src/core/ngx_queue.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/core/ngx_queue.c.o: ../src/core/ngx_queue.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/nginx_learning.dir/src/core/ngx_queue.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/nginx_learning.dir/src/core/ngx_queue.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/core/ngx_queue.c.o   -c /opt/nginx/nginx-1.0.14/src/core/ngx_queue.c
 
 CMakeFiles/nginx_learning.dir/src/core/ngx_queue.c.i: cmake_force
@@ -419,7 +443,7 @@ CMakeFiles/nginx_learning.dir/src/core/ngx_queue.c.o.provides.build: CMakeFiles/
 
 CMakeFiles/nginx_learning.dir/src/core/ngx_radix_tree.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/core/ngx_radix_tree.c.o: ../src/core/ngx_radix_tree.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/nginx_learning.dir/src/core/ngx_radix_tree.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/nginx_learning.dir/src/core/ngx_radix_tree.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/core/ngx_radix_tree.c.o   -c /opt/nginx/nginx-1.0.14/src/core/ngx_radix_tree.c
 
 CMakeFiles/nginx_learning.dir/src/core/ngx_radix_tree.c.i: cmake_force
@@ -443,7 +467,7 @@ CMakeFiles/nginx_learning.dir/src/core/ngx_radix_tree.c.o.provides.build: CMakeF
 
 CMakeFiles/nginx_learning.dir/src/core/ngx_buf.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/core/ngx_buf.c.o: ../src/core/ngx_buf.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/nginx_learning.dir/src/core/ngx_buf.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/nginx_learning.dir/src/core/ngx_buf.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/core/ngx_buf.c.o   -c /opt/nginx/nginx-1.0.14/src/core/ngx_buf.c
 
 CMakeFiles/nginx_learning.dir/src/core/ngx_buf.c.i: cmake_force
@@ -467,7 +491,7 @@ CMakeFiles/nginx_learning.dir/src/core/ngx_buf.c.o.provides.build: CMakeFiles/ng
 
 CMakeFiles/nginx_learning.dir/src/core/ngx_string.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/core/ngx_string.c.o: ../src/core/ngx_string.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/nginx_learning.dir/src/core/ngx_string.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/nginx_learning.dir/src/core/ngx_string.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/core/ngx_string.c.o   -c /opt/nginx/nginx-1.0.14/src/core/ngx_string.c
 
 CMakeFiles/nginx_learning.dir/src/core/ngx_string.c.i: cmake_force
@@ -491,7 +515,7 @@ CMakeFiles/nginx_learning.dir/src/core/ngx_string.c.o.provides.build: CMakeFiles
 
 CMakeFiles/nginx_learning.dir/src/core/ngx_cycle.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/core/ngx_cycle.c.o: ../src/core/ngx_cycle.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/nginx_learning.dir/src/core/ngx_cycle.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/nginx_learning.dir/src/core/ngx_cycle.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/core/ngx_cycle.c.o   -c /opt/nginx/nginx-1.0.14/src/core/ngx_cycle.c
 
 CMakeFiles/nginx_learning.dir/src/core/ngx_cycle.c.i: cmake_force
@@ -515,7 +539,7 @@ CMakeFiles/nginx_learning.dir/src/core/ngx_cycle.c.o.provides.build: CMakeFiles/
 
 CMakeFiles/nginx_learning.dir/src/core/ngx_murmurhash.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/core/ngx_murmurhash.c.o: ../src/core/ngx_murmurhash.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/nginx_learning.dir/src/core/ngx_murmurhash.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/nginx_learning.dir/src/core/ngx_murmurhash.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/core/ngx_murmurhash.c.o   -c /opt/nginx/nginx-1.0.14/src/core/ngx_murmurhash.c
 
 CMakeFiles/nginx_learning.dir/src/core/ngx_murmurhash.c.i: cmake_force
@@ -539,7 +563,7 @@ CMakeFiles/nginx_learning.dir/src/core/ngx_murmurhash.c.o.provides.build: CMakeF
 
 CMakeFiles/nginx_learning.dir/src/core/ngx_conf_file.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/core/ngx_conf_file.c.o: ../src/core/ngx_conf_file.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/nginx_learning.dir/src/core/ngx_conf_file.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/nginx_learning.dir/src/core/ngx_conf_file.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/core/ngx_conf_file.c.o   -c /opt/nginx/nginx-1.0.14/src/core/ngx_conf_file.c
 
 CMakeFiles/nginx_learning.dir/src/core/ngx_conf_file.c.i: cmake_force
@@ -563,7 +587,7 @@ CMakeFiles/nginx_learning.dir/src/core/ngx_conf_file.c.o.provides.build: CMakeFi
 
 CMakeFiles/nginx_learning.dir/src/core/ngx_parse.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/core/ngx_parse.c.o: ../src/core/ngx_parse.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/nginx_learning.dir/src/core/ngx_parse.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/nginx_learning.dir/src/core/ngx_parse.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/core/ngx_parse.c.o   -c /opt/nginx/nginx-1.0.14/src/core/ngx_parse.c
 
 CMakeFiles/nginx_learning.dir/src/core/ngx_parse.c.i: cmake_force
@@ -587,7 +611,7 @@ CMakeFiles/nginx_learning.dir/src/core/ngx_parse.c.o.provides.build: CMakeFiles/
 
 CMakeFiles/nginx_learning.dir/src/core/ngx_connection.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/core/ngx_connection.c.o: ../src/core/ngx_connection.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/nginx_learning.dir/src/core/ngx_connection.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/nginx_learning.dir/src/core/ngx_connection.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/core/ngx_connection.c.o   -c /opt/nginx/nginx-1.0.14/src/core/ngx_connection.c
 
 CMakeFiles/nginx_learning.dir/src/core/ngx_connection.c.i: cmake_force
@@ -611,7 +635,7 @@ CMakeFiles/nginx_learning.dir/src/core/ngx_connection.c.o.provides.build: CMakeF
 
 CMakeFiles/nginx_learning.dir/src/core/ngx_regex.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/core/ngx_regex.c.o: ../src/core/ngx_regex.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/nginx_learning.dir/src/core/ngx_regex.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/nginx_learning.dir/src/core/ngx_regex.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/core/ngx_regex.c.o   -c /opt/nginx/nginx-1.0.14/src/core/ngx_regex.c
 
 CMakeFiles/nginx_learning.dir/src/core/ngx_regex.c.i: cmake_force
@@ -635,7 +659,7 @@ CMakeFiles/nginx_learning.dir/src/core/ngx_regex.c.o.provides.build: CMakeFiles/
 
 CMakeFiles/nginx_learning.dir/src/core/ngx_list.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/core/ngx_list.c.o: ../src/core/ngx_list.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/nginx_learning.dir/src/core/ngx_list.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/nginx_learning.dir/src/core/ngx_list.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/core/ngx_list.c.o   -c /opt/nginx/nginx-1.0.14/src/core/ngx_list.c
 
 CMakeFiles/nginx_learning.dir/src/core/ngx_list.c.i: cmake_force
@@ -659,7 +683,7 @@ CMakeFiles/nginx_learning.dir/src/core/ngx_list.c.o.provides.build: CMakeFiles/n
 
 CMakeFiles/nginx_learning.dir/src/core/ngx_file.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/core/ngx_file.c.o: ../src/core/ngx_file.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/nginx_learning.dir/src/core/ngx_file.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/nginx_learning.dir/src/core/ngx_file.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/core/ngx_file.c.o   -c /opt/nginx/nginx-1.0.14/src/core/ngx_file.c
 
 CMakeFiles/nginx_learning.dir/src/core/ngx_file.c.i: cmake_force
@@ -683,7 +707,7 @@ CMakeFiles/nginx_learning.dir/src/core/ngx_file.c.o.provides.build: CMakeFiles/n
 
 CMakeFiles/nginx_learning.dir/src/core/ngx_array.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/core/ngx_array.c.o: ../src/core/ngx_array.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/nginx_learning.dir/src/core/ngx_array.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/nginx_learning.dir/src/core/ngx_array.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/core/ngx_array.c.o   -c /opt/nginx/nginx-1.0.14/src/core/ngx_array.c
 
 CMakeFiles/nginx_learning.dir/src/core/ngx_array.c.i: cmake_force
@@ -707,7 +731,7 @@ CMakeFiles/nginx_learning.dir/src/core/ngx_array.c.o.provides.build: CMakeFiles/
 
 CMakeFiles/nginx_learning.dir/src/core/ngx_open_file_cache.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/core/ngx_open_file_cache.c.o: ../src/core/ngx_open_file_cache.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/nginx_learning.dir/src/core/ngx_open_file_cache.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/nginx_learning.dir/src/core/ngx_open_file_cache.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/core/ngx_open_file_cache.c.o   -c /opt/nginx/nginx-1.0.14/src/core/ngx_open_file_cache.c
 
 CMakeFiles/nginx_learning.dir/src/core/ngx_open_file_cache.c.i: cmake_force
@@ -731,7 +755,7 @@ CMakeFiles/nginx_learning.dir/src/core/ngx_open_file_cache.c.o.provides.build: C
 
 CMakeFiles/nginx_learning.dir/src/core/ngx_output_chain.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/core/ngx_output_chain.c.o: ../src/core/ngx_output_chain.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/nginx_learning.dir/src/core/ngx_output_chain.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/nginx_learning.dir/src/core/ngx_output_chain.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/core/ngx_output_chain.c.o   -c /opt/nginx/nginx-1.0.14/src/core/ngx_output_chain.c
 
 CMakeFiles/nginx_learning.dir/src/core/ngx_output_chain.c.i: cmake_force
@@ -755,7 +779,7 @@ CMakeFiles/nginx_learning.dir/src/core/ngx_output_chain.c.o.provides.build: CMak
 
 CMakeFiles/nginx_learning.dir/src/core/ngx_hash.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/core/ngx_hash.c.o: ../src/core/ngx_hash.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/nginx_learning.dir/src/core/ngx_hash.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/nginx_learning.dir/src/core/ngx_hash.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/core/ngx_hash.c.o   -c /opt/nginx/nginx-1.0.14/src/core/ngx_hash.c
 
 CMakeFiles/nginx_learning.dir/src/core/ngx_hash.c.i: cmake_force
@@ -779,7 +803,7 @@ CMakeFiles/nginx_learning.dir/src/core/ngx_hash.c.o.provides.build: CMakeFiles/n
 
 CMakeFiles/nginx_learning.dir/src/event/ngx_event_timer.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/event/ngx_event_timer.c.o: ../src/event/ngx_event_timer.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/nginx_learning.dir/src/event/ngx_event_timer.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object CMakeFiles/nginx_learning.dir/src/event/ngx_event_timer.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/event/ngx_event_timer.c.o   -c /opt/nginx/nginx-1.0.14/src/event/ngx_event_timer.c
 
 CMakeFiles/nginx_learning.dir/src/event/ngx_event_timer.c.i: cmake_force
@@ -803,7 +827,7 @@ CMakeFiles/nginx_learning.dir/src/event/ngx_event_timer.c.o.provides.build: CMak
 
 CMakeFiles/nginx_learning.dir/src/event/ngx_event_openssl.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/event/ngx_event_openssl.c.o: ../src/event/ngx_event_openssl.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object CMakeFiles/nginx_learning.dir/src/event/ngx_event_openssl.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object CMakeFiles/nginx_learning.dir/src/event/ngx_event_openssl.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/event/ngx_event_openssl.c.o   -c /opt/nginx/nginx-1.0.14/src/event/ngx_event_openssl.c
 
 CMakeFiles/nginx_learning.dir/src/event/ngx_event_openssl.c.i: cmake_force
@@ -827,7 +851,7 @@ CMakeFiles/nginx_learning.dir/src/event/ngx_event_openssl.c.o.provides.build: CM
 
 CMakeFiles/nginx_learning.dir/src/event/ngx_event_posted.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/event/ngx_event_posted.c.o: ../src/event/ngx_event_posted.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object CMakeFiles/nginx_learning.dir/src/event/ngx_event_posted.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object CMakeFiles/nginx_learning.dir/src/event/ngx_event_posted.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/event/ngx_event_posted.c.o   -c /opt/nginx/nginx-1.0.14/src/event/ngx_event_posted.c
 
 CMakeFiles/nginx_learning.dir/src/event/ngx_event_posted.c.i: cmake_force
@@ -851,7 +875,7 @@ CMakeFiles/nginx_learning.dir/src/event/ngx_event_posted.c.o.provides.build: CMa
 
 CMakeFiles/nginx_learning.dir/src/event/ngx_event_pipe.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/event/ngx_event_pipe.c.o: ../src/event/ngx_event_pipe.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object CMakeFiles/nginx_learning.dir/src/event/ngx_event_pipe.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object CMakeFiles/nginx_learning.dir/src/event/ngx_event_pipe.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/event/ngx_event_pipe.c.o   -c /opt/nginx/nginx-1.0.14/src/event/ngx_event_pipe.c
 
 CMakeFiles/nginx_learning.dir/src/event/ngx_event_pipe.c.i: cmake_force
@@ -875,7 +899,7 @@ CMakeFiles/nginx_learning.dir/src/event/ngx_event_pipe.c.o.provides.build: CMake
 
 CMakeFiles/nginx_learning.dir/src/event/ngx_event_accept.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/event/ngx_event_accept.c.o: ../src/event/ngx_event_accept.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object CMakeFiles/nginx_learning.dir/src/event/ngx_event_accept.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object CMakeFiles/nginx_learning.dir/src/event/ngx_event_accept.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/event/ngx_event_accept.c.o   -c /opt/nginx/nginx-1.0.14/src/event/ngx_event_accept.c
 
 CMakeFiles/nginx_learning.dir/src/event/ngx_event_accept.c.i: cmake_force
@@ -899,7 +923,7 @@ CMakeFiles/nginx_learning.dir/src/event/ngx_event_accept.c.o.provides.build: CMa
 
 CMakeFiles/nginx_learning.dir/src/event/ngx_event_connect.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/event/ngx_event_connect.c.o: ../src/event/ngx_event_connect.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object CMakeFiles/nginx_learning.dir/src/event/ngx_event_connect.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building C object CMakeFiles/nginx_learning.dir/src/event/ngx_event_connect.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/event/ngx_event_connect.c.o   -c /opt/nginx/nginx-1.0.14/src/event/ngx_event_connect.c
 
 CMakeFiles/nginx_learning.dir/src/event/ngx_event_connect.c.i: cmake_force
@@ -923,7 +947,7 @@ CMakeFiles/nginx_learning.dir/src/event/ngx_event_connect.c.o.provides.build: CM
 
 CMakeFiles/nginx_learning.dir/src/event/ngx_event_mutex.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/event/ngx_event_mutex.c.o: ../src/event/ngx_event_mutex.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building C object CMakeFiles/nginx_learning.dir/src/event/ngx_event_mutex.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building C object CMakeFiles/nginx_learning.dir/src/event/ngx_event_mutex.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/event/ngx_event_mutex.c.o   -c /opt/nginx/nginx-1.0.14/src/event/ngx_event_mutex.c
 
 CMakeFiles/nginx_learning.dir/src/event/ngx_event_mutex.c.i: cmake_force
@@ -947,7 +971,7 @@ CMakeFiles/nginx_learning.dir/src/event/ngx_event_mutex.c.o.provides.build: CMak
 
 CMakeFiles/nginx_learning.dir/src/event/ngx_event.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/event/ngx_event.c.o: ../src/event/ngx_event.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building C object CMakeFiles/nginx_learning.dir/src/event/ngx_event.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object CMakeFiles/nginx_learning.dir/src/event/ngx_event.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/event/ngx_event.c.o   -c /opt/nginx/nginx-1.0.14/src/event/ngx_event.c
 
 CMakeFiles/nginx_learning.dir/src/event/ngx_event.c.i: cmake_force
@@ -971,7 +995,7 @@ CMakeFiles/nginx_learning.dir/src/event/ngx_event.c.o.provides.build: CMakeFiles
 
 CMakeFiles/nginx_learning.dir/src/event/ngx_event_busy_lock.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/event/ngx_event_busy_lock.c.o: ../src/event/ngx_event_busy_lock.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object CMakeFiles/nginx_learning.dir/src/event/ngx_event_busy_lock.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object CMakeFiles/nginx_learning.dir/src/event/ngx_event_busy_lock.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/event/ngx_event_busy_lock.c.o   -c /opt/nginx/nginx-1.0.14/src/event/ngx_event_busy_lock.c
 
 CMakeFiles/nginx_learning.dir/src/event/ngx_event_busy_lock.c.i: cmake_force
@@ -995,7 +1019,7 @@ CMakeFiles/nginx_learning.dir/src/event/ngx_event_busy_lock.c.o.provides.build: 
 
 CMakeFiles/nginx_learning.dir/src/event/modules/ngx_epoll_module.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/event/modules/ngx_epoll_module.c.o: ../src/event/modules/ngx_epoll_module.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object CMakeFiles/nginx_learning.dir/src/event/modules/ngx_epoll_module.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building C object CMakeFiles/nginx_learning.dir/src/event/modules/ngx_epoll_module.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/event/modules/ngx_epoll_module.c.o   -c /opt/nginx/nginx-1.0.14/src/event/modules/ngx_epoll_module.c
 
 CMakeFiles/nginx_learning.dir/src/event/modules/ngx_epoll_module.c.i: cmake_force
@@ -1019,7 +1043,7 @@ CMakeFiles/nginx_learning.dir/src/event/modules/ngx_epoll_module.c.o.provides.bu
 
 CMakeFiles/nginx_learning.dir/src/event/modules/ngx_devpoll_module.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/event/modules/ngx_devpoll_module.c.o: ../src/event/modules/ngx_devpoll_module.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building C object CMakeFiles/nginx_learning.dir/src/event/modules/ngx_devpoll_module.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building C object CMakeFiles/nginx_learning.dir/src/event/modules/ngx_devpoll_module.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/event/modules/ngx_devpoll_module.c.o   -c /opt/nginx/nginx-1.0.14/src/event/modules/ngx_devpoll_module.c
 
 CMakeFiles/nginx_learning.dir/src/event/modules/ngx_devpoll_module.c.i: cmake_force
@@ -1043,7 +1067,7 @@ CMakeFiles/nginx_learning.dir/src/event/modules/ngx_devpoll_module.c.o.provides.
 
 CMakeFiles/nginx_learning.dir/src/event/modules/ngx_rtsig_module.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/event/modules/ngx_rtsig_module.c.o: ../src/event/modules/ngx_rtsig_module.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building C object CMakeFiles/nginx_learning.dir/src/event/modules/ngx_rtsig_module.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building C object CMakeFiles/nginx_learning.dir/src/event/modules/ngx_rtsig_module.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/event/modules/ngx_rtsig_module.c.o   -c /opt/nginx/nginx-1.0.14/src/event/modules/ngx_rtsig_module.c
 
 CMakeFiles/nginx_learning.dir/src/event/modules/ngx_rtsig_module.c.i: cmake_force
@@ -1067,7 +1091,7 @@ CMakeFiles/nginx_learning.dir/src/event/modules/ngx_rtsig_module.c.o.provides.bu
 
 CMakeFiles/nginx_learning.dir/src/event/modules/ngx_eventport_module.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/event/modules/ngx_eventport_module.c.o: ../src/event/modules/ngx_eventport_module.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building C object CMakeFiles/nginx_learning.dir/src/event/modules/ngx_eventport_module.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building C object CMakeFiles/nginx_learning.dir/src/event/modules/ngx_eventport_module.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/event/modules/ngx_eventport_module.c.o   -c /opt/nginx/nginx-1.0.14/src/event/modules/ngx_eventport_module.c
 
 CMakeFiles/nginx_learning.dir/src/event/modules/ngx_eventport_module.c.i: cmake_force
@@ -1091,7 +1115,7 @@ CMakeFiles/nginx_learning.dir/src/event/modules/ngx_eventport_module.c.o.provide
 
 CMakeFiles/nginx_learning.dir/src/event/modules/ngx_poll_module.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/event/modules/ngx_poll_module.c.o: ../src/event/modules/ngx_poll_module.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building C object CMakeFiles/nginx_learning.dir/src/event/modules/ngx_poll_module.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object CMakeFiles/nginx_learning.dir/src/event/modules/ngx_poll_module.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/event/modules/ngx_poll_module.c.o   -c /opt/nginx/nginx-1.0.14/src/event/modules/ngx_poll_module.c
 
 CMakeFiles/nginx_learning.dir/src/event/modules/ngx_poll_module.c.i: cmake_force
@@ -1115,7 +1139,7 @@ CMakeFiles/nginx_learning.dir/src/event/modules/ngx_poll_module.c.o.provides.bui
 
 CMakeFiles/nginx_learning.dir/src/event/modules/ngx_kqueue_module.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/event/modules/ngx_kqueue_module.c.o: ../src/event/modules/ngx_kqueue_module.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object CMakeFiles/nginx_learning.dir/src/event/modules/ngx_kqueue_module.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building C object CMakeFiles/nginx_learning.dir/src/event/modules/ngx_kqueue_module.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/event/modules/ngx_kqueue_module.c.o   -c /opt/nginx/nginx-1.0.14/src/event/modules/ngx_kqueue_module.c
 
 CMakeFiles/nginx_learning.dir/src/event/modules/ngx_kqueue_module.c.i: cmake_force
@@ -1139,7 +1163,7 @@ CMakeFiles/nginx_learning.dir/src/event/modules/ngx_kqueue_module.c.o.provides.b
 
 CMakeFiles/nginx_learning.dir/src/event/modules/ngx_win32_select_module.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/event/modules/ngx_win32_select_module.c.o: ../src/event/modules/ngx_win32_select_module.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building C object CMakeFiles/nginx_learning.dir/src/event/modules/ngx_win32_select_module.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building C object CMakeFiles/nginx_learning.dir/src/event/modules/ngx_win32_select_module.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/event/modules/ngx_win32_select_module.c.o   -c /opt/nginx/nginx-1.0.14/src/event/modules/ngx_win32_select_module.c
 
 CMakeFiles/nginx_learning.dir/src/event/modules/ngx_win32_select_module.c.i: cmake_force
@@ -1163,7 +1187,7 @@ CMakeFiles/nginx_learning.dir/src/event/modules/ngx_win32_select_module.c.o.prov
 
 CMakeFiles/nginx_learning.dir/src/event/modules/ngx_select_module.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/event/modules/ngx_select_module.c.o: ../src/event/modules/ngx_select_module.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building C object CMakeFiles/nginx_learning.dir/src/event/modules/ngx_select_module.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building C object CMakeFiles/nginx_learning.dir/src/event/modules/ngx_select_module.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/event/modules/ngx_select_module.c.o   -c /opt/nginx/nginx-1.0.14/src/event/modules/ngx_select_module.c
 
 CMakeFiles/nginx_learning.dir/src/event/modules/ngx_select_module.c.i: cmake_force
@@ -1187,7 +1211,7 @@ CMakeFiles/nginx_learning.dir/src/event/modules/ngx_select_module.c.o.provides.b
 
 CMakeFiles/nginx_learning.dir/src/event/modules/ngx_aio_module.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/event/modules/ngx_aio_module.c.o: ../src/event/modules/ngx_aio_module.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building C object CMakeFiles/nginx_learning.dir/src/event/modules/ngx_aio_module.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building C object CMakeFiles/nginx_learning.dir/src/event/modules/ngx_aio_module.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/event/modules/ngx_aio_module.c.o   -c /opt/nginx/nginx-1.0.14/src/event/modules/ngx_aio_module.c
 
 CMakeFiles/nginx_learning.dir/src/event/modules/ngx_aio_module.c.i: cmake_force
@@ -1211,7 +1235,7 @@ CMakeFiles/nginx_learning.dir/src/event/modules/ngx_aio_module.c.o.provides.buil
 
 CMakeFiles/nginx_learning.dir/src/http/ngx_http_header_filter_module.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/http/ngx_http_header_filter_module.c.o: ../src/http/ngx_http_header_filter_module.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building C object CMakeFiles/nginx_learning.dir/src/http/ngx_http_header_filter_module.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building C object CMakeFiles/nginx_learning.dir/src/http/ngx_http_header_filter_module.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/http/ngx_http_header_filter_module.c.o   -c /opt/nginx/nginx-1.0.14/src/http/ngx_http_header_filter_module.c
 
 CMakeFiles/nginx_learning.dir/src/http/ngx_http_header_filter_module.c.i: cmake_force
@@ -1235,7 +1259,7 @@ CMakeFiles/nginx_learning.dir/src/http/ngx_http_header_filter_module.c.o.provide
 
 CMakeFiles/nginx_learning.dir/src/http/ngx_http_file_cache.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/http/ngx_http_file_cache.c.o: ../src/http/ngx_http_file_cache.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building C object CMakeFiles/nginx_learning.dir/src/http/ngx_http_file_cache.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building C object CMakeFiles/nginx_learning.dir/src/http/ngx_http_file_cache.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/http/ngx_http_file_cache.c.o   -c /opt/nginx/nginx-1.0.14/src/http/ngx_http_file_cache.c
 
 CMakeFiles/nginx_learning.dir/src/http/ngx_http_file_cache.c.i: cmake_force
@@ -1259,7 +1283,7 @@ CMakeFiles/nginx_learning.dir/src/http/ngx_http_file_cache.c.o.provides.build: C
 
 CMakeFiles/nginx_learning.dir/src/http/ngx_http_postpone_filter_module.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/http/ngx_http_postpone_filter_module.c.o: ../src/http/ngx_http_postpone_filter_module.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building C object CMakeFiles/nginx_learning.dir/src/http/ngx_http_postpone_filter_module.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building C object CMakeFiles/nginx_learning.dir/src/http/ngx_http_postpone_filter_module.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/http/ngx_http_postpone_filter_module.c.o   -c /opt/nginx/nginx-1.0.14/src/http/ngx_http_postpone_filter_module.c
 
 CMakeFiles/nginx_learning.dir/src/http/ngx_http_postpone_filter_module.c.i: cmake_force
@@ -1283,7 +1307,7 @@ CMakeFiles/nginx_learning.dir/src/http/ngx_http_postpone_filter_module.c.o.provi
 
 CMakeFiles/nginx_learning.dir/src/http/ngx_http_copy_filter_module.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/http/ngx_http_copy_filter_module.c.o: ../src/http/ngx_http_copy_filter_module.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building C object CMakeFiles/nginx_learning.dir/src/http/ngx_http_copy_filter_module.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building C object CMakeFiles/nginx_learning.dir/src/http/ngx_http_copy_filter_module.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/http/ngx_http_copy_filter_module.c.o   -c /opt/nginx/nginx-1.0.14/src/http/ngx_http_copy_filter_module.c
 
 CMakeFiles/nginx_learning.dir/src/http/ngx_http_copy_filter_module.c.i: cmake_force
@@ -1307,7 +1331,7 @@ CMakeFiles/nginx_learning.dir/src/http/ngx_http_copy_filter_module.c.o.provides.
 
 CMakeFiles/nginx_learning.dir/src/http/ngx_http_upstream.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/http/ngx_http_upstream.c.o: ../src/http/ngx_http_upstream.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building C object CMakeFiles/nginx_learning.dir/src/http/ngx_http_upstream.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building C object CMakeFiles/nginx_learning.dir/src/http/ngx_http_upstream.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/http/ngx_http_upstream.c.o   -c /opt/nginx/nginx-1.0.14/src/http/ngx_http_upstream.c
 
 CMakeFiles/nginx_learning.dir/src/http/ngx_http_upstream.c.i: cmake_force
@@ -1331,7 +1355,7 @@ CMakeFiles/nginx_learning.dir/src/http/ngx_http_upstream.c.o.provides.build: CMa
 
 CMakeFiles/nginx_learning.dir/src/http/ngx_http_request_body.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/http/ngx_http_request_body.c.o: ../src/http/ngx_http_request_body.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building C object CMakeFiles/nginx_learning.dir/src/http/ngx_http_request_body.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building C object CMakeFiles/nginx_learning.dir/src/http/ngx_http_request_body.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/http/ngx_http_request_body.c.o   -c /opt/nginx/nginx-1.0.14/src/http/ngx_http_request_body.c
 
 CMakeFiles/nginx_learning.dir/src/http/ngx_http_request_body.c.i: cmake_force
@@ -1355,7 +1379,7 @@ CMakeFiles/nginx_learning.dir/src/http/ngx_http_request_body.c.o.provides.build:
 
 CMakeFiles/nginx_learning.dir/src/http/ngx_http_special_response.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/http/ngx_http_special_response.c.o: ../src/http/ngx_http_special_response.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building C object CMakeFiles/nginx_learning.dir/src/http/ngx_http_special_response.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building C object CMakeFiles/nginx_learning.dir/src/http/ngx_http_special_response.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/http/ngx_http_special_response.c.o   -c /opt/nginx/nginx-1.0.14/src/http/ngx_http_special_response.c
 
 CMakeFiles/nginx_learning.dir/src/http/ngx_http_special_response.c.i: cmake_force
@@ -1379,7 +1403,7 @@ CMakeFiles/nginx_learning.dir/src/http/ngx_http_special_response.c.o.provides.bu
 
 CMakeFiles/nginx_learning.dir/src/http/ngx_http_parse.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/http/ngx_http_parse.c.o: ../src/http/ngx_http_parse.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building C object CMakeFiles/nginx_learning.dir/src/http/ngx_http_parse.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building C object CMakeFiles/nginx_learning.dir/src/http/ngx_http_parse.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/http/ngx_http_parse.c.o   -c /opt/nginx/nginx-1.0.14/src/http/ngx_http_parse.c
 
 CMakeFiles/nginx_learning.dir/src/http/ngx_http_parse.c.i: cmake_force
@@ -1403,7 +1427,7 @@ CMakeFiles/nginx_learning.dir/src/http/ngx_http_parse.c.o.provides.build: CMakeF
 
 CMakeFiles/nginx_learning.dir/src/http/ngx_http_busy_lock.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/http/ngx_http_busy_lock.c.o: ../src/http/ngx_http_busy_lock.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building C object CMakeFiles/nginx_learning.dir/src/http/ngx_http_busy_lock.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building C object CMakeFiles/nginx_learning.dir/src/http/ngx_http_busy_lock.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/http/ngx_http_busy_lock.c.o   -c /opt/nginx/nginx-1.0.14/src/http/ngx_http_busy_lock.c
 
 CMakeFiles/nginx_learning.dir/src/http/ngx_http_busy_lock.c.i: cmake_force
@@ -1427,7 +1451,7 @@ CMakeFiles/nginx_learning.dir/src/http/ngx_http_busy_lock.c.o.provides.build: CM
 
 CMakeFiles/nginx_learning.dir/src/http/ngx_http.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/http/ngx_http.c.o: ../src/http/ngx_http.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building C object CMakeFiles/nginx_learning.dir/src/http/ngx_http.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building C object CMakeFiles/nginx_learning.dir/src/http/ngx_http.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/http/ngx_http.c.o   -c /opt/nginx/nginx-1.0.14/src/http/ngx_http.c
 
 CMakeFiles/nginx_learning.dir/src/http/ngx_http.c.i: cmake_force
@@ -1451,7 +1475,7 @@ CMakeFiles/nginx_learning.dir/src/http/ngx_http.c.o.provides.build: CMakeFiles/n
 
 CMakeFiles/nginx_learning.dir/src/http/ngx_http_variables.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/http/ngx_http_variables.c.o: ../src/http/ngx_http_variables.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building C object CMakeFiles/nginx_learning.dir/src/http/ngx_http_variables.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building C object CMakeFiles/nginx_learning.dir/src/http/ngx_http_variables.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/http/ngx_http_variables.c.o   -c /opt/nginx/nginx-1.0.14/src/http/ngx_http_variables.c
 
 CMakeFiles/nginx_learning.dir/src/http/ngx_http_variables.c.i: cmake_force
@@ -1475,7 +1499,7 @@ CMakeFiles/nginx_learning.dir/src/http/ngx_http_variables.c.o.provides.build: CM
 
 CMakeFiles/nginx_learning.dir/src/http/ngx_http_upstream_round_robin.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/http/ngx_http_upstream_round_robin.c.o: ../src/http/ngx_http_upstream_round_robin.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building C object CMakeFiles/nginx_learning.dir/src/http/ngx_http_upstream_round_robin.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building C object CMakeFiles/nginx_learning.dir/src/http/ngx_http_upstream_round_robin.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/http/ngx_http_upstream_round_robin.c.o   -c /opt/nginx/nginx-1.0.14/src/http/ngx_http_upstream_round_robin.c
 
 CMakeFiles/nginx_learning.dir/src/http/ngx_http_upstream_round_robin.c.i: cmake_force
@@ -1499,7 +1523,7 @@ CMakeFiles/nginx_learning.dir/src/http/ngx_http_upstream_round_robin.c.o.provide
 
 CMakeFiles/nginx_learning.dir/src/http/ngx_http_script.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/http/ngx_http_script.c.o: ../src/http/ngx_http_script.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building C object CMakeFiles/nginx_learning.dir/src/http/ngx_http_script.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building C object CMakeFiles/nginx_learning.dir/src/http/ngx_http_script.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/http/ngx_http_script.c.o   -c /opt/nginx/nginx-1.0.14/src/http/ngx_http_script.c
 
 CMakeFiles/nginx_learning.dir/src/http/ngx_http_script.c.i: cmake_force
@@ -1523,7 +1547,7 @@ CMakeFiles/nginx_learning.dir/src/http/ngx_http_script.c.o.provides.build: CMake
 
 CMakeFiles/nginx_learning.dir/src/http/ngx_http_core_module.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/http/ngx_http_core_module.c.o: ../src/http/ngx_http_core_module.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building C object CMakeFiles/nginx_learning.dir/src/http/ngx_http_core_module.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building C object CMakeFiles/nginx_learning.dir/src/http/ngx_http_core_module.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/http/ngx_http_core_module.c.o   -c /opt/nginx/nginx-1.0.14/src/http/ngx_http_core_module.c
 
 CMakeFiles/nginx_learning.dir/src/http/ngx_http_core_module.c.i: cmake_force
@@ -1547,7 +1571,7 @@ CMakeFiles/nginx_learning.dir/src/http/ngx_http_core_module.c.o.provides.build: 
 
 CMakeFiles/nginx_learning.dir/src/http/ngx_http_request.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/http/ngx_http_request.c.o: ../src/http/ngx_http_request.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building C object CMakeFiles/nginx_learning.dir/src/http/ngx_http_request.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building C object CMakeFiles/nginx_learning.dir/src/http/ngx_http_request.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/http/ngx_http_request.c.o   -c /opt/nginx/nginx-1.0.14/src/http/ngx_http_request.c
 
 CMakeFiles/nginx_learning.dir/src/http/ngx_http_request.c.i: cmake_force
@@ -1571,7 +1595,7 @@ CMakeFiles/nginx_learning.dir/src/http/ngx_http_request.c.o.provides.build: CMak
 
 CMakeFiles/nginx_learning.dir/src/http/ngx_http_write_filter_module.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/http/ngx_http_write_filter_module.c.o: ../src/http/ngx_http_write_filter_module.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building C object CMakeFiles/nginx_learning.dir/src/http/ngx_http_write_filter_module.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building C object CMakeFiles/nginx_learning.dir/src/http/ngx_http_write_filter_module.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/http/ngx_http_write_filter_module.c.o   -c /opt/nginx/nginx-1.0.14/src/http/ngx_http_write_filter_module.c
 
 CMakeFiles/nginx_learning.dir/src/http/ngx_http_write_filter_module.c.i: cmake_force
@@ -1595,7 +1619,7 @@ CMakeFiles/nginx_learning.dir/src/http/ngx_http_write_filter_module.c.o.provides
 
 CMakeFiles/nginx_learning.dir/src/http/ngx_http_parse_time.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/http/ngx_http_parse_time.c.o: ../src/http/ngx_http_parse_time.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building C object CMakeFiles/nginx_learning.dir/src/http/ngx_http_parse_time.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object CMakeFiles/nginx_learning.dir/src/http/ngx_http_parse_time.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/http/ngx_http_parse_time.c.o   -c /opt/nginx/nginx-1.0.14/src/http/ngx_http_parse_time.c
 
 CMakeFiles/nginx_learning.dir/src/http/ngx_http_parse_time.c.i: cmake_force
@@ -1619,7 +1643,7 @@ CMakeFiles/nginx_learning.dir/src/http/ngx_http_parse_time.c.o.provides.build: C
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_gzip_filter_module.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_gzip_filter_module.c.o: ../src/http/modules/ngx_http_gzip_filter_module.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_gzip_filter_module.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_gzip_filter_module.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_gzip_filter_module.c.o   -c /opt/nginx/nginx-1.0.14/src/http/modules/ngx_http_gzip_filter_module.c
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_gzip_filter_module.c.i: cmake_force
@@ -1643,7 +1667,7 @@ CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_gzip_filter_module.c.o.p
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_upstream_ip_hash_module.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_upstream_ip_hash_module.c.o: ../src/http/modules/ngx_http_upstream_ip_hash_module.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_upstream_ip_hash_module.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_upstream_ip_hash_module.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_upstream_ip_hash_module.c.o   -c /opt/nginx/nginx-1.0.14/src/http/modules/ngx_http_upstream_ip_hash_module.c
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_upstream_ip_hash_module.c.i: cmake_force
@@ -1667,7 +1691,7 @@ CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_upstream_ip_hash_module.
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_split_clients_module.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_split_clients_module.c.o: ../src/http/modules/ngx_http_split_clients_module.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_split_clients_module.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_split_clients_module.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_split_clients_module.c.o   -c /opt/nginx/nginx-1.0.14/src/http/modules/ngx_http_split_clients_module.c
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_split_clients_module.c.i: cmake_force
@@ -1691,7 +1715,7 @@ CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_split_clients_module.c.o
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_empty_gif_module.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_empty_gif_module.c.o: ../src/http/modules/ngx_http_empty_gif_module.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_empty_gif_module.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_empty_gif_module.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_empty_gif_module.c.o   -c /opt/nginx/nginx-1.0.14/src/http/modules/ngx_http_empty_gif_module.c
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_empty_gif_module.c.i: cmake_force
@@ -1715,7 +1739,7 @@ CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_empty_gif_module.c.o.pro
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_dav_module.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_dav_module.c.o: ../src/http/modules/ngx_http_dav_module.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_dav_module.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_dav_module.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_dav_module.c.o   -c /opt/nginx/nginx-1.0.14/src/http/modules/ngx_http_dav_module.c
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_dav_module.c.i: cmake_force
@@ -1739,7 +1763,7 @@ CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_dav_module.c.o.provides.
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_log_module.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_log_module.c.o: ../src/http/modules/ngx_http_log_module.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_log_module.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_log_module.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_log_module.c.o   -c /opt/nginx/nginx-1.0.14/src/http/modules/ngx_http_log_module.c
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_log_module.c.i: cmake_force
@@ -1763,7 +1787,7 @@ CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_log_module.c.o.provides.
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_proxy_module.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_proxy_module.c.o: ../src/http/modules/ngx_http_proxy_module.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_proxy_module.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_proxy_module.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_proxy_module.c.o   -c /opt/nginx/nginx-1.0.14/src/http/modules/ngx_http_proxy_module.c
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_proxy_module.c.i: cmake_force
@@ -1787,7 +1811,7 @@ CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_proxy_module.c.o.provide
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_not_modified_filter_module.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_not_modified_filter_module.c.o: ../src/http/modules/ngx_http_not_modified_filter_module.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_not_modified_filter_module.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_not_modified_filter_module.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_not_modified_filter_module.c.o   -c /opt/nginx/nginx-1.0.14/src/http/modules/ngx_http_not_modified_filter_module.c
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_not_modified_filter_module.c.i: cmake_force
@@ -1811,7 +1835,7 @@ CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_not_modified_filter_modu
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_referer_module.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_referer_module.c.o: ../src/http/modules/ngx_http_referer_module.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_referer_module.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_referer_module.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_referer_module.c.o   -c /opt/nginx/nginx-1.0.14/src/http/modules/ngx_http_referer_module.c
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_referer_module.c.i: cmake_force
@@ -1835,7 +1859,7 @@ CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_referer_module.c.o.provi
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_geo_module.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_geo_module.c.o: ../src/http/modules/ngx_http_geo_module.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_geo_module.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_geo_module.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_geo_module.c.o   -c /opt/nginx/nginx-1.0.14/src/http/modules/ngx_http_geo_module.c
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_geo_module.c.i: cmake_force
@@ -1859,7 +1883,7 @@ CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_geo_module.c.o.provides.
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_headers_filter_module.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_headers_filter_module.c.o: ../src/http/modules/ngx_http_headers_filter_module.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_headers_filter_module.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_headers_filter_module.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_headers_filter_module.c.o   -c /opt/nginx/nginx-1.0.14/src/http/modules/ngx_http_headers_filter_module.c
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_headers_filter_module.c.i: cmake_force
@@ -1883,7 +1907,7 @@ CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_headers_filter_module.c.
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_ssi_filter_module.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_ssi_filter_module.c.o: ../src/http/modules/ngx_http_ssi_filter_module.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_ssi_filter_module.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_ssi_filter_module.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_ssi_filter_module.c.o   -c /opt/nginx/nginx-1.0.14/src/http/modules/ngx_http_ssi_filter_module.c
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_ssi_filter_module.c.i: cmake_force
@@ -1907,7 +1931,7 @@ CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_ssi_filter_module.c.o.pr
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_chunked_filter_module.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_chunked_filter_module.c.o: ../src/http/modules/ngx_http_chunked_filter_module.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_chunked_filter_module.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_chunked_filter_module.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_chunked_filter_module.c.o   -c /opt/nginx/nginx-1.0.14/src/http/modules/ngx_http_chunked_filter_module.c
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_chunked_filter_module.c.i: cmake_force
@@ -1931,7 +1955,7 @@ CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_chunked_filter_module.c.
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_auth_basic_module.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_auth_basic_module.c.o: ../src/http/modules/ngx_http_auth_basic_module.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_auth_basic_module.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_auth_basic_module.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_auth_basic_module.c.o   -c /opt/nginx/nginx-1.0.14/src/http/modules/ngx_http_auth_basic_module.c
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_auth_basic_module.c.i: cmake_force
@@ -1955,7 +1979,7 @@ CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_auth_basic_module.c.o.pr
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_degradation_module.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_degradation_module.c.o: ../src/http/modules/ngx_http_degradation_module.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_degradation_module.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_degradation_module.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_degradation_module.c.o   -c /opt/nginx/nginx-1.0.14/src/http/modules/ngx_http_degradation_module.c
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_degradation_module.c.i: cmake_force
@@ -1979,7 +2003,7 @@ CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_degradation_module.c.o.p
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_flv_module.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_flv_module.c.o: ../src/http/modules/ngx_http_flv_module.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_flv_module.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_82) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_flv_module.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_flv_module.c.o   -c /opt/nginx/nginx-1.0.14/src/http/modules/ngx_http_flv_module.c
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_flv_module.c.i: cmake_force
@@ -2003,7 +2027,7 @@ CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_flv_module.c.o.provides.
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_index_module.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_index_module.c.o: ../src/http/modules/ngx_http_index_module.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_82) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_index_module.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_index_module.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_index_module.c.o   -c /opt/nginx/nginx-1.0.14/src/http/modules/ngx_http_index_module.c
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_index_module.c.i: cmake_force
@@ -2027,7 +2051,7 @@ CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_index_module.c.o.provide
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_uwsgi_module.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_uwsgi_module.c.o: ../src/http/modules/ngx_http_uwsgi_module.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_uwsgi_module.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_uwsgi_module.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_uwsgi_module.c.o   -c /opt/nginx/nginx-1.0.14/src/http/modules/ngx_http_uwsgi_module.c
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_uwsgi_module.c.i: cmake_force
@@ -2051,7 +2075,7 @@ CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_uwsgi_module.c.o.provide
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_stub_status_module.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_stub_status_module.c.o: ../src/http/modules/ngx_http_stub_status_module.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_stub_status_module.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_85) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_stub_status_module.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_stub_status_module.c.o   -c /opt/nginx/nginx-1.0.14/src/http/modules/ngx_http_stub_status_module.c
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_stub_status_module.c.i: cmake_force
@@ -2075,7 +2099,7 @@ CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_stub_status_module.c.o.p
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_mp4_module.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_mp4_module.c.o: ../src/http/modules/ngx_http_mp4_module.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_85) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_mp4_module.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_86) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_mp4_module.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_mp4_module.c.o   -c /opt/nginx/nginx-1.0.14/src/http/modules/ngx_http_mp4_module.c
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_mp4_module.c.i: cmake_force
@@ -2099,7 +2123,7 @@ CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_mp4_module.c.o.provides.
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_xslt_filter_module.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_xslt_filter_module.c.o: ../src/http/modules/ngx_http_xslt_filter_module.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_86) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_xslt_filter_module.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_87) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_xslt_filter_module.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_xslt_filter_module.c.o   -c /opt/nginx/nginx-1.0.14/src/http/modules/ngx_http_xslt_filter_module.c
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_xslt_filter_module.c.i: cmake_force
@@ -2123,7 +2147,7 @@ CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_xslt_filter_module.c.o.p
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_map_module.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_map_module.c.o: ../src/http/modules/ngx_http_map_module.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_87) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_map_module.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_88) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_map_module.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_map_module.c.o   -c /opt/nginx/nginx-1.0.14/src/http/modules/ngx_http_map_module.c
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_map_module.c.i: cmake_force
@@ -2147,7 +2171,7 @@ CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_map_module.c.o.provides.
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_rewrite_module.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_rewrite_module.c.o: ../src/http/modules/ngx_http_rewrite_module.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_88) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_rewrite_module.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_89) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_rewrite_module.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_rewrite_module.c.o   -c /opt/nginx/nginx-1.0.14/src/http/modules/ngx_http_rewrite_module.c
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_rewrite_module.c.i: cmake_force
@@ -2171,7 +2195,7 @@ CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_rewrite_module.c.o.provi
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_charset_filter_module.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_charset_filter_module.c.o: ../src/http/modules/ngx_http_charset_filter_module.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_89) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_charset_filter_module.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_90) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_charset_filter_module.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_charset_filter_module.c.o   -c /opt/nginx/nginx-1.0.14/src/http/modules/ngx_http_charset_filter_module.c
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_charset_filter_module.c.i: cmake_force
@@ -2195,7 +2219,7 @@ CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_charset_filter_module.c.
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_ssl_module.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_ssl_module.c.o: ../src/http/modules/ngx_http_ssl_module.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_90) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_ssl_module.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_91) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_ssl_module.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_ssl_module.c.o   -c /opt/nginx/nginx-1.0.14/src/http/modules/ngx_http_ssl_module.c
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_ssl_module.c.i: cmake_force
@@ -2219,7 +2243,7 @@ CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_ssl_module.c.o.provides.
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_gzip_static_module.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_gzip_static_module.c.o: ../src/http/modules/ngx_http_gzip_static_module.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_91) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_gzip_static_module.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_92) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_gzip_static_module.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_gzip_static_module.c.o   -c /opt/nginx/nginx-1.0.14/src/http/modules/ngx_http_gzip_static_module.c
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_gzip_static_module.c.i: cmake_force
@@ -2243,7 +2267,7 @@ CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_gzip_static_module.c.o.p
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_access_module.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_access_module.c.o: ../src/http/modules/ngx_http_access_module.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_92) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_access_module.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_93) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_access_module.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_access_module.c.o   -c /opt/nginx/nginx-1.0.14/src/http/modules/ngx_http_access_module.c
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_access_module.c.i: cmake_force
@@ -2267,7 +2291,7 @@ CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_access_module.c.o.provid
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_addition_filter_module.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_addition_filter_module.c.o: ../src/http/modules/ngx_http_addition_filter_module.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_93) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_addition_filter_module.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_94) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_addition_filter_module.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_addition_filter_module.c.o   -c /opt/nginx/nginx-1.0.14/src/http/modules/ngx_http_addition_filter_module.c
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_addition_filter_module.c.i: cmake_force
@@ -2291,7 +2315,7 @@ CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_addition_filter_module.c
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_static_module.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_static_module.c.o: ../src/http/modules/ngx_http_static_module.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_94) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_static_module.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_95) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_static_module.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_static_module.c.o   -c /opt/nginx/nginx-1.0.14/src/http/modules/ngx_http_static_module.c
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_static_module.c.i: cmake_force
@@ -2315,7 +2339,7 @@ CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_static_module.c.o.provid
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_random_index_module.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_random_index_module.c.o: ../src/http/modules/ngx_http_random_index_module.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_95) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_random_index_module.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_96) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_random_index_module.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_random_index_module.c.o   -c /opt/nginx/nginx-1.0.14/src/http/modules/ngx_http_random_index_module.c
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_random_index_module.c.i: cmake_force
@@ -2339,7 +2363,7 @@ CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_random_index_module.c.o.
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_geoip_module.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_geoip_module.c.o: ../src/http/modules/ngx_http_geoip_module.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_96) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_geoip_module.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_97) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_geoip_module.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_geoip_module.c.o   -c /opt/nginx/nginx-1.0.14/src/http/modules/ngx_http_geoip_module.c
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_geoip_module.c.i: cmake_force
@@ -2363,7 +2387,7 @@ CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_geoip_module.c.o.provide
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_scgi_module.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_scgi_module.c.o: ../src/http/modules/ngx_http_scgi_module.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_97) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_scgi_module.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_98) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_scgi_module.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_scgi_module.c.o   -c /opt/nginx/nginx-1.0.14/src/http/modules/ngx_http_scgi_module.c
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_scgi_module.c.i: cmake_force
@@ -2387,7 +2411,7 @@ CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_scgi_module.c.o.provides
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_userid_filter_module.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_userid_filter_module.c.o: ../src/http/modules/ngx_http_userid_filter_module.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_98) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_userid_filter_module.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_99) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_userid_filter_module.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_userid_filter_module.c.o   -c /opt/nginx/nginx-1.0.14/src/http/modules/ngx_http_userid_filter_module.c
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_userid_filter_module.c.i: cmake_force
@@ -2411,7 +2435,7 @@ CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_userid_filter_module.c.o
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_memcached_module.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_memcached_module.c.o: ../src/http/modules/ngx_http_memcached_module.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_99) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_memcached_module.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_100) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_memcached_module.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_memcached_module.c.o   -c /opt/nginx/nginx-1.0.14/src/http/modules/ngx_http_memcached_module.c
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_memcached_module.c.i: cmake_force
@@ -2435,7 +2459,7 @@ CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_memcached_module.c.o.pro
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_autoindex_module.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_autoindex_module.c.o: ../src/http/modules/ngx_http_autoindex_module.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_100) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_autoindex_module.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_101) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_autoindex_module.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_autoindex_module.c.o   -c /opt/nginx/nginx-1.0.14/src/http/modules/ngx_http_autoindex_module.c
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_autoindex_module.c.i: cmake_force
@@ -2459,7 +2483,7 @@ CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_autoindex_module.c.o.pro
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_range_filter_module.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_range_filter_module.c.o: ../src/http/modules/ngx_http_range_filter_module.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_101) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_range_filter_module.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_102) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_range_filter_module.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_range_filter_module.c.o   -c /opt/nginx/nginx-1.0.14/src/http/modules/ngx_http_range_filter_module.c
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_range_filter_module.c.i: cmake_force
@@ -2483,7 +2507,7 @@ CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_range_filter_module.c.o.
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_browser_module.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_browser_module.c.o: ../src/http/modules/ngx_http_browser_module.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_102) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_browser_module.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_103) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_browser_module.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_browser_module.c.o   -c /opt/nginx/nginx-1.0.14/src/http/modules/ngx_http_browser_module.c
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_browser_module.c.i: cmake_force
@@ -2507,7 +2531,7 @@ CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_browser_module.c.o.provi
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_secure_link_module.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_secure_link_module.c.o: ../src/http/modules/ngx_http_secure_link_module.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_103) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_secure_link_module.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_104) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_secure_link_module.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_secure_link_module.c.o   -c /opt/nginx/nginx-1.0.14/src/http/modules/ngx_http_secure_link_module.c
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_secure_link_module.c.i: cmake_force
@@ -2531,7 +2555,7 @@ CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_secure_link_module.c.o.p
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_limit_zone_module.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_limit_zone_module.c.o: ../src/http/modules/ngx_http_limit_zone_module.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_104) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_limit_zone_module.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_105) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_limit_zone_module.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_limit_zone_module.c.o   -c /opt/nginx/nginx-1.0.14/src/http/modules/ngx_http_limit_zone_module.c
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_limit_zone_module.c.i: cmake_force
@@ -2555,7 +2579,7 @@ CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_limit_zone_module.c.o.pr
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_sub_filter_module.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_sub_filter_module.c.o: ../src/http/modules/ngx_http_sub_filter_module.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_105) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_sub_filter_module.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_106) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_sub_filter_module.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_sub_filter_module.c.o   -c /opt/nginx/nginx-1.0.14/src/http/modules/ngx_http_sub_filter_module.c
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_sub_filter_module.c.i: cmake_force
@@ -2579,7 +2603,7 @@ CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_sub_filter_module.c.o.pr
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_image_filter_module.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_image_filter_module.c.o: ../src/http/modules/ngx_http_image_filter_module.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_106) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_image_filter_module.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_107) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_image_filter_module.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_image_filter_module.c.o   -c /opt/nginx/nginx-1.0.14/src/http/modules/ngx_http_image_filter_module.c
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_image_filter_module.c.i: cmake_force
@@ -2603,7 +2627,7 @@ CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_image_filter_module.c.o.
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_limit_req_module.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_limit_req_module.c.o: ../src/http/modules/ngx_http_limit_req_module.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_107) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_limit_req_module.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_108) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_limit_req_module.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_limit_req_module.c.o   -c /opt/nginx/nginx-1.0.14/src/http/modules/ngx_http_limit_req_module.c
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_limit_req_module.c.i: cmake_force
@@ -2627,7 +2651,7 @@ CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_limit_req_module.c.o.pro
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_realip_module.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_realip_module.c.o: ../src/http/modules/ngx_http_realip_module.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_108) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_realip_module.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_109) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_realip_module.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_realip_module.c.o   -c /opt/nginx/nginx-1.0.14/src/http/modules/ngx_http_realip_module.c
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_realip_module.c.i: cmake_force
@@ -2651,7 +2675,7 @@ CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_realip_module.c.o.provid
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_fastcgi_module.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_fastcgi_module.c.o: ../src/http/modules/ngx_http_fastcgi_module.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_109) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_fastcgi_module.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_110) "Building C object CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_fastcgi_module.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_fastcgi_module.c.o   -c /opt/nginx/nginx-1.0.14/src/http/modules/ngx_http_fastcgi_module.c
 
 CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_fastcgi_module.c.i: cmake_force
@@ -2675,7 +2699,7 @@ CMakeFiles/nginx_learning.dir/src/http/modules/ngx_http_fastcgi_module.c.o.provi
 
 CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_proxy_module.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_proxy_module.c.o: ../src/mail/ngx_mail_proxy_module.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_110) "Building C object CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_proxy_module.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_111) "Building C object CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_proxy_module.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_proxy_module.c.o   -c /opt/nginx/nginx-1.0.14/src/mail/ngx_mail_proxy_module.c
 
 CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_proxy_module.c.i: cmake_force
@@ -2699,7 +2723,7 @@ CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_proxy_module.c.o.provides.build:
 
 CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_pop3_handler.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_pop3_handler.c.o: ../src/mail/ngx_mail_pop3_handler.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_111) "Building C object CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_pop3_handler.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_112) "Building C object CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_pop3_handler.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_pop3_handler.c.o   -c /opt/nginx/nginx-1.0.14/src/mail/ngx_mail_pop3_handler.c
 
 CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_pop3_handler.c.i: cmake_force
@@ -2723,7 +2747,7 @@ CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_pop3_handler.c.o.provides.build:
 
 CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_smtp_module.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_smtp_module.c.o: ../src/mail/ngx_mail_smtp_module.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_112) "Building C object CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_smtp_module.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_113) "Building C object CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_smtp_module.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_smtp_module.c.o   -c /opt/nginx/nginx-1.0.14/src/mail/ngx_mail_smtp_module.c
 
 CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_smtp_module.c.i: cmake_force
@@ -2747,7 +2771,7 @@ CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_smtp_module.c.o.provides.build: 
 
 CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_smtp_handler.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_smtp_handler.c.o: ../src/mail/ngx_mail_smtp_handler.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_113) "Building C object CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_smtp_handler.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_114) "Building C object CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_smtp_handler.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_smtp_handler.c.o   -c /opt/nginx/nginx-1.0.14/src/mail/ngx_mail_smtp_handler.c
 
 CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_smtp_handler.c.i: cmake_force
@@ -2771,7 +2795,7 @@ CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_smtp_handler.c.o.provides.build:
 
 CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_handler.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_handler.c.o: ../src/mail/ngx_mail_handler.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_114) "Building C object CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_handler.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_115) "Building C object CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_handler.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_handler.c.o   -c /opt/nginx/nginx-1.0.14/src/mail/ngx_mail_handler.c
 
 CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_handler.c.i: cmake_force
@@ -2795,7 +2819,7 @@ CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_handler.c.o.provides.build: CMak
 
 CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_imap_module.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_imap_module.c.o: ../src/mail/ngx_mail_imap_module.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_115) "Building C object CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_imap_module.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_116) "Building C object CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_imap_module.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_imap_module.c.o   -c /opt/nginx/nginx-1.0.14/src/mail/ngx_mail_imap_module.c
 
 CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_imap_module.c.i: cmake_force
@@ -2819,7 +2843,7 @@ CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_imap_module.c.o.provides.build: 
 
 CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_parse.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_parse.c.o: ../src/mail/ngx_mail_parse.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_116) "Building C object CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_parse.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_117) "Building C object CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_parse.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_parse.c.o   -c /opt/nginx/nginx-1.0.14/src/mail/ngx_mail_parse.c
 
 CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_parse.c.i: cmake_force
@@ -2843,7 +2867,7 @@ CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_parse.c.o.provides.build: CMakeF
 
 CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_core_module.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_core_module.c.o: ../src/mail/ngx_mail_core_module.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_117) "Building C object CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_core_module.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_118) "Building C object CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_core_module.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_core_module.c.o   -c /opt/nginx/nginx-1.0.14/src/mail/ngx_mail_core_module.c
 
 CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_core_module.c.i: cmake_force
@@ -2867,7 +2891,7 @@ CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_core_module.c.o.provides.build: 
 
 CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_pop3_module.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_pop3_module.c.o: ../src/mail/ngx_mail_pop3_module.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_118) "Building C object CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_pop3_module.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_119) "Building C object CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_pop3_module.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_pop3_module.c.o   -c /opt/nginx/nginx-1.0.14/src/mail/ngx_mail_pop3_module.c
 
 CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_pop3_module.c.i: cmake_force
@@ -2891,7 +2915,7 @@ CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_pop3_module.c.o.provides.build: 
 
 CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_auth_http_module.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_auth_http_module.c.o: ../src/mail/ngx_mail_auth_http_module.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_119) "Building C object CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_auth_http_module.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_120) "Building C object CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_auth_http_module.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_auth_http_module.c.o   -c /opt/nginx/nginx-1.0.14/src/mail/ngx_mail_auth_http_module.c
 
 CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_auth_http_module.c.i: cmake_force
@@ -2915,7 +2939,7 @@ CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_auth_http_module.c.o.provides.bu
 
 CMakeFiles/nginx_learning.dir/src/mail/ngx_mail.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/mail/ngx_mail.c.o: ../src/mail/ngx_mail.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_120) "Building C object CMakeFiles/nginx_learning.dir/src/mail/ngx_mail.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_121) "Building C object CMakeFiles/nginx_learning.dir/src/mail/ngx_mail.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/mail/ngx_mail.c.o   -c /opt/nginx/nginx-1.0.14/src/mail/ngx_mail.c
 
 CMakeFiles/nginx_learning.dir/src/mail/ngx_mail.c.i: cmake_force
@@ -2939,7 +2963,7 @@ CMakeFiles/nginx_learning.dir/src/mail/ngx_mail.c.o.provides.build: CMakeFiles/n
 
 CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_ssl_module.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_ssl_module.c.o: ../src/mail/ngx_mail_ssl_module.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_121) "Building C object CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_ssl_module.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_122) "Building C object CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_ssl_module.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_ssl_module.c.o   -c /opt/nginx/nginx-1.0.14/src/mail/ngx_mail_ssl_module.c
 
 CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_ssl_module.c.i: cmake_force
@@ -2963,7 +2987,7 @@ CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_ssl_module.c.o.provides.build: C
 
 CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_imap_handler.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_imap_handler.c.o: ../src/mail/ngx_mail_imap_handler.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_122) "Building C object CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_imap_handler.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_123) "Building C object CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_imap_handler.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_imap_handler.c.o   -c /opt/nginx/nginx-1.0.14/src/mail/ngx_mail_imap_handler.c
 
 CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_imap_handler.c.i: cmake_force
@@ -2987,7 +3011,7 @@ CMakeFiles/nginx_learning.dir/src/mail/ngx_mail_imap_handler.c.o.provides.build:
 
 CMakeFiles/nginx_learning.dir/src/misc/ngx_google_perftools_module.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/misc/ngx_google_perftools_module.c.o: ../src/misc/ngx_google_perftools_module.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_123) "Building C object CMakeFiles/nginx_learning.dir/src/misc/ngx_google_perftools_module.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_124) "Building C object CMakeFiles/nginx_learning.dir/src/misc/ngx_google_perftools_module.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/misc/ngx_google_perftools_module.c.o   -c /opt/nginx/nginx-1.0.14/src/misc/ngx_google_perftools_module.c
 
 CMakeFiles/nginx_learning.dir/src/misc/ngx_google_perftools_module.c.i: cmake_force
@@ -3011,7 +3035,7 @@ CMakeFiles/nginx_learning.dir/src/misc/ngx_google_perftools_module.c.o.provides.
 
 CMakeFiles/nginx_learning.dir/src/misc/ngx_cpp_test_module.cpp.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/misc/ngx_cpp_test_module.cpp.o: ../src/misc/ngx_cpp_test_module.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_124) "Building CXX object CMakeFiles/nginx_learning.dir/src/misc/ngx_cpp_test_module.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_125) "Building CXX object CMakeFiles/nginx_learning.dir/src/misc/ngx_cpp_test_module.cpp.o"
 	/opt/rh/devtoolset-3/root/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/nginx_learning.dir/src/misc/ngx_cpp_test_module.cpp.o -c /opt/nginx/nginx-1.0.14/src/misc/ngx_cpp_test_module.cpp
 
 CMakeFiles/nginx_learning.dir/src/misc/ngx_cpp_test_module.cpp.i: cmake_force
@@ -3035,7 +3059,7 @@ CMakeFiles/nginx_learning.dir/src/misc/ngx_cpp_test_module.cpp.o.provides.build:
 
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_posix_init.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_posix_init.c.o: ../src/os/unix/ngx_posix_init.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_125) "Building C object CMakeFiles/nginx_learning.dir/src/os/unix/ngx_posix_init.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_126) "Building C object CMakeFiles/nginx_learning.dir/src/os/unix/ngx_posix_init.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/os/unix/ngx_posix_init.c.o   -c /opt/nginx/nginx-1.0.14/src/os/unix/ngx_posix_init.c
 
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_posix_init.c.i: cmake_force
@@ -3059,7 +3083,7 @@ CMakeFiles/nginx_learning.dir/src/os/unix/ngx_posix_init.c.o.provides.build: CMa
 
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_shmem.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_shmem.c.o: ../src/os/unix/ngx_shmem.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_126) "Building C object CMakeFiles/nginx_learning.dir/src/os/unix/ngx_shmem.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_127) "Building C object CMakeFiles/nginx_learning.dir/src/os/unix/ngx_shmem.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/os/unix/ngx_shmem.c.o   -c /opt/nginx/nginx-1.0.14/src/os/unix/ngx_shmem.c
 
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_shmem.c.i: cmake_force
@@ -3083,7 +3107,7 @@ CMakeFiles/nginx_learning.dir/src/os/unix/ngx_shmem.c.o.provides.build: CMakeFil
 
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_pthread_thread.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_pthread_thread.c.o: ../src/os/unix/ngx_pthread_thread.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_127) "Building C object CMakeFiles/nginx_learning.dir/src/os/unix/ngx_pthread_thread.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_128) "Building C object CMakeFiles/nginx_learning.dir/src/os/unix/ngx_pthread_thread.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/os/unix/ngx_pthread_thread.c.o   -c /opt/nginx/nginx-1.0.14/src/os/unix/ngx_pthread_thread.c
 
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_pthread_thread.c.i: cmake_force
@@ -3107,7 +3131,7 @@ CMakeFiles/nginx_learning.dir/src/os/unix/ngx_pthread_thread.c.o.provides.build:
 
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_solaris_sendfilev_chain.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_solaris_sendfilev_chain.c.o: ../src/os/unix/ngx_solaris_sendfilev_chain.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_128) "Building C object CMakeFiles/nginx_learning.dir/src/os/unix/ngx_solaris_sendfilev_chain.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_129) "Building C object CMakeFiles/nginx_learning.dir/src/os/unix/ngx_solaris_sendfilev_chain.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/os/unix/ngx_solaris_sendfilev_chain.c.o   -c /opt/nginx/nginx-1.0.14/src/os/unix/ngx_solaris_sendfilev_chain.c
 
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_solaris_sendfilev_chain.c.i: cmake_force
@@ -3131,7 +3155,7 @@ CMakeFiles/nginx_learning.dir/src/os/unix/ngx_solaris_sendfilev_chain.c.o.provid
 
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_setproctitle.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_setproctitle.c.o: ../src/os/unix/ngx_setproctitle.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_129) "Building C object CMakeFiles/nginx_learning.dir/src/os/unix/ngx_setproctitle.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_130) "Building C object CMakeFiles/nginx_learning.dir/src/os/unix/ngx_setproctitle.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/os/unix/ngx_setproctitle.c.o   -c /opt/nginx/nginx-1.0.14/src/os/unix/ngx_setproctitle.c
 
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_setproctitle.c.i: cmake_force
@@ -3155,7 +3179,7 @@ CMakeFiles/nginx_learning.dir/src/os/unix/ngx_setproctitle.c.o.provides.build: C
 
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_udp_recv.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_udp_recv.c.o: ../src/os/unix/ngx_udp_recv.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_130) "Building C object CMakeFiles/nginx_learning.dir/src/os/unix/ngx_udp_recv.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_131) "Building C object CMakeFiles/nginx_learning.dir/src/os/unix/ngx_udp_recv.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/os/unix/ngx_udp_recv.c.o   -c /opt/nginx/nginx-1.0.14/src/os/unix/ngx_udp_recv.c
 
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_udp_recv.c.i: cmake_force
@@ -3179,7 +3203,7 @@ CMakeFiles/nginx_learning.dir/src/os/unix/ngx_udp_recv.c.o.provides.build: CMake
 
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_writev_chain.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_writev_chain.c.o: ../src/os/unix/ngx_writev_chain.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_131) "Building C object CMakeFiles/nginx_learning.dir/src/os/unix/ngx_writev_chain.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_132) "Building C object CMakeFiles/nginx_learning.dir/src/os/unix/ngx_writev_chain.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/os/unix/ngx_writev_chain.c.o   -c /opt/nginx/nginx-1.0.14/src/os/unix/ngx_writev_chain.c
 
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_writev_chain.c.i: cmake_force
@@ -3203,7 +3227,7 @@ CMakeFiles/nginx_learning.dir/src/os/unix/ngx_writev_chain.c.o.provides.build: C
 
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_daemon.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_daemon.c.o: ../src/os/unix/ngx_daemon.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_132) "Building C object CMakeFiles/nginx_learning.dir/src/os/unix/ngx_daemon.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_133) "Building C object CMakeFiles/nginx_learning.dir/src/os/unix/ngx_daemon.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/os/unix/ngx_daemon.c.o   -c /opt/nginx/nginx-1.0.14/src/os/unix/ngx_daemon.c
 
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_daemon.c.i: cmake_force
@@ -3227,7 +3251,7 @@ CMakeFiles/nginx_learning.dir/src/os/unix/ngx_daemon.c.o.provides.build: CMakeFi
 
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_freebsd_rfork_thread.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_freebsd_rfork_thread.c.o: ../src/os/unix/ngx_freebsd_rfork_thread.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_133) "Building C object CMakeFiles/nginx_learning.dir/src/os/unix/ngx_freebsd_rfork_thread.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_134) "Building C object CMakeFiles/nginx_learning.dir/src/os/unix/ngx_freebsd_rfork_thread.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/os/unix/ngx_freebsd_rfork_thread.c.o   -c /opt/nginx/nginx-1.0.14/src/os/unix/ngx_freebsd_rfork_thread.c
 
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_freebsd_rfork_thread.c.i: cmake_force
@@ -3251,7 +3275,7 @@ CMakeFiles/nginx_learning.dir/src/os/unix/ngx_freebsd_rfork_thread.c.o.provides.
 
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_channel.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_channel.c.o: ../src/os/unix/ngx_channel.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_134) "Building C object CMakeFiles/nginx_learning.dir/src/os/unix/ngx_channel.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_135) "Building C object CMakeFiles/nginx_learning.dir/src/os/unix/ngx_channel.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/os/unix/ngx_channel.c.o   -c /opt/nginx/nginx-1.0.14/src/os/unix/ngx_channel.c
 
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_channel.c.i: cmake_force
@@ -3275,7 +3299,7 @@ CMakeFiles/nginx_learning.dir/src/os/unix/ngx_channel.c.o.provides.build: CMakeF
 
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_time.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_time.c.o: ../src/os/unix/ngx_time.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_135) "Building C object CMakeFiles/nginx_learning.dir/src/os/unix/ngx_time.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_136) "Building C object CMakeFiles/nginx_learning.dir/src/os/unix/ngx_time.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/os/unix/ngx_time.c.o   -c /opt/nginx/nginx-1.0.14/src/os/unix/ngx_time.c
 
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_time.c.i: cmake_force
@@ -3299,7 +3323,7 @@ CMakeFiles/nginx_learning.dir/src/os/unix/ngx_time.c.o.provides.build: CMakeFile
 
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_errno.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_errno.c.o: ../src/os/unix/ngx_errno.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_136) "Building C object CMakeFiles/nginx_learning.dir/src/os/unix/ngx_errno.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_137) "Building C object CMakeFiles/nginx_learning.dir/src/os/unix/ngx_errno.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/os/unix/ngx_errno.c.o   -c /opt/nginx/nginx-1.0.14/src/os/unix/ngx_errno.c
 
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_errno.c.i: cmake_force
@@ -3323,7 +3347,7 @@ CMakeFiles/nginx_learning.dir/src/os/unix/ngx_errno.c.o.provides.build: CMakeFil
 
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_process.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_process.c.o: ../src/os/unix/ngx_process.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_137) "Building C object CMakeFiles/nginx_learning.dir/src/os/unix/ngx_process.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_138) "Building C object CMakeFiles/nginx_learning.dir/src/os/unix/ngx_process.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/os/unix/ngx_process.c.o   -c /opt/nginx/nginx-1.0.14/src/os/unix/ngx_process.c
 
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_process.c.i: cmake_force
@@ -3347,7 +3371,7 @@ CMakeFiles/nginx_learning.dir/src/os/unix/ngx_process.c.o.provides.build: CMakeF
 
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_socket.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_socket.c.o: ../src/os/unix/ngx_socket.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_138) "Building C object CMakeFiles/nginx_learning.dir/src/os/unix/ngx_socket.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_139) "Building C object CMakeFiles/nginx_learning.dir/src/os/unix/ngx_socket.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/os/unix/ngx_socket.c.o   -c /opt/nginx/nginx-1.0.14/src/os/unix/ngx_socket.c
 
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_socket.c.i: cmake_force
@@ -3371,7 +3395,7 @@ CMakeFiles/nginx_learning.dir/src/os/unix/ngx_socket.c.o.provides.build: CMakeFi
 
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_aio_write.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_aio_write.c.o: ../src/os/unix/ngx_aio_write.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_139) "Building C object CMakeFiles/nginx_learning.dir/src/os/unix/ngx_aio_write.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_140) "Building C object CMakeFiles/nginx_learning.dir/src/os/unix/ngx_aio_write.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/os/unix/ngx_aio_write.c.o   -c /opt/nginx/nginx-1.0.14/src/os/unix/ngx_aio_write.c
 
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_aio_write.c.i: cmake_force
@@ -3395,7 +3419,7 @@ CMakeFiles/nginx_learning.dir/src/os/unix/ngx_aio_write.c.o.provides.build: CMak
 
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_aio_write_chain.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_aio_write_chain.c.o: ../src/os/unix/ngx_aio_write_chain.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_140) "Building C object CMakeFiles/nginx_learning.dir/src/os/unix/ngx_aio_write_chain.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_141) "Building C object CMakeFiles/nginx_learning.dir/src/os/unix/ngx_aio_write_chain.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/os/unix/ngx_aio_write_chain.c.o   -c /opt/nginx/nginx-1.0.14/src/os/unix/ngx_aio_write_chain.c
 
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_aio_write_chain.c.i: cmake_force
@@ -3419,7 +3443,7 @@ CMakeFiles/nginx_learning.dir/src/os/unix/ngx_aio_write_chain.c.o.provides.build
 
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_send.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_send.c.o: ../src/os/unix/ngx_send.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_141) "Building C object CMakeFiles/nginx_learning.dir/src/os/unix/ngx_send.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_142) "Building C object CMakeFiles/nginx_learning.dir/src/os/unix/ngx_send.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/os/unix/ngx_send.c.o   -c /opt/nginx/nginx-1.0.14/src/os/unix/ngx_send.c
 
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_send.c.i: cmake_force
@@ -3443,7 +3467,7 @@ CMakeFiles/nginx_learning.dir/src/os/unix/ngx_send.c.o.provides.build: CMakeFile
 
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_solaris_init.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_solaris_init.c.o: ../src/os/unix/ngx_solaris_init.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_142) "Building C object CMakeFiles/nginx_learning.dir/src/os/unix/ngx_solaris_init.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_143) "Building C object CMakeFiles/nginx_learning.dir/src/os/unix/ngx_solaris_init.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/os/unix/ngx_solaris_init.c.o   -c /opt/nginx/nginx-1.0.14/src/os/unix/ngx_solaris_init.c
 
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_solaris_init.c.i: cmake_force
@@ -3467,7 +3491,7 @@ CMakeFiles/nginx_learning.dir/src/os/unix/ngx_solaris_init.c.o.provides.build: C
 
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_aio_read_chain.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_aio_read_chain.c.o: ../src/os/unix/ngx_aio_read_chain.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_143) "Building C object CMakeFiles/nginx_learning.dir/src/os/unix/ngx_aio_read_chain.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_144) "Building C object CMakeFiles/nginx_learning.dir/src/os/unix/ngx_aio_read_chain.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/os/unix/ngx_aio_read_chain.c.o   -c /opt/nginx/nginx-1.0.14/src/os/unix/ngx_aio_read_chain.c
 
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_aio_read_chain.c.i: cmake_force
@@ -3491,7 +3515,7 @@ CMakeFiles/nginx_learning.dir/src/os/unix/ngx_aio_read_chain.c.o.provides.build:
 
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_linux_sendfile_chain.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_linux_sendfile_chain.c.o: ../src/os/unix/ngx_linux_sendfile_chain.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_144) "Building C object CMakeFiles/nginx_learning.dir/src/os/unix/ngx_linux_sendfile_chain.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_145) "Building C object CMakeFiles/nginx_learning.dir/src/os/unix/ngx_linux_sendfile_chain.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/os/unix/ngx_linux_sendfile_chain.c.o   -c /opt/nginx/nginx-1.0.14/src/os/unix/ngx_linux_sendfile_chain.c
 
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_linux_sendfile_chain.c.i: cmake_force
@@ -3515,7 +3539,7 @@ CMakeFiles/nginx_learning.dir/src/os/unix/ngx_linux_sendfile_chain.c.o.provides.
 
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_freebsd_init.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_freebsd_init.c.o: ../src/os/unix/ngx_freebsd_init.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_145) "Building C object CMakeFiles/nginx_learning.dir/src/os/unix/ngx_freebsd_init.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_146) "Building C object CMakeFiles/nginx_learning.dir/src/os/unix/ngx_freebsd_init.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/os/unix/ngx_freebsd_init.c.o   -c /opt/nginx/nginx-1.0.14/src/os/unix/ngx_freebsd_init.c
 
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_freebsd_init.c.i: cmake_force
@@ -3539,7 +3563,7 @@ CMakeFiles/nginx_learning.dir/src/os/unix/ngx_freebsd_init.c.o.provides.build: C
 
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_file_aio_read.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_file_aio_read.c.o: ../src/os/unix/ngx_file_aio_read.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_146) "Building C object CMakeFiles/nginx_learning.dir/src/os/unix/ngx_file_aio_read.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_147) "Building C object CMakeFiles/nginx_learning.dir/src/os/unix/ngx_file_aio_read.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/os/unix/ngx_file_aio_read.c.o   -c /opt/nginx/nginx-1.0.14/src/os/unix/ngx_file_aio_read.c
 
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_file_aio_read.c.i: cmake_force
@@ -3563,7 +3587,7 @@ CMakeFiles/nginx_learning.dir/src/os/unix/ngx_file_aio_read.c.o.provides.build: 
 
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_process_cycle.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_process_cycle.c.o: ../src/os/unix/ngx_process_cycle.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_147) "Building C object CMakeFiles/nginx_learning.dir/src/os/unix/ngx_process_cycle.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_148) "Building C object CMakeFiles/nginx_learning.dir/src/os/unix/ngx_process_cycle.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/os/unix/ngx_process_cycle.c.o   -c /opt/nginx/nginx-1.0.14/src/os/unix/ngx_process_cycle.c
 
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_process_cycle.c.i: cmake_force
@@ -3587,7 +3611,7 @@ CMakeFiles/nginx_learning.dir/src/os/unix/ngx_process_cycle.c.o.provides.build: 
 
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_user.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_user.c.o: ../src/os/unix/ngx_user.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_148) "Building C object CMakeFiles/nginx_learning.dir/src/os/unix/ngx_user.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_149) "Building C object CMakeFiles/nginx_learning.dir/src/os/unix/ngx_user.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/os/unix/ngx_user.c.o   -c /opt/nginx/nginx-1.0.14/src/os/unix/ngx_user.c
 
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_user.c.i: cmake_force
@@ -3611,7 +3635,7 @@ CMakeFiles/nginx_learning.dir/src/os/unix/ngx_user.c.o.provides.build: CMakeFile
 
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_darwin_init.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_darwin_init.c.o: ../src/os/unix/ngx_darwin_init.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_149) "Building C object CMakeFiles/nginx_learning.dir/src/os/unix/ngx_darwin_init.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_150) "Building C object CMakeFiles/nginx_learning.dir/src/os/unix/ngx_darwin_init.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/os/unix/ngx_darwin_init.c.o   -c /opt/nginx/nginx-1.0.14/src/os/unix/ngx_darwin_init.c
 
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_darwin_init.c.i: cmake_force
@@ -3635,7 +3659,7 @@ CMakeFiles/nginx_learning.dir/src/os/unix/ngx_darwin_init.c.o.provides.build: CM
 
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_readv_chain.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_readv_chain.c.o: ../src/os/unix/ngx_readv_chain.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_150) "Building C object CMakeFiles/nginx_learning.dir/src/os/unix/ngx_readv_chain.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_151) "Building C object CMakeFiles/nginx_learning.dir/src/os/unix/ngx_readv_chain.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/os/unix/ngx_readv_chain.c.o   -c /opt/nginx/nginx-1.0.14/src/os/unix/ngx_readv_chain.c
 
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_readv_chain.c.i: cmake_force
@@ -3659,7 +3683,7 @@ CMakeFiles/nginx_learning.dir/src/os/unix/ngx_readv_chain.c.o.provides.build: CM
 
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_recv.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_recv.c.o: ../src/os/unix/ngx_recv.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_151) "Building C object CMakeFiles/nginx_learning.dir/src/os/unix/ngx_recv.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_152) "Building C object CMakeFiles/nginx_learning.dir/src/os/unix/ngx_recv.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/os/unix/ngx_recv.c.o   -c /opt/nginx/nginx-1.0.14/src/os/unix/ngx_recv.c
 
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_recv.c.i: cmake_force
@@ -3683,7 +3707,7 @@ CMakeFiles/nginx_learning.dir/src/os/unix/ngx_recv.c.o.provides.build: CMakeFile
 
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_alloc.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_alloc.c.o: ../src/os/unix/ngx_alloc.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_152) "Building C object CMakeFiles/nginx_learning.dir/src/os/unix/ngx_alloc.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_153) "Building C object CMakeFiles/nginx_learning.dir/src/os/unix/ngx_alloc.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/os/unix/ngx_alloc.c.o   -c /opt/nginx/nginx-1.0.14/src/os/unix/ngx_alloc.c
 
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_alloc.c.i: cmake_force
@@ -3707,7 +3731,7 @@ CMakeFiles/nginx_learning.dir/src/os/unix/ngx_alloc.c.o.provides.build: CMakeFil
 
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_aio_read.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_aio_read.c.o: ../src/os/unix/ngx_aio_read.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_153) "Building C object CMakeFiles/nginx_learning.dir/src/os/unix/ngx_aio_read.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_154) "Building C object CMakeFiles/nginx_learning.dir/src/os/unix/ngx_aio_read.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/os/unix/ngx_aio_read.c.o   -c /opt/nginx/nginx-1.0.14/src/os/unix/ngx_aio_read.c
 
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_aio_read.c.i: cmake_force
@@ -3731,7 +3755,7 @@ CMakeFiles/nginx_learning.dir/src/os/unix/ngx_aio_read.c.o.provides.build: CMake
 
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_linux_init.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_linux_init.c.o: ../src/os/unix/ngx_linux_init.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_154) "Building C object CMakeFiles/nginx_learning.dir/src/os/unix/ngx_linux_init.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_155) "Building C object CMakeFiles/nginx_learning.dir/src/os/unix/ngx_linux_init.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/os/unix/ngx_linux_init.c.o   -c /opt/nginx/nginx-1.0.14/src/os/unix/ngx_linux_init.c
 
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_linux_init.c.i: cmake_force
@@ -3755,7 +3779,7 @@ CMakeFiles/nginx_learning.dir/src/os/unix/ngx_linux_init.c.o.provides.build: CMa
 
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_darwin_sendfile_chain.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_darwin_sendfile_chain.c.o: ../src/os/unix/ngx_darwin_sendfile_chain.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_155) "Building C object CMakeFiles/nginx_learning.dir/src/os/unix/ngx_darwin_sendfile_chain.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_156) "Building C object CMakeFiles/nginx_learning.dir/src/os/unix/ngx_darwin_sendfile_chain.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/os/unix/ngx_darwin_sendfile_chain.c.o   -c /opt/nginx/nginx-1.0.14/src/os/unix/ngx_darwin_sendfile_chain.c
 
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_darwin_sendfile_chain.c.i: cmake_force
@@ -3779,7 +3803,7 @@ CMakeFiles/nginx_learning.dir/src/os/unix/ngx_darwin_sendfile_chain.c.o.provides
 
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_files.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_files.c.o: ../src/os/unix/ngx_files.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_156) "Building C object CMakeFiles/nginx_learning.dir/src/os/unix/ngx_files.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_157) "Building C object CMakeFiles/nginx_learning.dir/src/os/unix/ngx_files.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/os/unix/ngx_files.c.o   -c /opt/nginx/nginx-1.0.14/src/os/unix/ngx_files.c
 
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_files.c.i: cmake_force
@@ -3803,7 +3827,7 @@ CMakeFiles/nginx_learning.dir/src/os/unix/ngx_files.c.o.provides.build: CMakeFil
 
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_freebsd_sendfile_chain.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_freebsd_sendfile_chain.c.o: ../src/os/unix/ngx_freebsd_sendfile_chain.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_157) "Building C object CMakeFiles/nginx_learning.dir/src/os/unix/ngx_freebsd_sendfile_chain.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_158) "Building C object CMakeFiles/nginx_learning.dir/src/os/unix/ngx_freebsd_sendfile_chain.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/os/unix/ngx_freebsd_sendfile_chain.c.o   -c /opt/nginx/nginx-1.0.14/src/os/unix/ngx_freebsd_sendfile_chain.c
 
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_freebsd_sendfile_chain.c.i: cmake_force
@@ -3827,7 +3851,7 @@ CMakeFiles/nginx_learning.dir/src/os/unix/ngx_freebsd_sendfile_chain.c.o.provide
 
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_linux_aio_read.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_linux_aio_read.c.o: ../src/os/unix/ngx_linux_aio_read.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_158) "Building C object CMakeFiles/nginx_learning.dir/src/os/unix/ngx_linux_aio_read.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_159) "Building C object CMakeFiles/nginx_learning.dir/src/os/unix/ngx_linux_aio_read.c.o"
 	/opt/rh/devtoolset-3/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/os/unix/ngx_linux_aio_read.c.o   -c /opt/nginx/nginx-1.0.14/src/os/unix/ngx_linux_aio_read.c
 
 CMakeFiles/nginx_learning.dir/src/os/unix/ngx_linux_aio_read.c.i: cmake_force
@@ -3851,6 +3875,7 @@ CMakeFiles/nginx_learning.dir/src/os/unix/ngx_linux_aio_read.c.o.provides.build:
 
 # Object files for target nginx_learning
 nginx_learning_OBJECTS = \
+"CMakeFiles/nginx_learning.dir/objs/ngx_modules.c.o" \
 "CMakeFiles/nginx_learning.dir/src/core/ngx_inet.c.o" \
 "CMakeFiles/nginx_learning.dir/src/core/ngx_crc32.c.o" \
 "CMakeFiles/nginx_learning.dir/src/core/ngx_palloc.c.o" \
@@ -4013,6 +4038,7 @@ nginx_learning_OBJECTS = \
 # External object files for target nginx_learning
 nginx_learning_EXTERNAL_OBJECTS =
 
+nginx_learning: CMakeFiles/nginx_learning.dir/objs/ngx_modules.c.o
 nginx_learning: CMakeFiles/nginx_learning.dir/src/core/ngx_inet.c.o
 nginx_learning: CMakeFiles/nginx_learning.dir/src/core/ngx_crc32.c.o
 nginx_learning: CMakeFiles/nginx_learning.dir/src/core/ngx_palloc.c.o
@@ -4173,7 +4199,7 @@ nginx_learning: CMakeFiles/nginx_learning.dir/src/os/unix/ngx_freebsd_sendfile_c
 nginx_learning: CMakeFiles/nginx_learning.dir/src/os/unix/ngx_linux_aio_read.c.o
 nginx_learning: CMakeFiles/nginx_learning.dir/build.make
 nginx_learning: CMakeFiles/nginx_learning.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_159) "Linking CXX executable nginx_learning"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_160) "Linking CXX executable nginx_learning"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/nginx_learning.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -4181,6 +4207,7 @@ CMakeFiles/nginx_learning.dir/build: nginx_learning
 
 .PHONY : CMakeFiles/nginx_learning.dir/build
 
+CMakeFiles/nginx_learning.dir/requires: CMakeFiles/nginx_learning.dir/objs/ngx_modules.c.o.requires
 CMakeFiles/nginx_learning.dir/requires: CMakeFiles/nginx_learning.dir/src/core/ngx_inet.c.o.requires
 CMakeFiles/nginx_learning.dir/requires: CMakeFiles/nginx_learning.dir/src/core/ngx_crc32.c.o.requires
 CMakeFiles/nginx_learning.dir/requires: CMakeFiles/nginx_learning.dir/src/core/ngx_palloc.c.o.requires

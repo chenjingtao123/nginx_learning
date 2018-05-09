@@ -128,7 +128,7 @@ int main() {
 }
 
 ----------
-gcc -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c
+gcc -g -O0 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c
 ----------
 
 ----------------------------------------
@@ -150,14 +150,14 @@ int main() {
 }
 
 ----------
-gcc -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c
+gcc -g -O0 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c
 ----------
 
 ----------------------------------------
 checking for crypt()
 
-/tmp/ccaFvUyC.o: In function `main':
-autotest.c:(.text+0xf): undefined reference to `crypt'
+/tmp/ccWfvS2h.o: In function `main':
+/opt/nginx/nginx-1.0.14/objs/autotest.c:7: undefined reference to `crypt'
 collect2: error: ld returned 1 exit status
 ----------
 
@@ -171,7 +171,7 @@ int main() {
 }
 
 ----------
-gcc -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c
+gcc -g -O0 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c
 ----------
 
 ----------------------------------------
@@ -198,7 +198,7 @@ int main() {
 }
 
 ----------
-gcc -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c
+gcc -g -O0 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c
 ----------
 
 ----------------------------------------
@@ -229,7 +229,7 @@ int main() {
 }
 
 ----------
-gcc -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c
+gcc -g -O0 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c
 ----------
 
 ----------------------------------------
@@ -253,7 +253,7 @@ int main() {
 }
 
 ----------
-gcc -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c
+gcc -g -O0 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c
 ----------
 
 ----------------------------------------
@@ -267,8 +267,8 @@ checking for statvfs()
 ----------------------------------------
 checking for dlopen()
 
-/tmp/ccBi4HdX.o: In function `main':
-autotest.c:(.text+0xf): undefined reference to `dlopen'
+/tmp/ccvZbvjy.o: In function `main':
+/opt/nginx/nginx-1.0.14/objs/autotest.c:7: undefined reference to `dlopen'
 collect2: error: ld returned 1 exit status
 ----------
 
@@ -282,7 +282,7 @@ int main() {
 }
 
 ----------
-gcc -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c
+gcc -g -O0 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c
 ----------
 
 ----------------------------------------
@@ -313,7 +313,7 @@ int main() {
 }
 
 ----------
-gcc -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c
+gcc -g -O0 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c
 ----------
 
 ----------------------------------------
@@ -336,7 +336,7 @@ int main() {
 }
 
 ----------
-gcc -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c
+gcc -g -O0 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c
 ----------
 
 ----------------------------------------
@@ -442,8 +442,8 @@ objs/autotest.c:11:5: warning: incompatible implicit declaration of built-in fun
 ----------------------------------------
 checking for setproctitle()
 
-/tmp/ccf1qTLL.o: In function `main':
-autotest.c:(.text+0xf): undefined reference to `setproctitle'
+/tmp/ccErAFhD.o: In function `main':
+/opt/nginx/nginx-1.0.14/objs/autotest.c:7: undefined reference to `setproctitle'
 collect2: error: ld returned 1 exit status
 ----------
 
@@ -457,7 +457,7 @@ int main() {
 }
 
 ----------
-gcc -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c
+gcc -g -O0 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c
 ----------
 
 ----------------------------------------
@@ -471,8 +471,8 @@ checking for pwrite()
 ----------------------------------------
 checking for sys_nerr
 
-/tmp/cc320HdX.o: In function `main':
-autotest.c:(.text+0x6): warning: `sys_nerr' is deprecated; use `strerror' or `strerror_r' instead
+/tmp/ccH9TXSC.o: In function `main':
+/opt/nginx/nginx-1.0.14/objs/autotest.c:8: warning: `sys_nerr' is deprecated; use `strerror' or `strerror_r' instead
 135
 ----------------------------------------
 checking for localtime_r()
@@ -505,9 +505,9 @@ checking for System V shared memory
 ----------------------------------------
 checking for POSIX semaphores
 
-/tmp/ccUUbm5j.o: In function `main':
-autotest.c:(.text+0x1a): undefined reference to `sem_init'
-autotest.c:(.text+0x32): undefined reference to `sem_destroy'
+/tmp/ccJXb3l0.o: In function `main':
+/opt/nginx/nginx-1.0.14/objs/autotest.c:8: undefined reference to `sem_init'
+/opt/nginx/nginx-1.0.14/objs/autotest.c:9: undefined reference to `sem_destroy'
 collect2: error: ld returned 1 exit status
 ----------
 
@@ -523,7 +523,7 @@ int main() {
 }
 
 ----------
-gcc -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c
+gcc -g -O0 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c
 ----------
 
 ----------------------------------------
@@ -561,7 +561,7 @@ int main() {
 }
 
 ----------
-gcc -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c
+gcc -g -O0 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c
 ----------
 
 ----------------------------------------
@@ -595,7 +595,7 @@ int main() {
 }
 
 ----------
-gcc -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c -lmd
+gcc -g -O0 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c -lmd
 ----------
 
 ----------------------------------------
@@ -617,7 +617,7 @@ int main() {
 }
 
 ----------
-gcc -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c -lmd5
+gcc -g -O0 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c -lmd5
 ----------
 
 ----------------------------------------
@@ -643,7 +643,7 @@ int main() {
 }
 
 ----------
-gcc -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c -lmd
+gcc -g -O0 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c -lmd
 ----------
 
 ----------------------------------------

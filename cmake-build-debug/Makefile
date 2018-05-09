@@ -123,6 +123,33 @@ nginx_learning/fast:
 	$(MAKE) -f CMakeFiles/nginx_learning.dir/build.make CMakeFiles/nginx_learning.dir/build
 .PHONY : nginx_learning/fast
 
+objs/ngx_modules.o: objs/ngx_modules.c.o
+
+.PHONY : objs/ngx_modules.o
+
+# target to build an object file
+objs/ngx_modules.c.o:
+	$(MAKE) -f CMakeFiles/nginx_learning.dir/build.make CMakeFiles/nginx_learning.dir/objs/ngx_modules.c.o
+.PHONY : objs/ngx_modules.c.o
+
+objs/ngx_modules.i: objs/ngx_modules.c.i
+
+.PHONY : objs/ngx_modules.i
+
+# target to preprocess a source file
+objs/ngx_modules.c.i:
+	$(MAKE) -f CMakeFiles/nginx_learning.dir/build.make CMakeFiles/nginx_learning.dir/objs/ngx_modules.c.i
+.PHONY : objs/ngx_modules.c.i
+
+objs/ngx_modules.s: objs/ngx_modules.c.s
+
+.PHONY : objs/ngx_modules.s
+
+# target to generate assembly for a file
+objs/ngx_modules.c.s:
+	$(MAKE) -f CMakeFiles/nginx_learning.dir/build.make CMakeFiles/nginx_learning.dir/objs/ngx_modules.c.s
+.PHONY : objs/ngx_modules.c.s
+
 src/core/nginx.o: src/core/nginx.c.o
 
 .PHONY : src/core/nginx.o
@@ -4398,6 +4425,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... nginx_learning"
+	@echo "... objs/ngx_modules.o"
+	@echo "... objs/ngx_modules.i"
+	@echo "... objs/ngx_modules.s"
 	@echo "... src/core/nginx.o"
 	@echo "... src/core/nginx.i"
 	@echo "... src/core/nginx.s"

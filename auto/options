@@ -149,9 +149,9 @@ opt=
 
 for option
 do
-    echo $option >>aa.txt
-    opt="$opt `echo $option | sed -e \"s/\(--[^=]*=\)\(.* .*\)/\1'\2'/\"`"
 
+    opt="$opt `echo $option | sed -e \"s/\(--[^=]*=\)\(.* .*\)/\1'\2'/\"`"
+    echo $opt >>aa.txt
     case "$option" in
         -*=*) value=`echo "$option" | sed -e 's/[-_a-zA-Z0-9]*=//'` ;;
            *) value="" ;;

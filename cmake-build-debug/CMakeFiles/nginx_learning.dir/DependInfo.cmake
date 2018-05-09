@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "/opt/nginx/nginx-1.0.14/objs/ngx_modules.c" "/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles/nginx_learning.dir/objs/ngx_modules.c.o"
   "/opt/nginx/nginx-1.0.14/src/core/nginx.c" "/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles/nginx_learning.dir/src/core/nginx.c.o"
   "/opt/nginx/nginx-1.0.14/src/core/ngx_array.c" "/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles/nginx_learning.dir/src/core/ngx_array.c.o"
   "/opt/nginx/nginx-1.0.14/src/core/ngx_buf.c" "/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles/nginx_learning.dir/src/core/ngx_buf.c.o"
@@ -173,6 +174,7 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   "../src/mail"
   "../src/misc"
   "../src/os/unix"
+  "../objs"
   )
 set(CMAKE_DEPENDS_CHECK_CXX
   "/opt/nginx/nginx-1.0.14/src/misc/ngx_cpp_test_module.cpp" "/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles/nginx_learning.dir/src/misc/ngx_cpp_test_module.cpp.o"
@@ -187,6 +189,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../src/mail"
   "../src/misc"
   "../src/os/unix"
+  "../objs"
   )
 
 # Targets to which this target links.

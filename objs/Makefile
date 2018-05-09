@@ -1,6 +1,6 @@
 
 CC =	gcc
-CFLAGS =  -pipe  -O -W -Wall -Wpointer-arith -Wno-unused-parameter -Wunused-function -Wunused-variable -Wunused-value -Werror -g 
+CFLAGS =  -pipe  -O -W -Wall -Wpointer-arith -Wno-unused-parameter -Wunused-function -Wunused-variable -Wunused-value -Werror -g -g -O0
 CPP =	gcc -E
 LINK =	$(CC)
 
@@ -1050,47 +1050,47 @@ objs/src/http/modules/ngx_http_upstream_ip_hash_module.o:	$(CORE_DEPS) $(HTTP_DE
 manpage:	objs/nginx.8
 
 objs/nginx.8:	man/nginx.8 objs/ngx_auto_config.h
-	sed -e "s|%%PREFIX%%|/opt|" \
-		-e "s|%%PID_PATH%%|/opt/logs/nginx.pid|" \
-		-e "s|%%CONF_PATH%%|/opt/conf/nginx.conf|" \
-		-e "s|%%ERROR_LOG_PATH%%|/opt/logs/error.log|" \
+	sed -e "s|%%PREFIX%%|/opt/nginx|" \
+		-e "s|%%PID_PATH%%|/opt/nginx/logs/nginx.pid|" \
+		-e "s|%%CONF_PATH%%|/opt/nginx/conf/nginx.conf|" \
+		-e "s|%%ERROR_LOG_PATH%%|/opt/nginx/logs/error.log|" \
 		< man/nginx.8 > $@
 
 install:	objs/nginx 		
-	test -d '$(DESTDIR)/opt' || mkdir -p '$(DESTDIR)/opt'
+	test -d '$(DESTDIR)/opt/nginx' || mkdir -p '$(DESTDIR)/opt/nginx'
 
-	test -d '$(DESTDIR)/opt/sbin' 		|| mkdir -p '$(DESTDIR)/opt/sbin'
-	test ! -f '$(DESTDIR)/opt/sbin/nginx' 		|| mv '$(DESTDIR)/opt/sbin/nginx' 			'$(DESTDIR)/opt/sbin/nginx.old'
-	cp objs/nginx '$(DESTDIR)/opt/sbin/nginx'
+	test -d '$(DESTDIR)/opt/nginx/sbin' 		|| mkdir -p '$(DESTDIR)/opt/nginx/sbin'
+	test ! -f '$(DESTDIR)/opt/nginx/sbin/nginx' 		|| mv '$(DESTDIR)/opt/nginx/sbin/nginx' 			'$(DESTDIR)/opt/nginx/sbin/nginx.old'
+	cp objs/nginx '$(DESTDIR)/opt/nginx/sbin/nginx'
 
-	test -d '$(DESTDIR)/opt/conf' 		|| mkdir -p '$(DESTDIR)/opt/conf'
+	test -d '$(DESTDIR)/opt/nginx/conf' 		|| mkdir -p '$(DESTDIR)/opt/nginx/conf'
 
-	cp conf/koi-win '$(DESTDIR)/opt/conf'
-	cp conf/koi-utf '$(DESTDIR)/opt/conf'
-	cp conf/win-utf '$(DESTDIR)/opt/conf'
+	cp conf/koi-win '$(DESTDIR)/opt/nginx/conf'
+	cp conf/koi-utf '$(DESTDIR)/opt/nginx/conf'
+	cp conf/win-utf '$(DESTDIR)/opt/nginx/conf'
 
-	test -f '$(DESTDIR)/opt/conf/mime.types' 		|| cp conf/mime.types '$(DESTDIR)/opt/conf'
-	cp conf/mime.types '$(DESTDIR)/opt/conf/mime.types.default'
+	test -f '$(DESTDIR)/opt/nginx/conf/mime.types' 		|| cp conf/mime.types '$(DESTDIR)/opt/nginx/conf'
+	cp conf/mime.types '$(DESTDIR)/opt/nginx/conf/mime.types.default'
 
-	test -f '$(DESTDIR)/opt/conf/fastcgi_params' 		|| cp conf/fastcgi_params '$(DESTDIR)/opt/conf'
-	cp conf/fastcgi_params 		'$(DESTDIR)/opt/conf/fastcgi_params.default'
+	test -f '$(DESTDIR)/opt/nginx/conf/fastcgi_params' 		|| cp conf/fastcgi_params '$(DESTDIR)/opt/nginx/conf'
+	cp conf/fastcgi_params 		'$(DESTDIR)/opt/nginx/conf/fastcgi_params.default'
 
-	test -f '$(DESTDIR)/opt/conf/fastcgi.conf' 		|| cp conf/fastcgi.conf '$(DESTDIR)/opt/conf'
-	cp conf/fastcgi.conf '$(DESTDIR)/opt/conf/fastcgi.conf.default'
+	test -f '$(DESTDIR)/opt/nginx/conf/fastcgi.conf' 		|| cp conf/fastcgi.conf '$(DESTDIR)/opt/nginx/conf'
+	cp conf/fastcgi.conf '$(DESTDIR)/opt/nginx/conf/fastcgi.conf.default'
 
-	test -f '$(DESTDIR)/opt/conf/uwsgi_params' 		|| cp conf/uwsgi_params '$(DESTDIR)/opt/conf'
-	cp conf/uwsgi_params 		'$(DESTDIR)/opt/conf/uwsgi_params.default'
+	test -f '$(DESTDIR)/opt/nginx/conf/uwsgi_params' 		|| cp conf/uwsgi_params '$(DESTDIR)/opt/nginx/conf'
+	cp conf/uwsgi_params 		'$(DESTDIR)/opt/nginx/conf/uwsgi_params.default'
 
-	test -f '$(DESTDIR)/opt/conf/scgi_params' 		|| cp conf/scgi_params '$(DESTDIR)/opt/conf'
-	cp conf/scgi_params 		'$(DESTDIR)/opt/conf/scgi_params.default'
+	test -f '$(DESTDIR)/opt/nginx/conf/scgi_params' 		|| cp conf/scgi_params '$(DESTDIR)/opt/nginx/conf'
+	cp conf/scgi_params 		'$(DESTDIR)/opt/nginx/conf/scgi_params.default'
 
-	test -f '$(DESTDIR)/opt/conf/nginx.conf' 		|| cp conf/nginx.conf '$(DESTDIR)/opt/conf/nginx.conf'
-	cp conf/nginx.conf '$(DESTDIR)/opt/conf/nginx.conf.default'
+	test -f '$(DESTDIR)/opt/nginx/conf/nginx.conf' 		|| cp conf/nginx.conf '$(DESTDIR)/opt/nginx/conf/nginx.conf'
+	cp conf/nginx.conf '$(DESTDIR)/opt/nginx/conf/nginx.conf.default'
 
-	test -d '$(DESTDIR)/opt/logs' 		|| mkdir -p '$(DESTDIR)/opt/logs'
+	test -d '$(DESTDIR)/opt/nginx/logs' 		|| mkdir -p '$(DESTDIR)/opt/nginx/logs'
 
-	test -d '$(DESTDIR)/opt/logs' || 		mkdir -p '$(DESTDIR)/opt/logs'
+	test -d '$(DESTDIR)/opt/nginx/logs' || 		mkdir -p '$(DESTDIR)/opt/nginx/logs'
 
-	test -d '$(DESTDIR)/opt/html' 		|| cp -R html '$(DESTDIR)/opt'
+	test -d '$(DESTDIR)/opt/nginx/html' 		|| cp -R html '$(DESTDIR)/opt/nginx'
 
-	test -d '$(DESTDIR)/opt/logs' || 		mkdir -p '$(DESTDIR)/opt/logs'
+	test -d '$(DESTDIR)/opt/nginx/logs' || 		mkdir -p '$(DESTDIR)/opt/nginx/logs'

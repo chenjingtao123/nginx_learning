@@ -1,1 +1,12 @@
---prefix=/opt
+
+--prefix=/opt/nginx
+--prefix=/opt/nginx --with-cc-opt='-g O0'
+--prefix=/opt/nginx --with-cc-opt='-g O0' --with-debug
+--prefix=/opt/nginx
+--prefix=/opt/nginx --with-debug
+--prefix=/opt/nginx
+--prefix=/opt/nginx --with-cc-opt='-g -O0'
+--prefix=/opt/nginx --with-cc-opt='-g -O0' --with-debug
+--prefix=/opt/nginx
+--prefix=/opt/nginx --with-cc-opt='-g -O0'
+--prefix=/opt/nginx --with-cc-opt='-g -O0' --with-debug

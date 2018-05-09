@@ -50,6 +50,7 @@
 					<Add directory="/opt/nginx/nginx-1.0.14/src/mail"/>
 					<Add directory="/opt/nginx/nginx-1.0.14/src/misc"/>
 					<Add directory="/opt/nginx/nginx-1.0.14/src/os/unix"/>
+					<Add directory="/opt/nginx/nginx-1.0.14/objs"/>
 					<Add directory="/opt/rh/devtoolset-3/root/usr/lib/gcc/x86_64-redhat-linux/4.9.2/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/opt/rh/devtoolset-3/root/usr/include"/>
@@ -78,6 +79,7 @@
 					<Add directory="/opt/nginx/nginx-1.0.14/src/mail"/>
 					<Add directory="/opt/nginx/nginx-1.0.14/src/misc"/>
 					<Add directory="/opt/nginx/nginx-1.0.14/src/os/unix"/>
+					<Add directory="/opt/nginx/nginx-1.0.14/objs"/>
 					<Add directory="/opt/rh/devtoolset-3/root/usr/lib/gcc/x86_64-redhat-linux/4.9.2/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/opt/rh/devtoolset-3/root/usr/include"/>
@@ -94,6 +96,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/opt/nginx/nginx-1.0.14/objs/ngx_modules.c">
+			<Option target="nginx_learning"/>
+		</Unit>
 		<Unit filename="/opt/nginx/nginx-1.0.14/src/core/nginx.c">
 			<Option target="nginx_learning"/>
 		</Unit>

@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/nginx_learning.dir/objs/ngx_modules.c.o"
   "CMakeFiles/nginx_learning.dir/src/core/ngx_inet.c.o"
   "CMakeFiles/nginx_learning.dir/src/core/ngx_crc32.c.o"
   "CMakeFiles/nginx_learning.dir/src/core/ngx_palloc.c.o"

@@ -7,11 +7,11 @@ C_FLAGS = -g
 
 C_DEFINES = 
 
-C_INCLUDES = -I/opt/nginx/nginx-1.0.14/src/core -I/opt/nginx/nginx-1.0.14/src/event -I/opt/nginx/nginx-1.0.14/src/http -I/opt/nginx/nginx-1.0.14/src/mail -I/opt/nginx/nginx-1.0.14/src/misc -I/opt/nginx/nginx-1.0.14/src/os/unix 
+C_INCLUDES = -I/opt/nginx/nginx-1.0.14/src/core -I/opt/nginx/nginx-1.0.14/src/event -I/opt/nginx/nginx-1.0.14/src/http -I/opt/nginx/nginx-1.0.14/src/mail -I/opt/nginx/nginx-1.0.14/src/misc -I/opt/nginx/nginx-1.0.14/src/os/unix -I/opt/nginx/nginx-1.0.14/objs 
 
 CXX_FLAGS = -g   -std=gnu++11
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/opt/nginx/nginx-1.0.14/src/core -I/opt/nginx/nginx-1.0.14/src/event -I/opt/nginx/nginx-1.0.14/src/http -I/opt/nginx/nginx-1.0.14/src/mail -I/opt/nginx/nginx-1.0.14/src/misc -I/opt/nginx/nginx-1.0.14/src/os/unix 
+CXX_INCLUDES = -I/opt/nginx/nginx-1.0.14/src/core -I/opt/nginx/nginx-1.0.14/src/event -I/opt/nginx/nginx-1.0.14/src/http -I/opt/nginx/nginx-1.0.14/src/mail -I/opt/nginx/nginx-1.0.14/src/misc -I/opt/nginx/nginx-1.0.14/src/os/unix -I/opt/nginx/nginx-1.0.14/objs 
 
