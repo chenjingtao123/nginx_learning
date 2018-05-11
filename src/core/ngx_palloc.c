@@ -12,7 +12,12 @@
 static void *ngx_palloc_block(ngx_pool_t *pool, size_t size);
 static void *ngx_palloc_large(ngx_pool_t *pool, size_t size);
 
-
+/**
+ * 创建内存池
+ * @param size
+ * @param log
+ * @return
+ */
 ngx_pool_t *
 ngx_create_pool(size_t size, ngx_log_t *log)
 {
@@ -22,7 +27,7 @@ ngx_create_pool(size_t size, ngx_log_t *log)
     if (p == NULL) {
         return NULL;
     }
-
+    //last指针指向的是ngx_pool_t结构体(大小40B)之后数据区的起始位置
     p->d.last = (u_char *) p + sizeof(ngx_pool_t);
     p->d.end = (u_char *) p + size;
     p->d.next = NULL;
@@ -173,14 +178,19 @@ ngx_pnalloc(ngx_pool_t *pool, size_t size)
     return ngx_palloc_large(pool, size);
 }
 
-
+/**
+ * 重新申请一块小内存
+ * @param pool
+ * @param size
+ * @return
+ */
 static void *
 ngx_palloc_block(ngx_pool_t *pool, size_t size)
 {
     u_char      *m;
     size_t       psize;
     ngx_pool_t  *p, *new, *current;
-
+    //分配一块跟上次一样大小的内存
     psize = (size_t) (pool->d.end - (u_char *) pool);
 
     m = ngx_memalign(NGX_POOL_ALIGNMENT, psize, pool->log);
@@ -196,6 +206,7 @@ ngx_palloc_block(ngx_pool_t *pool, size_t size)
 
     m += sizeof(ngx_pool_data_t);
     m = ngx_align_ptr(m, NGX_ALIGNMENT);
+    //last指针指向的是ngx_pool_data_t结构体(大小16B)之后数据区的起始位置
     new->d.last = m + size;
 
     current = pool->current;
@@ -207,13 +218,15 @@ ngx_palloc_block(ngx_pool_t *pool, size_t size)
     }
 
     p->d.next = new;
-
+    /*新分配的small内存块放在表头*/
     pool->current = current ? current : new;
 
     return m;
 }
 
-
+//这是一个static的函数，说明外部函数不会随便调用，而是提供给内部分配调用的，
+//即nginx在进行内存分配需求时，不会自行去判断是否是大块内存还是小块内存，
+//而是交由内存分配函数去判断，对于用户需求来说是完全透明的。
 static void *
 ngx_palloc_large(ngx_pool_t *pool, size_t size)
 {
@@ -233,12 +246,12 @@ ngx_palloc_large(ngx_pool_t *pool, size_t size)
             large->alloc = p;
             return p;
         }
-
+        //avoid 避免循环次数太多影响性能
         if (n++ > 3) {
             break;
         }
     }
-
+    /*新分配的large内存块放在表头*/
     large = ngx_palloc(pool, sizeof(ngx_pool_large_t));
     if (large == NULL) {
         ngx_free(p);

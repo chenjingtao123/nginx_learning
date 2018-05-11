@@ -14,11 +14,11 @@
 
 
 struct ngx_array_s {
-    void        *elts;
-    ngx_uint_t   nelts;
-    size_t       size;
-    ngx_uint_t   nalloc;
-    ngx_pool_t  *pool;
+    void        *elts;//具体的数据区域的指针ss
+    ngx_uint_t   nelts;//数组实际包含的元素数量
+    size_t       size;//数组单个元素的大小
+    ngx_uint_t   nalloc;//数组容器预先(或者重新)分配的内存大小 ！！！这部分为预计的存储元素数量！！！
+    ngx_pool_t  *pool; //分配的内存池
 };
 
 

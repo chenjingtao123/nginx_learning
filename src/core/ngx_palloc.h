@@ -47,19 +47,19 @@ struct ngx_pool_large_s {
 
 
 typedef struct {
-    u_char               *last;//指向分配的内存中已使用的内存的最后一个字节地址
+    u_char               *last;//当前内存分配结束位置，即下一段可分配内存的起始位置
     u_char               *end;//指向分配的内存的最后一个字节地址
-    ngx_pool_t           *next;
+    ngx_pool_t           *next;//链接到下一个内存池，内存池的很多块内存就是通过该指针连成链表的
     ngx_uint_t            failed;
 } ngx_pool_data_t;
 
 
 struct ngx_pool_s {
     ngx_pool_data_t       d;
-    size_t                max;//当前内存池最大的那块内存块的大小
-    ngx_pool_t           *current;
+    size_t                max;//数据块大小，小块内存的最大值
+    ngx_pool_t           *current;//指向当前或本内存池
     ngx_chain_t          *chain;
-    ngx_pool_large_t     *large;
+    ngx_pool_large_t     *large;//指向大块内存分配，nginx中，大块内存分配直接采用标准系统接口malloc
     ngx_pool_cleanup_t   *cleanup;
     ngx_log_t            *log;
 };

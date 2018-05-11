@@ -61,7 +61,7 @@ struct ngx_cycle_s {
 
     ngx_cycle_t              *old_cycle;
 
-    ngx_str_t                 conf_file;
+    ngx_str_t                 conf_file;//由pool分配
     ngx_str_t                 conf_param;
     ngx_str_t                 conf_prefix;
     ngx_str_t                 prefix;

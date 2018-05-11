@@ -182,7 +182,7 @@ void ngx_close_file_mapping(ngx_file_mapping_t *fm);
 
 #define ngx_realpath(p, r)       realpath((char *) p, (char *) r)
 #define ngx_realpath_n           "realpath()"
-#define ngx_getcwd(buf, size)    (getcwd((char *) buf, size) != NULL)
+#define ngx_getcwd(buf, size)    (getcwd((char *) buf, size) != NULL)//将当前工作目录的绝对路径复制到参数buffer所指的内存空间中
 #define ngx_getcwd_n             "getcwd()"
 #define ngx_path_separator(c)    ((c) == '/')
 

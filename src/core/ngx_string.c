@@ -848,7 +848,12 @@ ngx_dns_strcmp(u_char *s1, u_char *s2)
     }
 }
 
-
+/**
+ * string to int
+ * @param line
+ * @param n
+ * @return
+ */
 ngx_int_t
 ngx_atoi(u_char *line, size_t n)
 {
