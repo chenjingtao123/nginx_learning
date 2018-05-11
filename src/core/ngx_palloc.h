@@ -47,8 +47,8 @@ struct ngx_pool_large_s {
 
 
 typedef struct {
-    u_char               *last;
-    u_char               *end;
+    u_char               *last;//指向分配的内存中已使用的内存的最后一个字节地址
+    u_char               *end;//指向分配的内存的最后一个字节地址
     ngx_pool_t           *next;
     ngx_uint_t            failed;
 } ngx_pool_data_t;
@@ -56,7 +56,7 @@ typedef struct {
 
 struct ngx_pool_s {
     ngx_pool_data_t       d;
-    size_t                max;
+    size_t                max;//当前内存池最大的那块内存块的大小
     ngx_pool_t           *current;
     ngx_chain_t          *chain;
     ngx_pool_large_t     *large;

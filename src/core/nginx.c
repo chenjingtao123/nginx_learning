@@ -8,7 +8,6 @@
 #include <ngx_config.h>
 #include <ngx_core.h>
 #include <nginx.h>
-#include <zconf.h>
 
 
 static ngx_int_t ngx_add_inherited_sockets(ngx_cycle_t *cycle);
@@ -241,8 +240,7 @@ main(int argc, char *const *argv)
 #else
                 "  -p prefix     : set prefix path (default: NONE)" NGX_LINEFEED
 #endif
-                "  -c filename   : set configuration file (default: "
-                                   NGX_CONF_PATH ")" NGX_LINEFEED
+                "  -c filename   : set configuration file (default: "NGX_CONF_PATH ")" NGX_LINEFEED
                 "  -g directives : set global directives out of configuration "
                                    "file" NGX_LINEFEED NGX_LINEFEED
                 );

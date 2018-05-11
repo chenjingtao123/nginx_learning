@@ -261,7 +261,11 @@ ngx_log_errno(u_char *buf, u_char *last, ngx_err_t err)
     return buf;
 }
 
-
+/**
+ * init open logs/error.log
+ * @param prefix
+ * @return
+ */
 ngx_log_t *
 ngx_log_init(u_char *prefix)
 {

@@ -392,6 +392,7 @@ if [ $USE_OPENSSL = YES ]; then
     CORE_SRCS="$CORE_SRCS $OPENSSL_SRCS"
 fi
 
+
 if [ $HTTP = YES ]; then
     modules="$modules $HTTP_MODULES $HTTP_FILTER_MODULES \
              $HTTP_HEADERS_FILTER_MODULE \

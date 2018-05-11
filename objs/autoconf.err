@@ -11,14 +11,72 @@ checking for gcc -pipe switch
 ----------------------------------------
 checking for gcc builtin atomic operations
 
+gcc: error: O0: No such file or directory
+----------
+
+#include <sys/types.h>
+
+
+
+int main() {
+    long  n = 0;
+                      if (!__sync_bool_compare_and_swap(&n, 0, 1))
+                          return 1;
+                      if (__sync_fetch_and_add(&n, 1) != 1)
+                          return 1;
+                      if (n != 2)
+                          return 1;
+                      __sync_synchronize();;
+    return 0;
+}
+
+----------
+gcc -g O0 -o objs/autotest objs/autotest.c
+----------
 
 ----------------------------------------
 checking for C99 variadic macros
 
+gcc: error: O0: No such file or directory
+----------
+
+#include <sys/types.h>
+
+#include <stdio.h>
+#define var(dummy, ...)  sprintf(__VA_ARGS__)
+
+int main() {
+    char  buf[30]; buf[0] = '0';
+                          var(0, buf, "%d", 1);
+                          if (buf[0] != '1') return 1;
+    return 0;
+}
+
+----------
+gcc -g O0 -o objs/autotest objs/autotest.c
+----------
 
 ----------------------------------------
 checking for gcc variadic macros
 
+gcc: error: O0: No such file or directory
+----------
+
+#include <sys/types.h>
+
+#include <stdio.h>
+#define var(dummy, args...)  sprintf(args)
+
+int main() {
+    char  buf[30]; buf[0] = '0';
+                      var(0, buf, "%d", 1);
+                      if (buf[0] != '1') return 1;
+    return 0;
+}
+
+----------
+gcc -g O0 -o objs/autotest objs/autotest.c
+----------
 
 ----------------------------------------
 checking for unistd.h
@@ -71,14 +129,72 @@ checking for crypt.h
 ----------------------------------------
 checking for epoll
 
+gcc: error: O0: No such file or directory
+----------
+
+#include <sys/types.h>
+#include <unistd.h>
+#include <sys/epoll.h>
+
+int main() {
+    int efd = 0, fd = 1, n;
+                  struct epoll_event ee;
+                  ee.events = EPOLLIN|EPOLLOUT|EPOLLET;
+                  ee.data.ptr = NULL;
+                  efd = epoll_create(100);
+                  if (efd == -1) return 1;;
+    return 0;
+}
+
+----------
+gcc -g O0 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c
+----------
 
 ----------------------------------------
 checking for sendfile()
 
+gcc: error: O0: No such file or directory
+----------
+
+#include <sys/types.h>
+#include <unistd.h>
+#include <sys/sendfile.h>
+                  #include <errno.h>
+
+int main() {
+    int s = 0, fd = 1;
+                  ssize_t n; off_t off = 0;
+                  n = sendfile(s, fd, &off, 1);
+                  if (n == -1 && errno == ENOSYS) return 1;
+    return 0;
+}
+
+----------
+gcc -g O0 -D_GNU_SOURCE -o objs/autotest objs/autotest.c
+----------
 
 ----------------------------------------
 checking for sendfile64()
 
+gcc: error: O0: No such file or directory
+----------
+
+#include <sys/types.h>
+#include <unistd.h>
+#include <sys/sendfile.h>
+                  #include <errno.h>
+
+int main() {
+    int s = 0, fd = 1;
+                  ssize_t n; off_t off = 0;
+                  n = sendfile(s, fd, &off, 1);
+                  if (n == -1 && errno == ENOSYS) return 1;
+    return 0;
+}
+
+----------
+gcc -g O0 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c
+----------
 
 ----------------------------------------
 checking for sys/prctl.h
@@ -87,14 +203,61 @@ checking for sys/prctl.h
 ----------------------------------------
 checking for prctl(PR_SET_DUMPABLE)
 
+gcc: error: O0: No such file or directory
+----------
+
+#include <sys/types.h>
+#include <unistd.h>
+#include <sys/prctl.h>
+
+int main() {
+    if (prctl(PR_SET_DUMPABLE, 1, 0, 0, 0) == -1) return 1;
+    return 0;
+}
+
+----------
+gcc -g O0 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c
+----------
 
 ----------------------------------------
 checking for sched_setaffinity()
 
+gcc: error: O0: No such file or directory
+----------
+
+#include <sys/types.h>
+#include <unistd.h>
+#include <sched.h>
+
+int main() {
+    long mask = 0;
+                  sched_setaffinity(0, 32, (cpu_set_t *) &mask);
+    return 0;
+}
+
+----------
+gcc -g O0 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c
+----------
 
 ----------------------------------------
 checking for crypt_r()
 
+gcc: error: O0: No such file or directory
+----------
+
+#include <sys/types.h>
+#include <unistd.h>
+#include <crypt.h>
+
+int main() {
+    struct crypt_data  cd;
+                  crypt_r(NULL, NULL, &cd);;
+    return 0;
+}
+
+----------
+gcc -g O0 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c -lcrypt
+----------
 
 ----------------------------------------
 checking for sys/vfs.h
@@ -103,14 +266,31 @@ checking for sys/vfs.h
 ----------------------------------------
 checking for poll()
 
+gcc: error: O0: No such file or directory
+----------
+
+#include <sys/types.h>
+#include <unistd.h>
+#include <poll.h>
+
+int main() {
+    int  n, dp; struct pollfd  pl;
+                  dp = 0;
+                  pl.fd = 0;
+                  pl.events = 0;
+                  pl.revents = 0;
+                  n = poll(&pl, 1, 0);
+    return 0;
+}
+
+----------
+gcc -g O0 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c
+----------
 
 ----------------------------------------
 checking for /dev/poll
 
-objs/autotest.c:4:25: fatal error: sys/devpoll.h: No such file or directory
- #include <sys/devpoll.h>
-                         ^
-compilation terminated.
+gcc: error: O0: No such file or directory
 ----------
 
 #include <sys/types.h>
@@ -128,16 +308,13 @@ int main() {
 }
 
 ----------
-gcc -g -O0 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c
+gcc -g O0 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c
 ----------
 
 ----------------------------------------
 checking for kqueue
 
-objs/autotest.c:4:23: fatal error: sys/event.h: No such file or directory
- #include <sys/event.h>
-                       ^
-compilation terminated.
+gcc: error: O0: No such file or directory
 ----------
 
 #include <sys/types.h>
@@ -150,15 +327,13 @@ int main() {
 }
 
 ----------
-gcc -g -O0 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c
+gcc -g O0 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c
 ----------
 
 ----------------------------------------
 checking for crypt()
 
-/tmp/ccWfvS2h.o: In function `main':
-/opt/nginx/nginx-1.0.14/objs/autotest.c:7: undefined reference to `crypt'
-collect2: error: ld returned 1 exit status
+gcc: error: O0: No such file or directory
 ----------
 
 #include <sys/types.h>
@@ -171,21 +346,32 @@ int main() {
 }
 
 ----------
-gcc -g -O0 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c
+gcc -g O0 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c
 ----------
 
 ----------------------------------------
 checking for crypt() in libcrypt
 
+gcc: error: O0: No such file or directory
+----------
+
+#include <sys/types.h>
+#include <unistd.h>
+
+
+int main() {
+    crypt("test", "salt");;
+    return 0;
+}
+
+----------
+gcc -g O0 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c -lcrypt
+----------
 
 ----------------------------------------
 checking for F_READAHEAD
 
-objs/autotest.c: In function ‘main’:
-objs/autotest.c:7:14: error: ‘F_READAHEAD’ undeclared (first use in this function)
-     fcntl(0, F_READAHEAD, 1);;
-              ^
-objs/autotest.c:7:14: note: each undeclared identifier is reported only once for each function it appears in
+gcc: error: O0: No such file or directory
 ----------
 
 #include <sys/types.h>
@@ -198,25 +384,51 @@ int main() {
 }
 
 ----------
-gcc -g -O0 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c
+gcc -g O0 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c
 ----------
 
 ----------------------------------------
 checking for posix_fadvise()
 
+gcc: error: O0: No such file or directory
+----------
+
+#include <sys/types.h>
+#include <unistd.h>
+#include <fcntl.h>
+
+int main() {
+    posix_fadvise(0, 0, 0, POSIX_FADV_SEQUENTIAL);;
+    return 0;
+}
+
+----------
+gcc -g O0 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c
+----------
 
 ----------------------------------------
 checking for O_DIRECT
 
+gcc: error: O0: No such file or directory
+----------
+
+#include <sys/types.h>
+#include <unistd.h>
+#include <fcntl.h>
+
+int main() {
+    fcntl(0, F_SETFL, O_DIRECT);;
+    return 0;
+}
+
+----------
+gcc -g O0 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c
+----------
 
 ----------------------------------------
 checking for F_NOCACHE
 
-objs/autotest.c: In function ‘main’:
-objs/autotest.c:7:14: error: ‘F_NOCACHE’ undeclared (first use in this function)
-     fcntl(0, F_NOCACHE, 1);;
-              ^
-objs/autotest.c:7:14: note: each undeclared identifier is reported only once for each function it appears in
+gcc: error: O0: No such file or directory
 ----------
 
 #include <sys/types.h>
@@ -229,17 +441,13 @@ int main() {
 }
 
 ----------
-gcc -g -O0 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c
+gcc -g O0 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c
 ----------
 
 ----------------------------------------
 checking for directio()
 
-objs/autotest.c: In function ‘main’:
-objs/autotest.c:8:17: error: ‘DIRECTIO_ON’ undeclared (first use in this function)
-     directio(0, DIRECTIO_ON);;
-                 ^
-objs/autotest.c:8:17: note: each undeclared identifier is reported only once for each function it appears in
+gcc: error: O0: No such file or directory
 ----------
 
 #include <sys/types.h>
@@ -253,23 +461,56 @@ int main() {
 }
 
 ----------
-gcc -g -O0 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c
+gcc -g O0 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c
 ----------
 
 ----------------------------------------
 checking for statfs()
 
+gcc: error: O0: No such file or directory
+----------
+
+#include <sys/types.h>
+#include <unistd.h>
+#include <sys/param.h>
+                  #include <sys/mount.h>
+                  #include <sys/vfs.h>
+
+int main() {
+    struct statfs  fs;
+                  statfs(NULL, &fs);;
+    return 0;
+}
+
+----------
+gcc -g O0 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c
+----------
 
 ----------------------------------------
 checking for statvfs()
 
+gcc: error: O0: No such file or directory
+----------
+
+#include <sys/types.h>
+#include <unistd.h>
+#include <sys/types.h>
+                  #include <sys/statvfs.h>
+
+int main() {
+    struct statvfs  fs;
+                  statvfs(NULL, &fs);;
+    return 0;
+}
+
+----------
+gcc -g O0 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c
+----------
 
 ----------------------------------------
 checking for dlopen()
 
-/tmp/ccvZbvjy.o: In function `main':
-/opt/nginx/nginx-1.0.14/objs/autotest.c:7: undefined reference to `dlopen'
-collect2: error: ld returned 1 exit status
+gcc: error: O0: No such file or directory
 ----------
 
 #include <sys/types.h>
@@ -282,25 +523,70 @@ int main() {
 }
 
 ----------
-gcc -g -O0 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c
+gcc -g O0 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c
 ----------
 
 ----------------------------------------
 checking for dlopen() in libdl
 
+gcc: error: O0: No such file or directory
+----------
+
+#include <sys/types.h>
+#include <unistd.h>
+#include <dlfcn.h>
+
+int main() {
+    dlopen(NULL, 0);
+    return 0;
+}
+
+----------
+gcc -g O0 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c -ldl
+----------
 
 ----------------------------------------
 checking for sched_yield()
 
+gcc: error: O0: No such file or directory
+----------
+
+#include <sys/types.h>
+#include <unistd.h>
+#include <sched.h>
+
+int main() {
+    sched_yield();
+    return 0;
+}
+
+----------
+gcc -g O0 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c
+----------
+
+----------------------------------------
+checking for sched_yield() in librt
+
+gcc: error: O0: No such file or directory
+----------
+
+#include <sys/types.h>
+#include <unistd.h>
+#include <sched.h>
+
+int main() {
+    sched_yield();
+    return 0;
+}
+
+----------
+gcc -g O0 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c -lrt
+----------
 
 ----------------------------------------
 checking for SO_SETFIB
 
-objs/autotest.c: In function ‘main’:
-objs/autotest.c:7:31: error: ‘SO_SETFIB’ undeclared (first use in this function)
-     setsockopt(0, SOL_SOCKET, SO_SETFIB, NULL, 4);
-                               ^
-objs/autotest.c:7:31: note: each undeclared identifier is reported only once for each function it appears in
+gcc: error: O0: No such file or directory
 ----------
 
 #include <sys/types.h>
@@ -313,17 +599,13 @@ int main() {
 }
 
 ----------
-gcc -g -O0 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c
+gcc -g O0 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c
 ----------
 
 ----------------------------------------
 checking for SO_ACCEPTFILTER
 
-objs/autotest.c: In function ‘main’:
-objs/autotest.c:7:31: error: ‘SO_ACCEPTFILTER’ undeclared (first use in this function)
-     setsockopt(0, SOL_SOCKET, SO_ACCEPTFILTER, NULL, 0);
-                               ^
-objs/autotest.c:7:31: note: each undeclared identifier is reported only once for each function it appears in
+gcc: error: O0: No such file or directory
 ----------
 
 #include <sys/types.h>
@@ -336,320 +618,68 @@ int main() {
 }
 
 ----------
-gcc -g -O0 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c
+gcc -g O0 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c
 ----------
 
 ----------------------------------------
 checking for TCP_DEFER_ACCEPT
 
+gcc: error: O0: No such file or directory
+----------
+
+#include <sys/types.h>
+#include <unistd.h>
+#include <sys/socket.h>
+                  #include <netinet/in.h>
+                  #include <netinet/tcp.h>
+
+int main() {
+    setsockopt(0, IPPROTO_TCP, TCP_DEFER_ACCEPT, NULL, 0);
+    return 0;
+}
+
+----------
+gcc -g O0 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c
+----------
 
 ----------------------------------------
 checking for accept4()
 
+gcc: error: O0: No such file or directory
+----------
+
+#include <sys/types.h>
+#include <unistd.h>
+#include <sys/socket.h>
+
+int main() {
+    accept4(0, NULL, NULL, SOCK_NONBLOCK);
+    return 0;
+}
+
+----------
+gcc -g O0 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c
+----------
 
 ----------------------------------------
 checking for int size
 
-objs/autotest.c: In function ‘main’:
-objs/autotest.c:11:5: warning: incompatible implicit declaration of built-in function ‘printf’
-     printf("%d", sizeof(int));
-     ^
-
-----------------------------------------
-checking for long size
-
-objs/autotest.c: In function ‘main’:
-objs/autotest.c:11:5: warning: incompatible implicit declaration of built-in function ‘printf’
-     printf("%d", sizeof(long));
-     ^
-
-----------------------------------------
-checking for long long size
-
-objs/autotest.c: In function ‘main’:
-objs/autotest.c:11:5: warning: incompatible implicit declaration of built-in function ‘printf’
-     printf("%d", sizeof(long long));
-     ^
-
-----------------------------------------
-checking for void * size
-
-objs/autotest.c: In function ‘main’:
-objs/autotest.c:11:5: warning: incompatible implicit declaration of built-in function ‘printf’
-     printf("%d", sizeof(void *));
-     ^
-
-----------------------------------------
-checking for uint64_t
-
-
-----------------------------------------
-checking for sig_atomic_t
-
-
-----------------------------------------
-checking for sig_atomic_t size
-
-objs/autotest.c: In function ‘main’:
-objs/autotest.c:11:5: warning: incompatible implicit declaration of built-in function ‘printf’
-     printf("%d", sizeof(sig_atomic_t));
-     ^
-
-----------------------------------------
-checking for socklen_t
-
-
-----------------------------------------
-checking for in_addr_t
-
-
-----------------------------------------
-checking for in_port_t
-
-
-----------------------------------------
-checking for rlim_t
-
-
-checking for uintptr_t
-
-checking for system endianess
-
-----------------------------------------
-checking for size_t size
-
-objs/autotest.c: In function ‘main’:
-objs/autotest.c:11:5: warning: incompatible implicit declaration of built-in function ‘printf’
-     printf("%d", sizeof(size_t));
-     ^
-
-----------------------------------------
-checking for off_t size
-
-objs/autotest.c: In function ‘main’:
-objs/autotest.c:11:5: warning: incompatible implicit declaration of built-in function ‘printf’
-     printf("%d", sizeof(off_t));
-     ^
-
-----------------------------------------
-checking for time_t size
-
-objs/autotest.c: In function ‘main’:
-objs/autotest.c:11:5: warning: incompatible implicit declaration of built-in function ‘printf’
-     printf("%d", sizeof(time_t));
-     ^
-
-----------------------------------------
-checking for setproctitle()
-
-/tmp/ccErAFhD.o: In function `main':
-/opt/nginx/nginx-1.0.14/objs/autotest.c:7: undefined reference to `setproctitle'
-collect2: error: ld returned 1 exit status
+gcc: error: O0: No such file or directory
 ----------
 
 #include <sys/types.h>
+#include <sys/time.h>
 #include <unistd.h>
+#include <signal.h>
+#include <sys/resource.h>
+#include <inttypes.h>
 
 
 int main() {
-    setproctitle("test");;
+    printf("%d", sizeof(int));
     return 0;
 }
 
 ----------
-gcc -g -O0 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c
+gcc -g O0 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c
 ----------
-
-----------------------------------------
-checking for pread()
-
-
-----------------------------------------
-checking for pwrite()
-
-
-----------------------------------------
-checking for sys_nerr
-
-/tmp/ccH9TXSC.o: In function `main':
-/opt/nginx/nginx-1.0.14/objs/autotest.c:8: warning: `sys_nerr' is deprecated; use `strerror' or `strerror_r' instead
-135
-----------------------------------------
-checking for localtime_r()
-
-
-----------------------------------------
-checking for posix_memalign()
-
-
-----------------------------------------
-checking for memalign()
-
-objs/autotest.c: In function ‘main’:
-objs/autotest.c:7:16: warning: assignment makes pointer from integer without a cast
-     void *p; p = memalign(4096, 4096);
-                ^
-
-----------------------------------------
-checking for mmap(MAP_ANON|MAP_SHARED)
-
-
-----------------------------------------
-checking for mmap("/dev/zero", MAP_SHARED)
-
-
-----------------------------------------
-checking for System V shared memory
-
-
-----------------------------------------
-checking for POSIX semaphores
-
-/tmp/ccJXb3l0.o: In function `main':
-/opt/nginx/nginx-1.0.14/objs/autotest.c:8: undefined reference to `sem_init'
-/opt/nginx/nginx-1.0.14/objs/autotest.c:9: undefined reference to `sem_destroy'
-collect2: error: ld returned 1 exit status
-----------
-
-#include <sys/types.h>
-#include <unistd.h>
-#include <semaphore.h>
-
-int main() {
-    sem_t  sem;
-                  if (sem_init(&sem, 1, 0) == -1) return 1;
-                  sem_destroy(&sem);;
-    return 0;
-}
-
-----------
-gcc -g -O0 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c
-----------
-
-----------------------------------------
-checking for POSIX semaphores in libpthread
-
-
-----------------------------------------
-checking for struct msghdr.msg_control
-
-
-----------------------------------------
-checking for ioctl(FIONBIO)
-
-
-----------------------------------------
-checking for struct tm.tm_gmtoff
-
-
-----------------------------------------
-checking for struct dirent.d_namlen
-
-objs/autotest.c: In function ‘main’:
-objs/autotest.c:7:28: error: ‘struct dirent’ has no member named ‘d_namlen’
-     struct dirent  dir; dir.d_namlen = 0;
-                            ^
-----------
-
-#include <sys/types.h>
-#include <unistd.h>
-#include <dirent.h>
-
-int main() {
-    struct dirent  dir; dir.d_namlen = 0;
-    return 0;
-}
-
-----------
-gcc -g -O0 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c
-----------
-
-----------------------------------------
-checking for struct dirent.d_type
-
-
-----------------------------------------
-checking for sysconf(_SC_NPROCESSORS_ONLN)
-
-
-----------------------------------------
-checking for PCRE library
-
-
-----------------------------------------
-checking for system md library
-
-objs/autotest.c:4:17: fatal error: md5.h: No such file or directory
- #include <md5.h>
-                 ^
-compilation terminated.
-----------
-
-#include <sys/types.h>
-#include <unistd.h>
-#include <md5.h>
-
-int main() {
-    MD5_CTX md5; MD5Init(&md5);
-    return 0;
-}
-
-----------
-gcc -g -O0 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c -lmd
-----------
-
-----------------------------------------
-checking for system md5 library
-
-objs/autotest.c:4:17: fatal error: md5.h: No such file or directory
- #include <md5.h>
-                 ^
-compilation terminated.
-----------
-
-#include <sys/types.h>
-#include <unistd.h>
-#include <md5.h>
-
-int main() {
-    MD5_CTX md5; MD5Init(&md5);
-    return 0;
-}
-
-----------
-gcc -g -O0 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c -lmd5
-----------
-
-----------------------------------------
-checking for OpenSSL md5 crypto library
-
-
-----------------------------------------
-checking for sha1 in system md library
-
-objs/autotest.c:4:17: fatal error: sha.h: No such file or directory
- #include <sha.h>
-                 ^
-compilation terminated.
-----------
-
-#include <sys/types.h>
-#include <unistd.h>
-#include <sha.h>
-
-int main() {
-    SHA_CTX sha1; SHA1_Init(&sha1);
-    return 0;
-}
-
-----------
-gcc -g -O0 -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -o objs/autotest objs/autotest.c -lmd
-----------
-
-----------------------------------------
-checking for OpenSSL sha1 crypto library
-
-
-----------------------------------------
-checking for zlib library
-

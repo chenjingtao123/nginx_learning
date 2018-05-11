@@ -13,7 +13,7 @@ ngx_uint_t  ngx_pagesize;
 ngx_uint_t  ngx_pagesize_shift;
 ngx_uint_t  ngx_cacheline_size;
 
-
+/*分配内存*/
 void *
 ngx_alloc(size_t size, ngx_log_t *log)
 {
@@ -48,6 +48,13 @@ ngx_calloc(size_t size, ngx_log_t *log)
 
 #if (NGX_HAVE_POSIX_MEMALIGN)
 
+/**
+ * allocate size along a alignment-byte boundary
+ * @param alignment
+ * @param size
+ * @param log
+ * @return
+ */
 void *
 ngx_memalign(size_t alignment, size_t size, ngx_log_t *log)
 {

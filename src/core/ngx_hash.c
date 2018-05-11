@@ -257,7 +257,12 @@ ngx_hash_init(ngx_hash_init_t *hinit, ngx_hash_key_t *names, ngx_uint_t nelts)
     ngx_uint_t       i, n, key, size, start, bucket_size;
     ngx_hash_elt_t  *elt, **buckets;
 
+    /**
+     * for循环保证hash的桶至少能装一个<key,value>键值对，宏NGX_HASH_ELT_SIZE用来计算一个ngx_hash_key_t表示一个实际的<key,value>键值对占用内存的大小，
+     * 之所以NGX_HASH_ELT_SIZE(&names[n]) 后面需要加上sizeof(void *)，主要是每个桶都用一个值位NULL的void*指针来标记结束
+     */
     for (n = 0; n < nelts; n++) {
+        //检查bucket_size是否合法，也就是它的值必须保证一个桶至少能存放一个<key,value>键值对
         if (hinit->bucket_size < NGX_HASH_ELT_SIZE(&names[n]) + sizeof(void *))
         {
             ngx_log_error(NGX_LOG_EMERG, hinit->pool->log, 0,
@@ -272,7 +277,7 @@ ngx_hash_init(ngx_hash_init_t *hinit, ngx_hash_key_t *names, ngx_uint_t nelts)
     if (test == NULL) {
         return NGX_ERROR;
     }
-
+    //除去桶标记后桶的大小,每个桶都用一个值位NULL的void*指针来标记结束
     bucket_size = hinit->bucket_size - sizeof(void *);
 
     start = nelts / (bucket_size / (2 * sizeof(void *)));

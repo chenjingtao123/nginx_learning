@@ -74,7 +74,7 @@ void ngx_debug_point(void);
 
 
 extern int            ngx_argc;
-extern char         **ngx_argv;
+extern char         **ngx_argv;//保存main方法的参数信息
 extern char         **ngx_os_argv;
 
 extern ngx_pid_t      ngx_pid;

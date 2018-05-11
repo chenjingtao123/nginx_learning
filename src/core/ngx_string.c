@@ -26,7 +26,7 @@ ngx_strlow(u_char *dst, u_char *src, size_t n)
     }
 }
 
-
+/*copy string*/
 u_char *
 ngx_cpystrn(u_char *dst, u_char *src, size_t n)
 {

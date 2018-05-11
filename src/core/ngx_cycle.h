@@ -36,9 +36,9 @@ struct ngx_shm_zone_s {
 
 struct ngx_cycle_s {
     void                  ****conf_ctx;
-    ngx_pool_t               *pool;
+    ngx_pool_t               *pool;//内存池
 
-    ngx_log_t                *log;
+    ngx_log_t                *log;//日志->/opt/nginx/logs/error.log
     ngx_log_t                 new_log;
 
     ngx_connection_t        **files;
