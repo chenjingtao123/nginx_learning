@@ -39,11 +39,11 @@ ngx_array_destroy(ngx_array_t *a)
     ngx_pool_t  *p;
 
     p = a->pool;
-
+    //1：销毁数组存储元素的内存，即数据区的内存
     if ((u_char *) a->elts + a->size * a->nalloc == p->d.last) {
         p->d.last -= a->size * a->nalloc;
     }
-
+    //2：销毁数组本身的内存，即结构体array本身的内存
     if ((u_char *) a + sizeof(ngx_array_t) == p->d.last) {
         p->d.last = (u_char *) a;
     }
@@ -64,7 +64,7 @@ ngx_array_push(ngx_array_t *a)
         size = a->size * a->nalloc;
 
         p = a->pool;
-
+        //至少还可以容纳一个元素
         if ((u_char *) a->elts + size == p->d.last
             && p->d.last + a->size <= p->d.end)
         {
@@ -112,7 +112,7 @@ ngx_array_push_n(ngx_array_t *a, ngx_uint_t n)
         /* the array is full */
 
         p = a->pool;
-
+        //如果pool剩余的内存能够容纳这n个元素，就不用重新分配内存
         if ((u_char *) a->elts + a->size * a->nalloc == p->d.last
             && p->d.last + size <= p->d.end)
         {
@@ -126,7 +126,7 @@ ngx_array_push_n(ngx_array_t *a, ngx_uint_t n)
 
         } else {
             /* allocate a new array */
-
+            ////如果pool剩余的内存不能够容纳这n个元素，就重新分配内存
             nalloc = 2 * ((n >= a->nalloc) ? n : a->nalloc);
 
             new = ngx_palloc(p, nalloc * a->size);

@@ -1,3 +1,3 @@
-/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles/edit_cache.dir
-/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles/nginx_learning.dir
+/mnt/hgfs/workspace/nginx_learning/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/mnt/hgfs/workspace/nginx_learning/cmake-build-debug/CMakeFiles/edit_cache.dir
+/mnt/hgfs/workspace/nginx_learning/cmake-build-debug/CMakeFiles/nginx_learning.dir

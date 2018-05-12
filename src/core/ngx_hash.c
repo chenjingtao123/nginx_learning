@@ -244,10 +244,11 @@ ngx_hash_find_combined(ngx_hash_combined_t *hash, ngx_uint_t key, u_char *name,
     return NULL;
 }
 
-
+//以sizeof(void*)对齐
 #define NGX_HASH_ELT_SIZE(name)                                               \
     (sizeof(void *) + ngx_align((name)->key.len + 2, sizeof(void *)))
 
+//nelts是names数组中(实际)元素的个数
 ngx_int_t
 ngx_hash_init(ngx_hash_init_t *hinit, ngx_hash_key_t *names, ngx_uint_t nelts)
 {
@@ -265,6 +266,7 @@ ngx_hash_init(ngx_hash_init_t *hinit, ngx_hash_key_t *names, ngx_uint_t nelts)
         //检查bucket_size是否合法，也就是它的值必须保证一个桶至少能存放一个<key,value>键值对
         if (hinit->bucket_size < NGX_HASH_ELT_SIZE(&names[n]) + sizeof(void *))
         {
+            ////有任何一个元素，桶的大小不够为该元素分配空间，则退出
             ngx_log_error(NGX_LOG_EMERG, hinit->pool->log, 0,
                           "could not build the %s, you should "
                           "increase %s_bucket_size: %i",
@@ -272,21 +274,25 @@ ngx_hash_init(ngx_hash_init_t *hinit, ngx_hash_key_t *names, ngx_uint_t nelts)
             return NGX_ERROR;
         }
     }
-
+    //test 是short数组，用于临时保存每个桶的当前大小
     test = ngx_alloc(hinit->max_size * sizeof(u_short), hinit->pool->log);
     if (test == NULL) {
         return NGX_ERROR;
     }
     //除去桶标记后桶的大小,每个桶都用一个值位NULL的void*指针来标记结束
     bucket_size = hinit->bucket_size - sizeof(void *);
-
+    /* 计算需要桶数目的下界
+          每个元素最少需要 NGX_HASH_ELT_SIZE(&name[n]) > (2*sizeof(void*)) 的空间,2*sizeof(void*)=值位NULL的void*指针标记+sizeof(void *value)
+          因此 bucket_size 大小的桶最多能容下 bucket_size/(2*sizeof(void*)) 个元素
+          因此 nelts 个元素就最少需要start个桶。
+    */
     start = nelts / (bucket_size / (2 * sizeof(void *)));
     start = start ? start : 1;
 
     if (hinit->max_size > 10000 && nelts && hinit->max_size / nelts < 100) {
         start = hinit->max_size - 1000;
     }
-
+    /* 从最小桶数目开始试，计算容下 nelts 个元素需要多少个桶 */
     for (size = start; size < hinit->max_size; size++) {
 
         ngx_memzero(test, size * sizeof(u_short));
@@ -295,7 +301,7 @@ ngx_hash_init(ngx_hash_init_t *hinit, ngx_hash_key_t *names, ngx_uint_t nelts)
             if (names[n].key.data == NULL) {
                 continue;
             }
-
+            /*从有size个桶到max_size个桶挨着试一遍,找出最少需要多少个桶*/
             key = names[n].key_hash % size;
             test[key] = (u_short) (test[key] + NGX_HASH_ELT_SIZE(&names[n]));
 

@@ -60,7 +60,7 @@ struct ngx_pool_s {
     ngx_pool_t           *current;//指向当前或本内存池
     ngx_chain_t          *chain;
     ngx_pool_large_t     *large;//指向大块内存分配，nginx中，大块内存分配直接采用标准系统接口malloc
-    ngx_pool_cleanup_t   *cleanup;
+    ngx_pool_cleanup_t   *cleanup;//释放内存池的callback
     ngx_log_t            *log;
 };
 

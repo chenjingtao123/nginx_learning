@@ -1,6 +1,6 @@
 The system is: Linux - 2.6.32-279.el6.x86_64 - x86_64
 Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
-Compiler: /opt/rh/devtoolset-3/root/usr/bin/cc 
+Compiler: /opt/rh/devtoolset-4/root/usr/bin/cc 
 Build flags: 
 Id flags: 
 
@@ -10,10 +10,10 @@ The output was:
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
 
-The C compiler identification is GNU, found in "/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles/3.6.3/CompilerIdC/a.out"
+The C compiler identification is GNU, found in "/mnt/hgfs/workspace/nginx_learning/cmake-build-debug/CMakeFiles/3.7.2/CompilerIdC/a.out"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
-Compiler: /opt/rh/devtoolset-3/root/usr/bin/c++ 
+Compiler: /opt/rh/devtoolset-4/root/usr/bin/c++ 
 Build flags: 
 Id flags: 
 
@@ -23,75 +23,75 @@ The output was:
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
 
-The CXX compiler identification is GNU, found in "/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles/3.6.3/CompilerIdCXX/a.out"
+The CXX compiler identification is GNU, found in "/mnt/hgfs/workspace/nginx_learning/cmake-build-debug/CMakeFiles/3.7.2/CompilerIdCXX/a.out"
 
 Determining if the C compiler works passed with the following output:
-Change Dir: /opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /mnt/hgfs/workspace/nginx_learning/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_e45cb/fast"
-/usr/bin/gmake -f CMakeFiles/cmTC_e45cb.dir/build.make CMakeFiles/cmTC_e45cb.dir/build
-gmake[1]: Entering directory `/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_e45cb.dir/testCCompiler.c.o
-/opt/rh/devtoolset-3/root/usr/bin/cc     -o CMakeFiles/cmTC_e45cb.dir/testCCompiler.c.o   -c /opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_e45cb
-/root/cmake3.6.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e45cb.dir/link.txt --verbose=1
-/opt/rh/devtoolset-3/root/usr/bin/cc       CMakeFiles/cmTC_e45cb.dir/testCCompiler.c.o  -o cmTC_e45cb -rdynamic 
-gmake[1]: Leaving directory `/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/gmake" "cmTC_5daa5/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_5daa5.dir/build.make CMakeFiles/cmTC_5daa5.dir/build
+gmake[1]: Entering directory `/mnt/hgfs/workspace/nginx_learning/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5daa5.dir/testCCompiler.c.o
+/opt/rh/devtoolset-4/root/usr/bin/cc     -o CMakeFiles/cmTC_5daa5.dir/testCCompiler.c.o   -c /mnt/hgfs/workspace/nginx_learning/cmake-build-debug/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_5daa5
+/opt/clion/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5daa5.dir/link.txt --verbose=1
+/opt/rh/devtoolset-4/root/usr/bin/cc       CMakeFiles/cmTC_5daa5.dir/testCCompiler.c.o  -o cmTC_5daa5 -rdynamic 
+gmake[1]: Leaving directory `/mnt/hgfs/workspace/nginx_learning/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: /opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /mnt/hgfs/workspace/nginx_learning/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_abdbc/fast"
-/usr/bin/gmake -f CMakeFiles/cmTC_abdbc.dir/build.make CMakeFiles/cmTC_abdbc.dir/build
-gmake[1]: Entering directory `/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_abdbc.dir/CMakeCCompilerABI.c.o
-/opt/rh/devtoolset-3/root/usr/bin/cc     -o CMakeFiles/cmTC_abdbc.dir/CMakeCCompilerABI.c.o   -c /root/cmake3.6.3/share/cmake-3.6/Modules/CMakeCCompilerABI.c
-Linking C executable cmTC_abdbc
-/root/cmake3.6.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_abdbc.dir/link.txt --verbose=1
-/opt/rh/devtoolset-3/root/usr/bin/cc      -v CMakeFiles/cmTC_abdbc.dir/CMakeCCompilerABI.c.o  -o cmTC_abdbc -rdynamic  
+Run Build Command:"/usr/bin/gmake" "cmTC_388f4/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_388f4.dir/build.make CMakeFiles/cmTC_388f4.dir/build
+gmake[1]: Entering directory `/mnt/hgfs/workspace/nginx_learning/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_388f4.dir/CMakeCCompilerABI.c.o
+/opt/rh/devtoolset-4/root/usr/bin/cc     -o CMakeFiles/cmTC_388f4.dir/CMakeCCompilerABI.c.o   -c /opt/clion/bin/cmake/share/cmake-3.7/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_388f4
+/opt/clion/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_388f4.dir/link.txt --verbose=1
+/opt/rh/devtoolset-4/root/usr/bin/cc      -v CMakeFiles/cmTC_388f4.dir/CMakeCCompilerABI.c.o  -o cmTC_388f4 -rdynamic  
 Using built-in specs.
-COLLECT_GCC=/opt/rh/devtoolset-3/root/usr/bin/cc
-COLLECT_LTO_WRAPPER=/opt/rh/devtoolset-3/root/usr/libexec/gcc/x86_64-redhat-linux/4.9.2/lto-wrapper
+COLLECT_GCC=/opt/rh/devtoolset-4/root/usr/bin/cc
+COLLECT_LTO_WRAPPER=/opt/rh/devtoolset-4/root/usr/libexec/gcc/x86_64-redhat-linux/5.3.1/lto-wrapper
 Target: x86_64-redhat-linux
-Configured with: ../configure --prefix=/opt/rh/devtoolset-3/root/usr --mandir=/opt/rh/devtoolset-3/root/usr/share/man --infodir=/opt/rh/devtoolset-3/root/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-bootstrap --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --enable-languages=c,c++,fortran,lto --enable-plugin --with-linker-hash-style=gnu --enable-initfini-array --disable-libgcj --with-isl=/builddir/build/BUILD/gcc-4.9.2-20150212/obj-x86_64-redhat-linux/isl-install --with-cloog=/builddir/build/BUILD/gcc-4.9.2-20150212/obj-x86_64-redhat-linux/cloog-install --with-mpc=/builddir/build/BUILD/gcc-4.9.2-20150212/obj-x86_64-redhat-linux/mpc-install --with-tune=generic --with-arch_32=i686 --build=x86_64-redhat-linux
+Configured with: ../configure --enable-bootstrap --enable-languages=c,c++,fortran,lto --prefix=/opt/rh/devtoolset-4/root/usr --mandir=/opt/rh/devtoolset-4/root/usr/share/man --infodir=/opt/rh/devtoolset-4/root/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --enable-plugin --with-linker-hash-style=gnu --enable-initfini-array --disable-libgcj --with-default-libstdcxx-abi=gcc4-compatible --with-isl=/builddir/build/BUILD/gcc-5.3.1-20160406/obj-x86_64-redhat-linux/isl-install --enable-libmpx --with-mpc=/builddir/build/BUILD/gcc-5.3.1-20160406/obj-x86_64-redhat-linux/mpc-install --with-tune=generic --with-arch_32=i686 --build=x86_64-redhat-linux
 Thread model: posix
-gcc version 4.9.2 20150212 (Red Hat 4.9.2-6) (GCC) 
-COMPILER_PATH=/opt/rh/devtoolset-3/root/usr/libexec/gcc/x86_64-redhat-linux/4.9.2/:/opt/rh/devtoolset-3/root/usr/libexec/gcc/x86_64-redhat-linux/4.9.2/:/opt/rh/devtoolset-3/root/usr/libexec/gcc/x86_64-redhat-linux/:/opt/rh/devtoolset-3/root/usr/lib/gcc/x86_64-redhat-linux/4.9.2/:/opt/rh/devtoolset-3/root/usr/lib/gcc/x86_64-redhat-linux/
-LIBRARY_PATH=/opt/rh/devtoolset-3/root/usr/lib/gcc/x86_64-redhat-linux/4.9.2/:/opt/rh/devtoolset-3/root/usr/lib/gcc/x86_64-redhat-linux/4.9.2/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/rh/devtoolset-3/root/usr/lib/gcc/x86_64-redhat-linux/4.9.2/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_abdbc' '-rdynamic' '-mtune=generic' '-march=x86-64'
- /opt/rh/devtoolset-3/root/usr/libexec/gcc/x86_64-redhat-linux/4.9.2/collect2 -plugin /opt/rh/devtoolset-3/root/usr/libexec/gcc/x86_64-redhat-linux/4.9.2/liblto_plugin.so -plugin-opt=/opt/rh/devtoolset-3/root/usr/libexec/gcc/x86_64-redhat-linux/4.9.2/lto-wrapper -plugin-opt=-fresolution=/tmp/ccsPJMq5.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_abdbc /usr/lib/../lib64/crt1.o /usr/lib/../lib64/crti.o /opt/rh/devtoolset-3/root/usr/lib/gcc/x86_64-redhat-linux/4.9.2/crtbegin.o -L/opt/rh/devtoolset-3/root/usr/lib/gcc/x86_64-redhat-linux/4.9.2 -L/opt/rh/devtoolset-3/root/usr/lib/gcc/x86_64-redhat-linux/4.9.2/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/rh/devtoolset-3/root/usr/lib/gcc/x86_64-redhat-linux/4.9.2/../../.. CMakeFiles/cmTC_abdbc.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /opt/rh/devtoolset-3/root/usr/lib/gcc/x86_64-redhat-linux/4.9.2/crtend.o /usr/lib/../lib64/crtn.o
-gmake[1]: Leaving directory `/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles/CMakeTmp'
+gcc version 5.3.1 20160406 (Red Hat 5.3.1-6) (GCC) 
+COMPILER_PATH=/opt/rh/devtoolset-4/root/usr/libexec/gcc/x86_64-redhat-linux/5.3.1/:/opt/rh/devtoolset-4/root/usr/libexec/gcc/x86_64-redhat-linux/5.3.1/:/opt/rh/devtoolset-4/root/usr/libexec/gcc/x86_64-redhat-linux/:/opt/rh/devtoolset-4/root/usr/lib/gcc/x86_64-redhat-linux/5.3.1/:/opt/rh/devtoolset-4/root/usr/lib/gcc/x86_64-redhat-linux/
+LIBRARY_PATH=/opt/rh/devtoolset-4/root/usr/lib/gcc/x86_64-redhat-linux/5.3.1/:/opt/rh/devtoolset-4/root/usr/lib/gcc/x86_64-redhat-linux/5.3.1/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/rh/devtoolset-4/root/usr/lib/gcc/x86_64-redhat-linux/5.3.1/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_388f4' '-rdynamic' '-mtune=generic' '-march=x86-64'
+ /opt/rh/devtoolset-4/root/usr/libexec/gcc/x86_64-redhat-linux/5.3.1/collect2 -plugin /opt/rh/devtoolset-4/root/usr/libexec/gcc/x86_64-redhat-linux/5.3.1/liblto_plugin.so -plugin-opt=/opt/rh/devtoolset-4/root/usr/libexec/gcc/x86_64-redhat-linux/5.3.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccDD09O4.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_388f4 /usr/lib/../lib64/crt1.o /usr/lib/../lib64/crti.o /opt/rh/devtoolset-4/root/usr/lib/gcc/x86_64-redhat-linux/5.3.1/crtbegin.o -L/opt/rh/devtoolset-4/root/usr/lib/gcc/x86_64-redhat-linux/5.3.1 -L/opt/rh/devtoolset-4/root/usr/lib/gcc/x86_64-redhat-linux/5.3.1/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/rh/devtoolset-4/root/usr/lib/gcc/x86_64-redhat-linux/5.3.1/../../.. CMakeFiles/cmTC_388f4.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /opt/rh/devtoolset-4/root/usr/lib/gcc/x86_64-redhat-linux/5.3.1/crtend.o /usr/lib/../lib64/crtn.o
+gmake[1]: Leaving directory `/mnt/hgfs/workspace/nginx_learning/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /mnt/hgfs/workspace/nginx_learning/cmake-build-debug/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/gmake" "cmTC_abdbc/fast"]
-  ignore line: [/usr/bin/gmake -f CMakeFiles/cmTC_abdbc.dir/build.make CMakeFiles/cmTC_abdbc.dir/build]
-  ignore line: [gmake[1]: Entering directory `/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_abdbc.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/opt/rh/devtoolset-3/root/usr/bin/cc     -o CMakeFiles/cmTC_abdbc.dir/CMakeCCompilerABI.c.o   -c /root/cmake3.6.3/share/cmake-3.6/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTC_abdbc]
-  ignore line: [/root/cmake3.6.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_abdbc.dir/link.txt --verbose=1]
-  ignore line: [/opt/rh/devtoolset-3/root/usr/bin/cc      -v CMakeFiles/cmTC_abdbc.dir/CMakeCCompilerABI.c.o  -o cmTC_abdbc -rdynamic  ]
+  ignore line: [Run Build Command:"/usr/bin/gmake" "cmTC_388f4/fast"]
+  ignore line: [/usr/bin/gmake -f CMakeFiles/cmTC_388f4.dir/build.make CMakeFiles/cmTC_388f4.dir/build]
+  ignore line: [gmake[1]: Entering directory `/mnt/hgfs/workspace/nginx_learning/cmake-build-debug/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_388f4.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/opt/rh/devtoolset-4/root/usr/bin/cc     -o CMakeFiles/cmTC_388f4.dir/CMakeCCompilerABI.c.o   -c /opt/clion/bin/cmake/share/cmake-3.7/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_388f4]
+  ignore line: [/opt/clion/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_388f4.dir/link.txt --verbose=1]
+  ignore line: [/opt/rh/devtoolset-4/root/usr/bin/cc      -v CMakeFiles/cmTC_388f4.dir/CMakeCCompilerABI.c.o  -o cmTC_388f4 -rdynamic  ]
   ignore line: [Using built-in specs.]
-  ignore line: [COLLECT_GCC=/opt/rh/devtoolset-3/root/usr/bin/cc]
-  ignore line: [COLLECT_LTO_WRAPPER=/opt/rh/devtoolset-3/root/usr/libexec/gcc/x86_64-redhat-linux/4.9.2/lto-wrapper]
+  ignore line: [COLLECT_GCC=/opt/rh/devtoolset-4/root/usr/bin/cc]
+  ignore line: [COLLECT_LTO_WRAPPER=/opt/rh/devtoolset-4/root/usr/libexec/gcc/x86_64-redhat-linux/5.3.1/lto-wrapper]
   ignore line: [Target: x86_64-redhat-linux]
-  ignore line: [Configured with: ../configure --prefix=/opt/rh/devtoolset-3/root/usr --mandir=/opt/rh/devtoolset-3/root/usr/share/man --infodir=/opt/rh/devtoolset-3/root/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-bootstrap --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --enable-languages=c,c++,fortran,lto --enable-plugin --with-linker-hash-style=gnu --enable-initfini-array --disable-libgcj --with-isl=/builddir/build/BUILD/gcc-4.9.2-20150212/obj-x86_64-redhat-linux/isl-install --with-cloog=/builddir/build/BUILD/gcc-4.9.2-20150212/obj-x86_64-redhat-linux/cloog-install --with-mpc=/builddir/build/BUILD/gcc-4.9.2-20150212/obj-x86_64-redhat-linux/mpc-install --with-tune=generic --with-arch_32=i686 --build=x86_64-redhat-linux]
+  ignore line: [Configured with: ../configure --enable-bootstrap --enable-languages=c,c++,fortran,lto --prefix=/opt/rh/devtoolset-4/root/usr --mandir=/opt/rh/devtoolset-4/root/usr/share/man --infodir=/opt/rh/devtoolset-4/root/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --enable-plugin --with-linker-hash-style=gnu --enable-initfini-array --disable-libgcj --with-default-libstdcxx-abi=gcc4-compatible --with-isl=/builddir/build/BUILD/gcc-5.3.1-20160406/obj-x86_64-redhat-linux/isl-install --enable-libmpx --with-mpc=/builddir/build/BUILD/gcc-5.3.1-20160406/obj-x86_64-redhat-linux/mpc-install --with-tune=generic --with-arch_32=i686 --build=x86_64-redhat-linux]
   ignore line: [Thread model: posix]
-  ignore line: [gcc version 4.9.2 20150212 (Red Hat 4.9.2-6) (GCC) ]
-  ignore line: [COMPILER_PATH=/opt/rh/devtoolset-3/root/usr/libexec/gcc/x86_64-redhat-linux/4.9.2/:/opt/rh/devtoolset-3/root/usr/libexec/gcc/x86_64-redhat-linux/4.9.2/:/opt/rh/devtoolset-3/root/usr/libexec/gcc/x86_64-redhat-linux/:/opt/rh/devtoolset-3/root/usr/lib/gcc/x86_64-redhat-linux/4.9.2/:/opt/rh/devtoolset-3/root/usr/lib/gcc/x86_64-redhat-linux/]
-  ignore line: [LIBRARY_PATH=/opt/rh/devtoolset-3/root/usr/lib/gcc/x86_64-redhat-linux/4.9.2/:/opt/rh/devtoolset-3/root/usr/lib/gcc/x86_64-redhat-linux/4.9.2/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/rh/devtoolset-3/root/usr/lib/gcc/x86_64-redhat-linux/4.9.2/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_abdbc' '-rdynamic' '-mtune=generic' '-march=x86-64']
-  link line: [ /opt/rh/devtoolset-3/root/usr/libexec/gcc/x86_64-redhat-linux/4.9.2/collect2 -plugin /opt/rh/devtoolset-3/root/usr/libexec/gcc/x86_64-redhat-linux/4.9.2/liblto_plugin.so -plugin-opt=/opt/rh/devtoolset-3/root/usr/libexec/gcc/x86_64-redhat-linux/4.9.2/lto-wrapper -plugin-opt=-fresolution=/tmp/ccsPJMq5.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_abdbc /usr/lib/../lib64/crt1.o /usr/lib/../lib64/crti.o /opt/rh/devtoolset-3/root/usr/lib/gcc/x86_64-redhat-linux/4.9.2/crtbegin.o -L/opt/rh/devtoolset-3/root/usr/lib/gcc/x86_64-redhat-linux/4.9.2 -L/opt/rh/devtoolset-3/root/usr/lib/gcc/x86_64-redhat-linux/4.9.2/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/rh/devtoolset-3/root/usr/lib/gcc/x86_64-redhat-linux/4.9.2/../../.. CMakeFiles/cmTC_abdbc.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /opt/rh/devtoolset-3/root/usr/lib/gcc/x86_64-redhat-linux/4.9.2/crtend.o /usr/lib/../lib64/crtn.o]
-    arg [/opt/rh/devtoolset-3/root/usr/libexec/gcc/x86_64-redhat-linux/4.9.2/collect2] ==> ignore
+  ignore line: [gcc version 5.3.1 20160406 (Red Hat 5.3.1-6) (GCC) ]
+  ignore line: [COMPILER_PATH=/opt/rh/devtoolset-4/root/usr/libexec/gcc/x86_64-redhat-linux/5.3.1/:/opt/rh/devtoolset-4/root/usr/libexec/gcc/x86_64-redhat-linux/5.3.1/:/opt/rh/devtoolset-4/root/usr/libexec/gcc/x86_64-redhat-linux/:/opt/rh/devtoolset-4/root/usr/lib/gcc/x86_64-redhat-linux/5.3.1/:/opt/rh/devtoolset-4/root/usr/lib/gcc/x86_64-redhat-linux/]
+  ignore line: [LIBRARY_PATH=/opt/rh/devtoolset-4/root/usr/lib/gcc/x86_64-redhat-linux/5.3.1/:/opt/rh/devtoolset-4/root/usr/lib/gcc/x86_64-redhat-linux/5.3.1/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/rh/devtoolset-4/root/usr/lib/gcc/x86_64-redhat-linux/5.3.1/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_388f4' '-rdynamic' '-mtune=generic' '-march=x86-64']
+  link line: [ /opt/rh/devtoolset-4/root/usr/libexec/gcc/x86_64-redhat-linux/5.3.1/collect2 -plugin /opt/rh/devtoolset-4/root/usr/libexec/gcc/x86_64-redhat-linux/5.3.1/liblto_plugin.so -plugin-opt=/opt/rh/devtoolset-4/root/usr/libexec/gcc/x86_64-redhat-linux/5.3.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccDD09O4.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_388f4 /usr/lib/../lib64/crt1.o /usr/lib/../lib64/crti.o /opt/rh/devtoolset-4/root/usr/lib/gcc/x86_64-redhat-linux/5.3.1/crtbegin.o -L/opt/rh/devtoolset-4/root/usr/lib/gcc/x86_64-redhat-linux/5.3.1 -L/opt/rh/devtoolset-4/root/usr/lib/gcc/x86_64-redhat-linux/5.3.1/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/rh/devtoolset-4/root/usr/lib/gcc/x86_64-redhat-linux/5.3.1/../../.. CMakeFiles/cmTC_388f4.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /opt/rh/devtoolset-4/root/usr/lib/gcc/x86_64-redhat-linux/5.3.1/crtend.o /usr/lib/../lib64/crtn.o]
+    arg [/opt/rh/devtoolset-4/root/usr/libexec/gcc/x86_64-redhat-linux/5.3.1/collect2] ==> ignore
     arg [-plugin] ==> ignore
-    arg [/opt/rh/devtoolset-3/root/usr/libexec/gcc/x86_64-redhat-linux/4.9.2/liblto_plugin.so] ==> ignore
-    arg [-plugin-opt=/opt/rh/devtoolset-3/root/usr/libexec/gcc/x86_64-redhat-linux/4.9.2/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccsPJMq5.res] ==> ignore
+    arg [/opt/rh/devtoolset-4/root/usr/libexec/gcc/x86_64-redhat-linux/5.3.1/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/opt/rh/devtoolset-4/root/usr/libexec/gcc/x86_64-redhat-linux/5.3.1/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccDD09O4.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -107,16 +107,16 @@ Parsed C implicit link information from above output:
     arg [-dynamic-linker] ==> ignore
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_abdbc] ==> ignore
+    arg [cmTC_388f4] ==> ignore
     arg [/usr/lib/../lib64/crt1.o] ==> ignore
     arg [/usr/lib/../lib64/crti.o] ==> ignore
-    arg [/opt/rh/devtoolset-3/root/usr/lib/gcc/x86_64-redhat-linux/4.9.2/crtbegin.o] ==> ignore
-    arg [-L/opt/rh/devtoolset-3/root/usr/lib/gcc/x86_64-redhat-linux/4.9.2] ==> dir [/opt/rh/devtoolset-3/root/usr/lib/gcc/x86_64-redhat-linux/4.9.2]
-    arg [-L/opt/rh/devtoolset-3/root/usr/lib/gcc/x86_64-redhat-linux/4.9.2/../../../../lib64] ==> dir [/opt/rh/devtoolset-3/root/usr/lib/gcc/x86_64-redhat-linux/4.9.2/../../../../lib64]
+    arg [/opt/rh/devtoolset-4/root/usr/lib/gcc/x86_64-redhat-linux/5.3.1/crtbegin.o] ==> ignore
+    arg [-L/opt/rh/devtoolset-4/root/usr/lib/gcc/x86_64-redhat-linux/5.3.1] ==> dir [/opt/rh/devtoolset-4/root/usr/lib/gcc/x86_64-redhat-linux/5.3.1]
+    arg [-L/opt/rh/devtoolset-4/root/usr/lib/gcc/x86_64-redhat-linux/5.3.1/../../../../lib64] ==> dir [/opt/rh/devtoolset-4/root/usr/lib/gcc/x86_64-redhat-linux/5.3.1/../../../../lib64]
     arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
     arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
-    arg [-L/opt/rh/devtoolset-3/root/usr/lib/gcc/x86_64-redhat-linux/4.9.2/../../..] ==> dir [/opt/rh/devtoolset-3/root/usr/lib/gcc/x86_64-redhat-linux/4.9.2/../../..]
-    arg [CMakeFiles/cmTC_abdbc.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-L/opt/rh/devtoolset-4/root/usr/lib/gcc/x86_64-redhat-linux/5.3.1/../../..] ==> dir [/opt/rh/devtoolset-4/root/usr/lib/gcc/x86_64-redhat-linux/5.3.1/../../..]
+    arg [CMakeFiles/cmTC_388f4.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--as-needed] ==> ignore
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -126,36 +126,36 @@ Parsed C implicit link information from above output:
     arg [--as-needed] ==> ignore
     arg [-lgcc_s] ==> lib [gcc_s]
     arg [--no-as-needed] ==> ignore
-    arg [/opt/rh/devtoolset-3/root/usr/lib/gcc/x86_64-redhat-linux/4.9.2/crtend.o] ==> ignore
+    arg [/opt/rh/devtoolset-4/root/usr/lib/gcc/x86_64-redhat-linux/5.3.1/crtend.o] ==> ignore
     arg [/usr/lib/../lib64/crtn.o] ==> ignore
   remove lib [gcc]
   remove lib [gcc_s]
   remove lib [gcc]
   remove lib [gcc_s]
-  collapse library dir [/opt/rh/devtoolset-3/root/usr/lib/gcc/x86_64-redhat-linux/4.9.2] ==> [/opt/rh/devtoolset-3/root/usr/lib/gcc/x86_64-redhat-linux/4.9.2]
-  collapse library dir [/opt/rh/devtoolset-3/root/usr/lib/gcc/x86_64-redhat-linux/4.9.2/../../../../lib64] ==> [/opt/rh/devtoolset-3/root/usr/lib64]
+  collapse library dir [/opt/rh/devtoolset-4/root/usr/lib/gcc/x86_64-redhat-linux/5.3.1] ==> [/opt/rh/devtoolset-4/root/usr/lib/gcc/x86_64-redhat-linux/5.3.1]
+  collapse library dir [/opt/rh/devtoolset-4/root/usr/lib/gcc/x86_64-redhat-linux/5.3.1/../../../../lib64] ==> [/opt/rh/devtoolset-4/root/usr/lib64]
   collapse library dir [/lib/../lib64] ==> [/lib64]
   collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
-  collapse library dir [/opt/rh/devtoolset-3/root/usr/lib/gcc/x86_64-redhat-linux/4.9.2/../../..] ==> [/opt/rh/devtoolset-3/root/usr/lib]
+  collapse library dir [/opt/rh/devtoolset-4/root/usr/lib/gcc/x86_64-redhat-linux/5.3.1/../../..] ==> [/opt/rh/devtoolset-4/root/usr/lib]
   implicit libs: [c]
-  implicit dirs: [/opt/rh/devtoolset-3/root/usr/lib/gcc/x86_64-redhat-linux/4.9.2;/opt/rh/devtoolset-3/root/usr/lib64;/lib64;/usr/lib64;/opt/rh/devtoolset-3/root/usr/lib]
+  implicit dirs: [/opt/rh/devtoolset-4/root/usr/lib/gcc/x86_64-redhat-linux/5.3.1;/opt/rh/devtoolset-4/root/usr/lib64;/lib64;/usr/lib64;/opt/rh/devtoolset-4/root/usr/lib]
   implicit fwks: []
 
 
 
 
 Detecting C [-std=c11] compiler features compiled with the following output:
-Change Dir: /opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /mnt/hgfs/workspace/nginx_learning/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_bd603/fast"
-/usr/bin/gmake -f CMakeFiles/cmTC_bd603.dir/build.make CMakeFiles/cmTC_bd603.dir/build
-gmake[1]: Entering directory `/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_bd603.dir/feature_tests.c.o
-/opt/rh/devtoolset-3/root/usr/bin/cc    -std=c11 -o CMakeFiles/cmTC_bd603.dir/feature_tests.c.o   -c /opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles/feature_tests.c
-Linking C executable cmTC_bd603
-/root/cmake3.6.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bd603.dir/link.txt --verbose=1
-/opt/rh/devtoolset-3/root/usr/bin/cc       CMakeFiles/cmTC_bd603.dir/feature_tests.c.o  -o cmTC_bd603 -rdynamic 
-gmake[1]: Leaving directory `/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/gmake" "cmTC_dce78/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_dce78.dir/build.make CMakeFiles/cmTC_dce78.dir/build
+gmake[1]: Entering directory `/mnt/hgfs/workspace/nginx_learning/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_dce78.dir/feature_tests.c.o
+/opt/rh/devtoolset-4/root/usr/bin/cc    -std=c11 -o CMakeFiles/cmTC_dce78.dir/feature_tests.c.o   -c /mnt/hgfs/workspace/nginx_learning/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_dce78
+/opt/clion/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dce78.dir/link.txt --verbose=1
+/opt/rh/devtoolset-4/root/usr/bin/cc       CMakeFiles/cmTC_dce78.dir/feature_tests.c.o  -o cmTC_dce78 -rdynamic 
+gmake[1]: Leaving directory `/mnt/hgfs/workspace/nginx_learning/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -165,17 +165,17 @@ gmake[1]: Leaving directory `/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFile
 
 
 Detecting C [-std=c99] compiler features compiled with the following output:
-Change Dir: /opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /mnt/hgfs/workspace/nginx_learning/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_d11ca/fast"
-/usr/bin/gmake -f CMakeFiles/cmTC_d11ca.dir/build.make CMakeFiles/cmTC_d11ca.dir/build
-gmake[1]: Entering directory `/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_d11ca.dir/feature_tests.c.o
-/opt/rh/devtoolset-3/root/usr/bin/cc    -std=c99 -o CMakeFiles/cmTC_d11ca.dir/feature_tests.c.o   -c /opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles/feature_tests.c
-Linking C executable cmTC_d11ca
-/root/cmake3.6.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d11ca.dir/link.txt --verbose=1
-/opt/rh/devtoolset-3/root/usr/bin/cc       CMakeFiles/cmTC_d11ca.dir/feature_tests.c.o  -o cmTC_d11ca -rdynamic 
-gmake[1]: Leaving directory `/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/gmake" "cmTC_8d647/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_8d647.dir/build.make CMakeFiles/cmTC_8d647.dir/build
+gmake[1]: Entering directory `/mnt/hgfs/workspace/nginx_learning/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8d647.dir/feature_tests.c.o
+/opt/rh/devtoolset-4/root/usr/bin/cc    -std=c99 -o CMakeFiles/cmTC_8d647.dir/feature_tests.c.o   -c /mnt/hgfs/workspace/nginx_learning/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_8d647
+/opt/clion/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8d647.dir/link.txt --verbose=1
+/opt/rh/devtoolset-4/root/usr/bin/cc       CMakeFiles/cmTC_8d647.dir/feature_tests.c.o  -o cmTC_8d647 -rdynamic 
+gmake[1]: Leaving directory `/mnt/hgfs/workspace/nginx_learning/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -185,17 +185,17 @@ gmake[1]: Leaving directory `/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFile
 
 
 Detecting C [-std=c90] compiler features compiled with the following output:
-Change Dir: /opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /mnt/hgfs/workspace/nginx_learning/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_16eb1/fast"
-/usr/bin/gmake -f CMakeFiles/cmTC_16eb1.dir/build.make CMakeFiles/cmTC_16eb1.dir/build
-gmake[1]: Entering directory `/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_16eb1.dir/feature_tests.c.o
-/opt/rh/devtoolset-3/root/usr/bin/cc    -std=c90 -o CMakeFiles/cmTC_16eb1.dir/feature_tests.c.o   -c /opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles/feature_tests.c
-Linking C executable cmTC_16eb1
-/root/cmake3.6.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_16eb1.dir/link.txt --verbose=1
-/opt/rh/devtoolset-3/root/usr/bin/cc       CMakeFiles/cmTC_16eb1.dir/feature_tests.c.o  -o cmTC_16eb1 -rdynamic 
-gmake[1]: Leaving directory `/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/gmake" "cmTC_ab5f7/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_ab5f7.dir/build.make CMakeFiles/cmTC_ab5f7.dir/build
+gmake[1]: Entering directory `/mnt/hgfs/workspace/nginx_learning/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ab5f7.dir/feature_tests.c.o
+/opt/rh/devtoolset-4/root/usr/bin/cc    -std=c90 -o CMakeFiles/cmTC_ab5f7.dir/feature_tests.c.o   -c /mnt/hgfs/workspace/nginx_learning/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_ab5f7
+/opt/clion/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ab5f7.dir/link.txt --verbose=1
+/opt/rh/devtoolset-4/root/usr/bin/cc       CMakeFiles/cmTC_ab5f7.dir/feature_tests.c.o  -o cmTC_ab5f7 -rdynamic 
+gmake[1]: Leaving directory `/mnt/hgfs/workspace/nginx_learning/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -203,72 +203,72 @@ gmake[1]: Leaving directory `/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFile
     Feature record: C_FEATURE:0c_static_assert
     Feature record: C_FEATURE:0c_variadic_macros
 Determining if the CXX compiler works passed with the following output:
-Change Dir: /opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /mnt/hgfs/workspace/nginx_learning/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_a0fad/fast"
-/usr/bin/gmake -f CMakeFiles/cmTC_a0fad.dir/build.make CMakeFiles/cmTC_a0fad.dir/build
-gmake[1]: Entering directory `/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_a0fad.dir/testCXXCompiler.cxx.o
-/opt/rh/devtoolset-3/root/usr/bin/c++      -o CMakeFiles/cmTC_a0fad.dir/testCXXCompiler.cxx.o -c /opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_a0fad
-/root/cmake3.6.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a0fad.dir/link.txt --verbose=1
-/opt/rh/devtoolset-3/root/usr/bin/c++        CMakeFiles/cmTC_a0fad.dir/testCXXCompiler.cxx.o  -o cmTC_a0fad -rdynamic 
-gmake[1]: Leaving directory `/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/gmake" "cmTC_b2186/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_b2186.dir/build.make CMakeFiles/cmTC_b2186.dir/build
+gmake[1]: Entering directory `/mnt/hgfs/workspace/nginx_learning/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_b2186.dir/testCXXCompiler.cxx.o
+/opt/rh/devtoolset-4/root/usr/bin/c++      -o CMakeFiles/cmTC_b2186.dir/testCXXCompiler.cxx.o -c /mnt/hgfs/workspace/nginx_learning/cmake-build-debug/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_b2186
+/opt/clion/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b2186.dir/link.txt --verbose=1
+/opt/rh/devtoolset-4/root/usr/bin/c++        CMakeFiles/cmTC_b2186.dir/testCXXCompiler.cxx.o  -o cmTC_b2186 -rdynamic 
+gmake[1]: Leaving directory `/mnt/hgfs/workspace/nginx_learning/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: /opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /mnt/hgfs/workspace/nginx_learning/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_1395c/fast"
-/usr/bin/gmake -f CMakeFiles/cmTC_1395c.dir/build.make CMakeFiles/cmTC_1395c.dir/build
-gmake[1]: Entering directory `/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_1395c.dir/CMakeCXXCompilerABI.cpp.o
-/opt/rh/devtoolset-3/root/usr/bin/c++      -o CMakeFiles/cmTC_1395c.dir/CMakeCXXCompilerABI.cpp.o -c /root/cmake3.6.3/share/cmake-3.6/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_1395c
-/root/cmake3.6.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1395c.dir/link.txt --verbose=1
-/opt/rh/devtoolset-3/root/usr/bin/c++       -v CMakeFiles/cmTC_1395c.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_1395c -rdynamic  
+Run Build Command:"/usr/bin/gmake" "cmTC_b1b36/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_b1b36.dir/build.make CMakeFiles/cmTC_b1b36.dir/build
+gmake[1]: Entering directory `/mnt/hgfs/workspace/nginx_learning/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_b1b36.dir/CMakeCXXCompilerABI.cpp.o
+/opt/rh/devtoolset-4/root/usr/bin/c++      -o CMakeFiles/cmTC_b1b36.dir/CMakeCXXCompilerABI.cpp.o -c /opt/clion/bin/cmake/share/cmake-3.7/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_b1b36
+/opt/clion/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b1b36.dir/link.txt --verbose=1
+/opt/rh/devtoolset-4/root/usr/bin/c++       -v CMakeFiles/cmTC_b1b36.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_b1b36 -rdynamic  
 Using built-in specs.
-COLLECT_GCC=/opt/rh/devtoolset-3/root/usr/bin/c++
-COLLECT_LTO_WRAPPER=/opt/rh/devtoolset-3/root/usr/libexec/gcc/x86_64-redhat-linux/4.9.2/lto-wrapper
+COLLECT_GCC=/opt/rh/devtoolset-4/root/usr/bin/c++
+COLLECT_LTO_WRAPPER=/opt/rh/devtoolset-4/root/usr/libexec/gcc/x86_64-redhat-linux/5.3.1/lto-wrapper
 Target: x86_64-redhat-linux
-Configured with: ../configure --prefix=/opt/rh/devtoolset-3/root/usr --mandir=/opt/rh/devtoolset-3/root/usr/share/man --infodir=/opt/rh/devtoolset-3/root/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-bootstrap --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --enable-languages=c,c++,fortran,lto --enable-plugin --with-linker-hash-style=gnu --enable-initfini-array --disable-libgcj --with-isl=/builddir/build/BUILD/gcc-4.9.2-20150212/obj-x86_64-redhat-linux/isl-install --with-cloog=/builddir/build/BUILD/gcc-4.9.2-20150212/obj-x86_64-redhat-linux/cloog-install --with-mpc=/builddir/build/BUILD/gcc-4.9.2-20150212/obj-x86_64-redhat-linux/mpc-install --with-tune=generic --with-arch_32=i686 --build=x86_64-redhat-linux
+Configured with: ../configure --enable-bootstrap --enable-languages=c,c++,fortran,lto --prefix=/opt/rh/devtoolset-4/root/usr --mandir=/opt/rh/devtoolset-4/root/usr/share/man --infodir=/opt/rh/devtoolset-4/root/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --enable-plugin --with-linker-hash-style=gnu --enable-initfini-array --disable-libgcj --with-default-libstdcxx-abi=gcc4-compatible --with-isl=/builddir/build/BUILD/gcc-5.3.1-20160406/obj-x86_64-redhat-linux/isl-install --enable-libmpx --with-mpc=/builddir/build/BUILD/gcc-5.3.1-20160406/obj-x86_64-redhat-linux/mpc-install --with-tune=generic --with-arch_32=i686 --build=x86_64-redhat-linux
 Thread model: posix
-gcc version 4.9.2 20150212 (Red Hat 4.9.2-6) (GCC) 
-COMPILER_PATH=/opt/rh/devtoolset-3/root/usr/libexec/gcc/x86_64-redhat-linux/4.9.2/:/opt/rh/devtoolset-3/root/usr/libexec/gcc/x86_64-redhat-linux/4.9.2/:/opt/rh/devtoolset-3/root/usr/libexec/gcc/x86_64-redhat-linux/:/opt/rh/devtoolset-3/root/usr/lib/gcc/x86_64-redhat-linux/4.9.2/:/opt/rh/devtoolset-3/root/usr/lib/gcc/x86_64-redhat-linux/
-LIBRARY_PATH=/opt/rh/devtoolset-3/root/usr/lib/gcc/x86_64-redhat-linux/4.9.2/:/opt/rh/devtoolset-3/root/usr/lib/gcc/x86_64-redhat-linux/4.9.2/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/rh/devtoolset-3/root/usr/lib/gcc/x86_64-redhat-linux/4.9.2/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_1395c' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /opt/rh/devtoolset-3/root/usr/libexec/gcc/x86_64-redhat-linux/4.9.2/collect2 -plugin /opt/rh/devtoolset-3/root/usr/libexec/gcc/x86_64-redhat-linux/4.9.2/liblto_plugin.so -plugin-opt=/opt/rh/devtoolset-3/root/usr/libexec/gcc/x86_64-redhat-linux/4.9.2/lto-wrapper -plugin-opt=-fresolution=/tmp/cc0dQ44V.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_1395c /usr/lib/../lib64/crt1.o /usr/lib/../lib64/crti.o /opt/rh/devtoolset-3/root/usr/lib/gcc/x86_64-redhat-linux/4.9.2/crtbegin.o -L/opt/rh/devtoolset-3/root/usr/lib/gcc/x86_64-redhat-linux/4.9.2 -L/opt/rh/devtoolset-3/root/usr/lib/gcc/x86_64-redhat-linux/4.9.2/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/rh/devtoolset-3/root/usr/lib/gcc/x86_64-redhat-linux/4.9.2/../../.. CMakeFiles/cmTC_1395c.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /opt/rh/devtoolset-3/root/usr/lib/gcc/x86_64-redhat-linux/4.9.2/crtend.o /usr/lib/../lib64/crtn.o
-gmake[1]: Leaving directory `/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles/CMakeTmp'
+gcc version 5.3.1 20160406 (Red Hat 5.3.1-6) (GCC) 
+COMPILER_PATH=/opt/rh/devtoolset-4/root/usr/libexec/gcc/x86_64-redhat-linux/5.3.1/:/opt/rh/devtoolset-4/root/usr/libexec/gcc/x86_64-redhat-linux/5.3.1/:/opt/rh/devtoolset-4/root/usr/libexec/gcc/x86_64-redhat-linux/:/opt/rh/devtoolset-4/root/usr/lib/gcc/x86_64-redhat-linux/5.3.1/:/opt/rh/devtoolset-4/root/usr/lib/gcc/x86_64-redhat-linux/
+LIBRARY_PATH=/opt/rh/devtoolset-4/root/usr/lib/gcc/x86_64-redhat-linux/5.3.1/:/opt/rh/devtoolset-4/root/usr/lib/gcc/x86_64-redhat-linux/5.3.1/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/rh/devtoolset-4/root/usr/lib/gcc/x86_64-redhat-linux/5.3.1/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_b1b36' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /opt/rh/devtoolset-4/root/usr/libexec/gcc/x86_64-redhat-linux/5.3.1/collect2 -plugin /opt/rh/devtoolset-4/root/usr/libexec/gcc/x86_64-redhat-linux/5.3.1/liblto_plugin.so -plugin-opt=/opt/rh/devtoolset-4/root/usr/libexec/gcc/x86_64-redhat-linux/5.3.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccw6OTI8.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_b1b36 /usr/lib/../lib64/crt1.o /usr/lib/../lib64/crti.o /opt/rh/devtoolset-4/root/usr/lib/gcc/x86_64-redhat-linux/5.3.1/crtbegin.o -L/opt/rh/devtoolset-4/root/usr/lib/gcc/x86_64-redhat-linux/5.3.1 -L/opt/rh/devtoolset-4/root/usr/lib/gcc/x86_64-redhat-linux/5.3.1/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/rh/devtoolset-4/root/usr/lib/gcc/x86_64-redhat-linux/5.3.1/../../.. CMakeFiles/cmTC_b1b36.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /opt/rh/devtoolset-4/root/usr/lib/gcc/x86_64-redhat-linux/5.3.1/crtend.o /usr/lib/../lib64/crtn.o
+gmake[1]: Leaving directory `/mnt/hgfs/workspace/nginx_learning/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /mnt/hgfs/workspace/nginx_learning/cmake-build-debug/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/gmake" "cmTC_1395c/fast"]
-  ignore line: [/usr/bin/gmake -f CMakeFiles/cmTC_1395c.dir/build.make CMakeFiles/cmTC_1395c.dir/build]
-  ignore line: [gmake[1]: Entering directory `/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_1395c.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/opt/rh/devtoolset-3/root/usr/bin/c++      -o CMakeFiles/cmTC_1395c.dir/CMakeCXXCompilerABI.cpp.o -c /root/cmake3.6.3/share/cmake-3.6/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTC_1395c]
-  ignore line: [/root/cmake3.6.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1395c.dir/link.txt --verbose=1]
-  ignore line: [/opt/rh/devtoolset-3/root/usr/bin/c++       -v CMakeFiles/cmTC_1395c.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_1395c -rdynamic  ]
+  ignore line: [Run Build Command:"/usr/bin/gmake" "cmTC_b1b36/fast"]
+  ignore line: [/usr/bin/gmake -f CMakeFiles/cmTC_b1b36.dir/build.make CMakeFiles/cmTC_b1b36.dir/build]
+  ignore line: [gmake[1]: Entering directory `/mnt/hgfs/workspace/nginx_learning/cmake-build-debug/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_b1b36.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/opt/rh/devtoolset-4/root/usr/bin/c++      -o CMakeFiles/cmTC_b1b36.dir/CMakeCXXCompilerABI.cpp.o -c /opt/clion/bin/cmake/share/cmake-3.7/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_b1b36]
+  ignore line: [/opt/clion/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b1b36.dir/link.txt --verbose=1]
+  ignore line: [/opt/rh/devtoolset-4/root/usr/bin/c++       -v CMakeFiles/cmTC_b1b36.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_b1b36 -rdynamic  ]
   ignore line: [Using built-in specs.]
-  ignore line: [COLLECT_GCC=/opt/rh/devtoolset-3/root/usr/bin/c++]
-  ignore line: [COLLECT_LTO_WRAPPER=/opt/rh/devtoolset-3/root/usr/libexec/gcc/x86_64-redhat-linux/4.9.2/lto-wrapper]
+  ignore line: [COLLECT_GCC=/opt/rh/devtoolset-4/root/usr/bin/c++]
+  ignore line: [COLLECT_LTO_WRAPPER=/opt/rh/devtoolset-4/root/usr/libexec/gcc/x86_64-redhat-linux/5.3.1/lto-wrapper]
   ignore line: [Target: x86_64-redhat-linux]
-  ignore line: [Configured with: ../configure --prefix=/opt/rh/devtoolset-3/root/usr --mandir=/opt/rh/devtoolset-3/root/usr/share/man --infodir=/opt/rh/devtoolset-3/root/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-bootstrap --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --enable-languages=c,c++,fortran,lto --enable-plugin --with-linker-hash-style=gnu --enable-initfini-array --disable-libgcj --with-isl=/builddir/build/BUILD/gcc-4.9.2-20150212/obj-x86_64-redhat-linux/isl-install --with-cloog=/builddir/build/BUILD/gcc-4.9.2-20150212/obj-x86_64-redhat-linux/cloog-install --with-mpc=/builddir/build/BUILD/gcc-4.9.2-20150212/obj-x86_64-redhat-linux/mpc-install --with-tune=generic --with-arch_32=i686 --build=x86_64-redhat-linux]
+  ignore line: [Configured with: ../configure --enable-bootstrap --enable-languages=c,c++,fortran,lto --prefix=/opt/rh/devtoolset-4/root/usr --mandir=/opt/rh/devtoolset-4/root/usr/share/man --infodir=/opt/rh/devtoolset-4/root/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --enable-plugin --with-linker-hash-style=gnu --enable-initfini-array --disable-libgcj --with-default-libstdcxx-abi=gcc4-compatible --with-isl=/builddir/build/BUILD/gcc-5.3.1-20160406/obj-x86_64-redhat-linux/isl-install --enable-libmpx --with-mpc=/builddir/build/BUILD/gcc-5.3.1-20160406/obj-x86_64-redhat-linux/mpc-install --with-tune=generic --with-arch_32=i686 --build=x86_64-redhat-linux]
   ignore line: [Thread model: posix]
-  ignore line: [gcc version 4.9.2 20150212 (Red Hat 4.9.2-6) (GCC) ]
-  ignore line: [COMPILER_PATH=/opt/rh/devtoolset-3/root/usr/libexec/gcc/x86_64-redhat-linux/4.9.2/:/opt/rh/devtoolset-3/root/usr/libexec/gcc/x86_64-redhat-linux/4.9.2/:/opt/rh/devtoolset-3/root/usr/libexec/gcc/x86_64-redhat-linux/:/opt/rh/devtoolset-3/root/usr/lib/gcc/x86_64-redhat-linux/4.9.2/:/opt/rh/devtoolset-3/root/usr/lib/gcc/x86_64-redhat-linux/]
-  ignore line: [LIBRARY_PATH=/opt/rh/devtoolset-3/root/usr/lib/gcc/x86_64-redhat-linux/4.9.2/:/opt/rh/devtoolset-3/root/usr/lib/gcc/x86_64-redhat-linux/4.9.2/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/rh/devtoolset-3/root/usr/lib/gcc/x86_64-redhat-linux/4.9.2/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_1395c' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /opt/rh/devtoolset-3/root/usr/libexec/gcc/x86_64-redhat-linux/4.9.2/collect2 -plugin /opt/rh/devtoolset-3/root/usr/libexec/gcc/x86_64-redhat-linux/4.9.2/liblto_plugin.so -plugin-opt=/opt/rh/devtoolset-3/root/usr/libexec/gcc/x86_64-redhat-linux/4.9.2/lto-wrapper -plugin-opt=-fresolution=/tmp/cc0dQ44V.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_1395c /usr/lib/../lib64/crt1.o /usr/lib/../lib64/crti.o /opt/rh/devtoolset-3/root/usr/lib/gcc/x86_64-redhat-linux/4.9.2/crtbegin.o -L/opt/rh/devtoolset-3/root/usr/lib/gcc/x86_64-redhat-linux/4.9.2 -L/opt/rh/devtoolset-3/root/usr/lib/gcc/x86_64-redhat-linux/4.9.2/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/rh/devtoolset-3/root/usr/lib/gcc/x86_64-redhat-linux/4.9.2/../../.. CMakeFiles/cmTC_1395c.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /opt/rh/devtoolset-3/root/usr/lib/gcc/x86_64-redhat-linux/4.9.2/crtend.o /usr/lib/../lib64/crtn.o]
-    arg [/opt/rh/devtoolset-3/root/usr/libexec/gcc/x86_64-redhat-linux/4.9.2/collect2] ==> ignore
+  ignore line: [gcc version 5.3.1 20160406 (Red Hat 5.3.1-6) (GCC) ]
+  ignore line: [COMPILER_PATH=/opt/rh/devtoolset-4/root/usr/libexec/gcc/x86_64-redhat-linux/5.3.1/:/opt/rh/devtoolset-4/root/usr/libexec/gcc/x86_64-redhat-linux/5.3.1/:/opt/rh/devtoolset-4/root/usr/libexec/gcc/x86_64-redhat-linux/:/opt/rh/devtoolset-4/root/usr/lib/gcc/x86_64-redhat-linux/5.3.1/:/opt/rh/devtoolset-4/root/usr/lib/gcc/x86_64-redhat-linux/]
+  ignore line: [LIBRARY_PATH=/opt/rh/devtoolset-4/root/usr/lib/gcc/x86_64-redhat-linux/5.3.1/:/opt/rh/devtoolset-4/root/usr/lib/gcc/x86_64-redhat-linux/5.3.1/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/rh/devtoolset-4/root/usr/lib/gcc/x86_64-redhat-linux/5.3.1/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_b1b36' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /opt/rh/devtoolset-4/root/usr/libexec/gcc/x86_64-redhat-linux/5.3.1/collect2 -plugin /opt/rh/devtoolset-4/root/usr/libexec/gcc/x86_64-redhat-linux/5.3.1/liblto_plugin.so -plugin-opt=/opt/rh/devtoolset-4/root/usr/libexec/gcc/x86_64-redhat-linux/5.3.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccw6OTI8.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_b1b36 /usr/lib/../lib64/crt1.o /usr/lib/../lib64/crti.o /opt/rh/devtoolset-4/root/usr/lib/gcc/x86_64-redhat-linux/5.3.1/crtbegin.o -L/opt/rh/devtoolset-4/root/usr/lib/gcc/x86_64-redhat-linux/5.3.1 -L/opt/rh/devtoolset-4/root/usr/lib/gcc/x86_64-redhat-linux/5.3.1/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/rh/devtoolset-4/root/usr/lib/gcc/x86_64-redhat-linux/5.3.1/../../.. CMakeFiles/cmTC_b1b36.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /opt/rh/devtoolset-4/root/usr/lib/gcc/x86_64-redhat-linux/5.3.1/crtend.o /usr/lib/../lib64/crtn.o]
+    arg [/opt/rh/devtoolset-4/root/usr/libexec/gcc/x86_64-redhat-linux/5.3.1/collect2] ==> ignore
     arg [-plugin] ==> ignore
-    arg [/opt/rh/devtoolset-3/root/usr/libexec/gcc/x86_64-redhat-linux/4.9.2/liblto_plugin.so] ==> ignore
-    arg [-plugin-opt=/opt/rh/devtoolset-3/root/usr/libexec/gcc/x86_64-redhat-linux/4.9.2/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/cc0dQ44V.res] ==> ignore
+    arg [/opt/rh/devtoolset-4/root/usr/libexec/gcc/x86_64-redhat-linux/5.3.1/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/opt/rh/devtoolset-4/root/usr/libexec/gcc/x86_64-redhat-linux/5.3.1/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccw6OTI8.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -284,16 +284,16 @@ Parsed CXX implicit link information from above output:
     arg [-dynamic-linker] ==> ignore
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_1395c] ==> ignore
+    arg [cmTC_b1b36] ==> ignore
     arg [/usr/lib/../lib64/crt1.o] ==> ignore
     arg [/usr/lib/../lib64/crti.o] ==> ignore
-    arg [/opt/rh/devtoolset-3/root/usr/lib/gcc/x86_64-redhat-linux/4.9.2/crtbegin.o] ==> ignore
-    arg [-L/opt/rh/devtoolset-3/root/usr/lib/gcc/x86_64-redhat-linux/4.9.2] ==> dir [/opt/rh/devtoolset-3/root/usr/lib/gcc/x86_64-redhat-linux/4.9.2]
-    arg [-L/opt/rh/devtoolset-3/root/usr/lib/gcc/x86_64-redhat-linux/4.9.2/../../../../lib64] ==> dir [/opt/rh/devtoolset-3/root/usr/lib/gcc/x86_64-redhat-linux/4.9.2/../../../../lib64]
+    arg [/opt/rh/devtoolset-4/root/usr/lib/gcc/x86_64-redhat-linux/5.3.1/crtbegin.o] ==> ignore
+    arg [-L/opt/rh/devtoolset-4/root/usr/lib/gcc/x86_64-redhat-linux/5.3.1] ==> dir [/opt/rh/devtoolset-4/root/usr/lib/gcc/x86_64-redhat-linux/5.3.1]
+    arg [-L/opt/rh/devtoolset-4/root/usr/lib/gcc/x86_64-redhat-linux/5.3.1/../../../../lib64] ==> dir [/opt/rh/devtoolset-4/root/usr/lib/gcc/x86_64-redhat-linux/5.3.1/../../../../lib64]
     arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
     arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
-    arg [-L/opt/rh/devtoolset-3/root/usr/lib/gcc/x86_64-redhat-linux/4.9.2/../../..] ==> dir [/opt/rh/devtoolset-3/root/usr/lib/gcc/x86_64-redhat-linux/4.9.2/../../..]
-    arg [CMakeFiles/cmTC_1395c.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [-L/opt/rh/devtoolset-4/root/usr/lib/gcc/x86_64-redhat-linux/5.3.1/../../..] ==> dir [/opt/rh/devtoolset-4/root/usr/lib/gcc/x86_64-redhat-linux/5.3.1/../../..]
+    arg [CMakeFiles/cmTC_b1b36.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -301,39 +301,39 @@ Parsed CXX implicit link information from above output:
     arg [-lc] ==> lib [c]
     arg [-lgcc_s] ==> lib [gcc_s]
     arg [-lgcc] ==> lib [gcc]
-    arg [/opt/rh/devtoolset-3/root/usr/lib/gcc/x86_64-redhat-linux/4.9.2/crtend.o] ==> ignore
+    arg [/opt/rh/devtoolset-4/root/usr/lib/gcc/x86_64-redhat-linux/5.3.1/crtend.o] ==> ignore
     arg [/usr/lib/../lib64/crtn.o] ==> ignore
   remove lib [gcc_s]
   remove lib [gcc]
   remove lib [gcc_s]
   remove lib [gcc]
-  collapse library dir [/opt/rh/devtoolset-3/root/usr/lib/gcc/x86_64-redhat-linux/4.9.2] ==> [/opt/rh/devtoolset-3/root/usr/lib/gcc/x86_64-redhat-linux/4.9.2]
-  collapse library dir [/opt/rh/devtoolset-3/root/usr/lib/gcc/x86_64-redhat-linux/4.9.2/../../../../lib64] ==> [/opt/rh/devtoolset-3/root/usr/lib64]
+  collapse library dir [/opt/rh/devtoolset-4/root/usr/lib/gcc/x86_64-redhat-linux/5.3.1] ==> [/opt/rh/devtoolset-4/root/usr/lib/gcc/x86_64-redhat-linux/5.3.1]
+  collapse library dir [/opt/rh/devtoolset-4/root/usr/lib/gcc/x86_64-redhat-linux/5.3.1/../../../../lib64] ==> [/opt/rh/devtoolset-4/root/usr/lib64]
   collapse library dir [/lib/../lib64] ==> [/lib64]
   collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
-  collapse library dir [/opt/rh/devtoolset-3/root/usr/lib/gcc/x86_64-redhat-linux/4.9.2/../../..] ==> [/opt/rh/devtoolset-3/root/usr/lib]
+  collapse library dir [/opt/rh/devtoolset-4/root/usr/lib/gcc/x86_64-redhat-linux/5.3.1/../../..] ==> [/opt/rh/devtoolset-4/root/usr/lib]
   implicit libs: [stdc++;m;c]
-  implicit dirs: [/opt/rh/devtoolset-3/root/usr/lib/gcc/x86_64-redhat-linux/4.9.2;/opt/rh/devtoolset-3/root/usr/lib64;/lib64;/usr/lib64;/opt/rh/devtoolset-3/root/usr/lib]
+  implicit dirs: [/opt/rh/devtoolset-4/root/usr/lib/gcc/x86_64-redhat-linux/5.3.1;/opt/rh/devtoolset-4/root/usr/lib64;/lib64;/usr/lib64;/opt/rh/devtoolset-4/root/usr/lib]
   implicit fwks: []
 
 
 
 
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
-Change Dir: /opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /mnt/hgfs/workspace/nginx_learning/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_4d268/fast"
-/usr/bin/gmake -f CMakeFiles/cmTC_4d268.dir/build.make CMakeFiles/cmTC_4d268.dir/build
-gmake[1]: Entering directory `/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_4d268.dir/feature_tests.cxx.o
-/opt/rh/devtoolset-3/root/usr/bin/c++     -std=c++14 -o CMakeFiles/cmTC_4d268.dir/feature_tests.cxx.o -c /opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_4d268
-/root/cmake3.6.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4d268.dir/link.txt --verbose=1
-/opt/rh/devtoolset-3/root/usr/bin/c++        CMakeFiles/cmTC_4d268.dir/feature_tests.cxx.o  -o cmTC_4d268 -rdynamic 
-gmake[1]: Leaving directory `/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/gmake" "cmTC_409a2/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_409a2.dir/build.make CMakeFiles/cmTC_409a2.dir/build
+gmake[1]: Entering directory `/mnt/hgfs/workspace/nginx_learning/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_409a2.dir/feature_tests.cxx.o
+/opt/rh/devtoolset-4/root/usr/bin/c++     -std=c++14 -o CMakeFiles/cmTC_409a2.dir/feature_tests.cxx.o -c /mnt/hgfs/workspace/nginx_learning/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_409a2
+/opt/clion/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_409a2.dir/link.txt --verbose=1
+/opt/rh/devtoolset-4/root/usr/bin/c++        CMakeFiles/cmTC_409a2.dir/feature_tests.cxx.o  -o cmTC_409a2 -rdynamic 
+gmake[1]: Leaving directory `/mnt/hgfs/workspace/nginx_learning/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
-    Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
     Feature record: CXX_FEATURE:1cxx_alias_templates
     Feature record: CXX_FEATURE:1cxx_alignas
     Feature record: CXX_FEATURE:1cxx_alignof
@@ -373,7 +373,7 @@ gmake[1]: Leaving directory `/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFile
     Feature record: CXX_FEATURE:1cxx_range_for
     Feature record: CXX_FEATURE:1cxx_raw_string_literals
     Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
-    Feature record: CXX_FEATURE:0cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:1cxx_relaxed_constexpr
     Feature record: CXX_FEATURE:1cxx_return_type_deduction
     Feature record: CXX_FEATURE:1cxx_right_angle_brackets
     Feature record: CXX_FEATURE:1cxx_rvalue_references
@@ -387,23 +387,23 @@ gmake[1]: Leaving directory `/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFile
     Feature record: CXX_FEATURE:1cxx_uniform_initialization
     Feature record: CXX_FEATURE:1cxx_unrestricted_unions
     Feature record: CXX_FEATURE:1cxx_user_literals
-    Feature record: CXX_FEATURE:0cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variable_templates
     Feature record: CXX_FEATURE:1cxx_variadic_macros
     Feature record: CXX_FEATURE:1cxx_variadic_templates
 
 
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
-Change Dir: /opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /mnt/hgfs/workspace/nginx_learning/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_19d8f/fast"
-/usr/bin/gmake -f CMakeFiles/cmTC_19d8f.dir/build.make CMakeFiles/cmTC_19d8f.dir/build
-gmake[1]: Entering directory `/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_19d8f.dir/feature_tests.cxx.o
-/opt/rh/devtoolset-3/root/usr/bin/c++     -std=c++11 -o CMakeFiles/cmTC_19d8f.dir/feature_tests.cxx.o -c /opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_19d8f
-/root/cmake3.6.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_19d8f.dir/link.txt --verbose=1
-/opt/rh/devtoolset-3/root/usr/bin/c++        CMakeFiles/cmTC_19d8f.dir/feature_tests.cxx.o  -o cmTC_19d8f -rdynamic 
-gmake[1]: Leaving directory `/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/gmake" "cmTC_5ce76/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_5ce76.dir/build.make CMakeFiles/cmTC_5ce76.dir/build
+gmake[1]: Entering directory `/mnt/hgfs/workspace/nginx_learning/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_5ce76.dir/feature_tests.cxx.o
+/opt/rh/devtoolset-4/root/usr/bin/c++     -std=c++11 -o CMakeFiles/cmTC_5ce76.dir/feature_tests.cxx.o -c /mnt/hgfs/workspace/nginx_learning/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_5ce76
+/opt/clion/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5ce76.dir/link.txt --verbose=1
+/opt/rh/devtoolset-4/root/usr/bin/c++        CMakeFiles/cmTC_5ce76.dir/feature_tests.cxx.o  -o cmTC_5ce76 -rdynamic 
+gmake[1]: Leaving directory `/mnt/hgfs/workspace/nginx_learning/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -466,17 +466,17 @@ gmake[1]: Leaving directory `/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFile
 
 
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
-Change Dir: /opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /mnt/hgfs/workspace/nginx_learning/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/gmake" "cmTC_bf313/fast"
-/usr/bin/gmake -f CMakeFiles/cmTC_bf313.dir/build.make CMakeFiles/cmTC_bf313.dir/build
-gmake[1]: Entering directory `/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_bf313.dir/feature_tests.cxx.o
-/opt/rh/devtoolset-3/root/usr/bin/c++     -std=c++98 -o CMakeFiles/cmTC_bf313.dir/feature_tests.cxx.o -c /opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_bf313
-/root/cmake3.6.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bf313.dir/link.txt --verbose=1
-/opt/rh/devtoolset-3/root/usr/bin/c++        CMakeFiles/cmTC_bf313.dir/feature_tests.cxx.o  -o cmTC_bf313 -rdynamic 
-gmake[1]: Leaving directory `/opt/nginx/nginx-1.0.14/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/gmake" "cmTC_1710d/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_1710d.dir/build.make CMakeFiles/cmTC_1710d.dir/build
+gmake[1]: Entering directory `/mnt/hgfs/workspace/nginx_learning/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_1710d.dir/feature_tests.cxx.o
+/opt/rh/devtoolset-4/root/usr/bin/c++     -std=c++98 -o CMakeFiles/cmTC_1710d.dir/feature_tests.cxx.o -c /mnt/hgfs/workspace/nginx_learning/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_1710d
+/opt/clion/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1710d.dir/link.txt --verbose=1
+/opt/rh/devtoolset-4/root/usr/bin/c++        CMakeFiles/cmTC_1710d.dir/feature_tests.cxx.o  -o cmTC_1710d -rdynamic 
+gmake[1]: Leaving directory `/mnt/hgfs/workspace/nginx_learning/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers

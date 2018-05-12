@@ -14,31 +14,32 @@
 
 
 typedef struct {
-    void             *value;
-    u_short           len;
-    u_char            name[1];
+    void             *value;/*指向用户自定义元素数据*/
+    u_short           len;/*元素关键字的长度*/
+    u_char            name[1];/*元素关键字首地址 柔性数组->不占空间大小*/
 } ngx_hash_elt_t;
 
 
 typedef struct {
-    ngx_hash_elt_t  **buckets;
-    ngx_uint_t        size;
+    ngx_hash_elt_t  **buckets;//指针的指针可以完整的表示二维数组
+    ngx_uint_t        size;//散列表中槽的个数
 } ngx_hash_t;
 
 
 typedef struct {
     ngx_hash_t        hash;
-    void             *value;
-} ngx_hash_wildcard_t;
+    void             *value;//value指针可以指向用户数据
+} ngx_hash_wildcard_t;//支持通配符的散列表
 
 
 typedef struct {
-    ngx_str_t         key;
-    ngx_uint_t        key_hash;
-    void             *value;
+    ngx_str_t         key;//元素关键字
+    ngx_uint_t        key_hash;//计算出来的hash
+    void             *value;//实际用户数据
 } ngx_hash_key_t;
 
-
+//散列方法的函数指针定义
+//传入关键字的首地址，len是关键字的长度
 typedef ngx_uint_t (*ngx_hash_key_pt) (u_char *data, size_t len);
 
 
@@ -50,14 +51,14 @@ typedef struct {
 
 
 typedef struct {
-    ngx_hash_t       *hash;
-    ngx_hash_key_pt   key;
+    ngx_hash_t       *hash;//指向普通的完全匹配散列表
+    ngx_hash_key_pt   key;//hash函数指针
 
-    ngx_uint_t        max_size;
-    ngx_uint_t        bucket_size;
+    ngx_uint_t        max_size;//hash表中的桶的个数。该字段越大，元素存储时冲突的可能性越小，每个桶中存储的元素会更少
+    ngx_uint_t        bucket_size;//每个bucket的空间，这就限制了关键字的最大长度
 
-    char             *name;
-    ngx_pool_t       *pool;
+    char             *name;//散列表名字
+    ngx_pool_t       *pool;//给散列表分配空间的内存池
     ngx_pool_t       *temp_pool;
 } ngx_hash_init_t;
 
@@ -87,6 +88,7 @@ typedef struct {
     ngx_array_t       dns_wc_tail;
     ngx_array_t      *dns_wc_tail_hash;
 } ngx_hash_keys_arrays_t;
+//通过构造ngx_hash_keys_arrays_t(其实也是一个简易的hash表)，辅助我们构造最终的hash表
 
 
 typedef struct {

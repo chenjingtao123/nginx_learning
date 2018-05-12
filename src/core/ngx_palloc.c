@@ -218,7 +218,7 @@ ngx_palloc_block(ngx_pool_t *pool, size_t size)
     }
 
     p->d.next = new;
-    /*新分配的small内存块放在表头*/
+    /*新分配的small内存块放在表尾巴*/
     pool->current = current ? current : new;
 
     return m;
