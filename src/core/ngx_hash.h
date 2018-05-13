@@ -23,7 +23,7 @@ typedef struct {
 typedef struct {
     ngx_hash_elt_t  **buckets;//指针的指针可以完整的表示二维数组
     ngx_uint_t        size;//散列表中槽的个数
-} ngx_hash_t;
+} ngx_hash_t;//拉链法
 
 
 typedef struct {
@@ -44,8 +44,11 @@ typedef ngx_uint_t (*ngx_hash_key_pt) (u_char *data, size_t len);
 
 
 typedef struct {
+    //精准匹配的散列表
     ngx_hash_t            hash;
+    //查询前置通配符的散列表
     ngx_hash_wildcard_t  *wc_head;
+    //查询后置通配符的散列表
     ngx_hash_wildcard_t  *wc_tail;
 } ngx_hash_combined_t;
 
@@ -55,7 +58,7 @@ typedef struct {
     ngx_hash_key_pt   key;//hash函数指针
 
     ngx_uint_t        max_size;//hash表中的桶的个数。该字段越大，元素存储时冲突的可能性越小，每个桶中存储的元素会更少
-    ngx_uint_t        bucket_size;//每个bucket的空间，这就限制了关键字的最大长度
+    ngx_uint_t        bucket_size;//每个bucket的空间，这就限制了关键字的最大长度,bucket_size=该桶上这个链表里所有元素的容量和
 
     char             *name;//散列表名字
     ngx_pool_t       *pool;//给散列表分配空间的内存池
