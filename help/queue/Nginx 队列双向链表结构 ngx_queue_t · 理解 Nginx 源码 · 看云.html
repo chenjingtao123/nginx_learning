@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)https://www.kancloud.cn/digest/understandingnginx/202592 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+<title>Nginx 队列双向链表结构 ngx_queue_t · 理解 Nginx 源码  · 看云</title>
+    <meta name="description" content="本专栏是对 Nginx 高性能服务器源码的学习与理解。根据对其源码的解读，了解Nginx服务器的基本框架。
+        ">
+    <meta name="keywords" content="文档托管,在线创作,文档在线管理,在线知识管理,文档托管平台,在线写书,文档在线转换,在线编辑,在线阅读,开发手册,api手册,文档在线学习,技术文档在线阅读,在线文档编辑">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+            <link rel="stylesheet" href="./Nginx 队列双向链表结构 ngx_queue_t · 理解 Nginx 源码 · 看云_files/reader.css">
+                <script src="./Nginx 队列双向链表结构 ngx_queue_t · 理解 Nginx 源码 · 看云_files/index.js.下载" async=""></script><link rel="stylesheet" href="./Nginx 队列双向链表结构 ngx_queue_t · 理解 Nginx 源码 · 看云_files/style.css" data-react-helmet="true"><meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" data-react-helmet="true"></head>
+<body>
+<div id="main"><div class="root"><div class="window-container"><div class="window-head"><div class="toolbar"><a class="title" href="https://www.kancloud.cn/digest/understandingnginx">理解 Nginx 源码</a><div class="extra"></div></div></div><div class="progress"><div class="progress-bar" style="width: 31.8182%;"></div></div><div class="window-body with-sidebar"><div class="sidebar"><div class="sidebar-selector"><div class="item active"><i class="icon content"></i>目录</div><div class="item"><i class="icon search"></i>搜索</div></div><div class="sidebar-body"><div class="catalog-body active"><ul><li class=""><div class="wholerow"></div><i class="icon"></i><a href="https://www.kancloud.cn/digest/understandingnginx/202586" class="text">前言</a></li><li class=""><div class="wholerow"></div><i class="icon"></i><a href="https://www.kancloud.cn/digest/understandingnginx/202587" class="text">Nginx 配置文件</a></li><li class=""><div class="wholerow"></div><i class="icon"></i><a href="https://www.kancloud.cn/digest/understandingnginx/202588" class="text">Nginx 内存池管理</a></li><li class=""><div class="wholerow"></div><i class="icon"></i><a href="https://www.kancloud.cn/digest/understandingnginx/202589" class="text">Nginx 基本数据结构</a></li><li class=""><div class="wholerow"></div><i class="icon"></i><a href="https://www.kancloud.cn/digest/understandingnginx/202590" class="text">Nginx 数组结构 ngx_array_t</a></li><li class=""><div class="wholerow"></div><i class="icon"></i><a href="https://www.kancloud.cn/digest/understandingnginx/202591" class="text">Nginx 链表结构 ngx_list_t</a></li><li class="active"><div class="wholerow"></div><i class="icon"></i><a href="https://www.kancloud.cn/digest/understandingnginx/202592" class="text">Nginx 队列双向链表结构 ngx_queue_t</a></li><li class=""><div class="wholerow"></div><i class="icon"></i><a href="https://www.kancloud.cn/digest/understandingnginx/202593" class="text">Nginx 哈希表结构 ngx_hash_t</a></li><li class=""><div class="wholerow"></div><i class="icon"></i><a href="https://www.kancloud.cn/digest/understandingnginx/202594" class="text">Nginx 红黑树结构 ngx_rbtree_t</a></li><li class=""><div class="wholerow"></div><i class="icon"></i><a href="https://www.kancloud.cn/digest/understandingnginx/202595" class="text">Nginx 模块开发</a></li><li class=""><div class="wholerow"></div><i class="icon"></i><a href="https://www.kancloud.cn/digest/understandingnginx/202596" class="text">Nginx 启动初始化过程</a></li><li class=""><div class="wholerow"></div><i class="icon"></i><a href="https://www.kancloud.cn/digest/understandingnginx/202597" class="text">Nginx 配置解析</a></li><li class=""><div class="wholerow"></div><i class="icon"></i><a href="https://www.kancloud.cn/digest/understandingnginx/202598" class="text">Nginx 中的 upstream 与 subrequest 机制</a></li><li class=""><div class="wholerow"></div><i class="icon"></i><a href="https://www.kancloud.cn/digest/understandingnginx/202599" class="text">Nginx 源码结构分析</a></li><li class=""><div class="wholerow"></div><i class="icon"></i><a href="https://www.kancloud.cn/digest/understandingnginx/202600" class="text">Nginx 事件模块</a></li><li class=""><div class="wholerow"></div><i class="icon"></i><a href="https://www.kancloud.cn/digest/understandingnginx/202601" class="text">Nginx 的 epoll 事件驱动模块</a></li><li class=""><div class="wholerow"></div><i class="icon"></i><a href="https://www.kancloud.cn/digest/understandingnginx/202602" class="text">Nginx 定时器事件</a></li><li class=""><div class="wholerow"></div><i class="icon"></i><a href="https://www.kancloud.cn/digest/understandingnginx/202603" class="text">Nginx 事件驱动模块连接处理</a></li><li class=""><div class="wholerow"></div><i class="icon"></i><a href="https://www.kancloud.cn/digest/understandingnginx/202604" class="text">Nginx 中 HTTP 模块初始化</a></li><li class=""><div class="wholerow"></div><i class="icon"></i><a href="https://www.kancloud.cn/digest/understandingnginx/202605" class="text">Nginx 中处理 HTTP 请求</a></li><li class=""><div class="wholerow"></div><i class="icon"></i><a href="https://www.kancloud.cn/digest/understandingnginx/202606" class="text">Nginx 中 upstream 机制的实现</a></li><li class=""><div class="wholerow"></div><i class="icon"></i><a href="https://www.kancloud.cn/digest/understandingnginx/202607" class="text">Nginx 中 upstream 机制的负载均衡</a></li></ul></div><div class="search-body"><div class="search-form"><form class="ui form"><div class="ui small fluid icon input"><input type="text" placeholder="请输入搜索关键词..."><i class="search icon"></i></div></form></div><div class="search-result"><div class="blankslate"><i class="icon search"></i><p>暂无相关搜索结果！</p></div></div></div></div><div class="sidebar-copyright">本文档使用 <a href="http://www.kancloud.cn/" target="_blank">看云</a> 构建</div></div><div class="workspace"><div class="article-wrap"><div class="article"><div class="article-head"><div class="left floated tools"><a class="item icon"><i class="icon align justify"></i></a></div><div class="right floated tools"></div><h1>Nginx 队列双向链表结构 ngx_queue_t</h1></div><div class="article-body"><h3 data-line="0" class="line"><a id="_0"></a>队列链表结构</h3>
+<p>队列双向循环链表实现文件：文件：src/core/ngx_queue.h/.c。在 Nginx 的队列实现中，实质就是具有头节点的双向循环链表，这里的双向链表中的节点是没有数据区的，只有两个指向节点的指针。需注意的是队列链表的内存分配不是直接从内存池分配的，即没有进行内存池管理，而是需要我们自己管理内存，所有我们可以指定它在内存池管理或者直接在堆里面进行管理，最好使用内存池进行管理。节点结构定义如下：</p>
+<pre><code><span class="hljs-comment">/* 队列结构，其实质是具有有头节点的双向循环链表 */</span>
+<span class="hljs-keyword">typedef</span> <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">ngx_queue_s</span>  <span class="hljs-title">ngx_queue_t</span>;</span>
+
+<span class="hljs-comment">/* 队列中每个节点结构，只有两个指针，并没有数据区 */</span>
+<span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">ngx_queue_s</span> {</span>
+    <span class="hljs-keyword">ngx_queue_t</span>  *prev;
+    <span class="hljs-keyword">ngx_queue_t</span>  *next;
+};
+</code></pre>
+<h3 data-line="15" class="line"><a id="_15"></a>队列链表操作</h3>
+<p>其基本操作如下：</p>
+<pre><code><span class="hljs-comment">/* h 为链表结构体 ngx_queue_t 的指针；初始化双链表 */</span>
+<span class="hljs-function"><span class="hljs-title">ngx_queue_int</span><span class="hljs-params">(h)</span></span>
+
+<span class="hljs-comment">/* h 为链表容器结构体 ngx_queue_t 的指针； 判断链表是否为空 */</span>
+<span class="hljs-function"><span class="hljs-title">ngx_queue_empty</span><span class="hljs-params">(h)</span></span>
+
+<span class="hljs-comment">/* h 为链表容器结构体 ngx_queue_t 的指针，x 为插入元素结构体中 ngx_queue_t 成员的指针；将 x 插入到链表头部 */</span>
+<span class="hljs-function"><span class="hljs-title">ngx_queue_insert_head</span><span class="hljs-params">(h, x)</span></span>
+
+<span class="hljs-comment">/* h 为链表容器结构体 ngx_queue_t 的指针，x 为插入元素结构体中 ngx_queue_t 成员的指针。将 x 插入到链表尾部 */</span>
+<span class="hljs-function"><span class="hljs-title">ngx_queue_insert_tail</span><span class="hljs-params">(h, x)</span></span>
+
+<span class="hljs-comment">/* h 为链表容器结构体 ngx_queue_t 的指针。返回链表容器 h 中的第一个元素的 ngx_queue_t 结构体指针 */</span>
+<span class="hljs-function"><span class="hljs-title">ngx_queue_head</span><span class="hljs-params">(h)</span></span>
+
+<span class="hljs-comment">/* h 为链表容器结构体 ngx_queue_t 的指针。返回链表容器 h 中的最后一个元素的 ngx_queue_t 结构体指针 */</span>
+<span class="hljs-function"><span class="hljs-title">ngx_queue_last</span><span class="hljs-params">(h)</span></span>
+
+<span class="hljs-comment">/* h 为链表容器结构体 ngx_queue_t 的指针。返回链表结构体的指针 */</span>
+<span class="hljs-function"><span class="hljs-title">ngx_queue_sentinel</span><span class="hljs-params">(h)</span></span>
+
+<span class="hljs-comment">/* x 为链表容器结构体 ngx_queue_t 的指针。从容器中移除 x 元素 */</span>
+<span class="hljs-function"><span class="hljs-title">ngx_queue_remove</span><span class="hljs-params">(x)</span></span>
+
+<span class="hljs-comment">/* h 为链表容器结构体 ngx_queue_t 的指针。该函数用于拆分链表，
+ * h 是链表容器，而 q 是链表 h 中的一个元素。
+ * 将链表 h 以元素 q 为界拆分成两个链表 h 和 n
+ */</span>
+<span class="hljs-function"><span class="hljs-title">ngx_queue_split</span><span class="hljs-params">(h, q, n)</span></span>
+
+<span class="hljs-comment">/* h 为链表容器结构体 ngx_queue_t 的指针， n为另一个链表容器结构体 ngx_queue_t 的指针
+ * 合并链表，将 n 链表添加到 h 链表的末尾
+ */</span>
+<span class="hljs-function"><span class="hljs-title">ngx_queue_add</span><span class="hljs-params">(h, n)</span></span>
+
+<span class="hljs-comment">/* h 为链表容器结构体 ngx_queue_t 的指针。返回链表中心元素，即第 N/2 + 1 个 */</span>
+<span class="hljs-function"><span class="hljs-title">ngx_queue_middle</span><span class="hljs-params">(h)</span></span>
+
+<span class="hljs-comment">/* h 为链表容器结构体 ngx_queue_t 的指针，cmpfunc 是比较回调函数。使用插入排序对链表进行排序 */</span>
+<span class="hljs-function"><span class="hljs-title">ngx_queue_sort</span><span class="hljs-params">(h, cmpfunc)</span></span>
+
+<span class="hljs-comment">/* q 为链表中某一个元素结构体的 ngx_queue_t 成员的指针。返回 q 元素的下一个元素。*/</span>
+<span class="hljs-function"><span class="hljs-title">ngx_queue_next</span><span class="hljs-params">(q)</span></span>
+
+<span class="hljs-comment">/* q 为链表中某一个元素结构体的 ngx_queue_t 成员的指针。返回 q 元素的上一个元素。*/</span>
+<span class="hljs-function"><span class="hljs-title">ngx_queue_prev</span><span class="hljs-params">(q)</span></span>
+
+<span class="hljs-comment">/* q 为链表中某一个元素结构体的 ngx_queue_t 成员的指针，type 是链表元素的结构体类型名称，
+ * link 是上面这个结构体中 ngx_queue_t 类型的成员名字。返回 q 元素所属结构体的地址
+ */</span>
+<span class="hljs-function"><span class="hljs-title">ngx_queue_data</span><span class="hljs-params">(q, type, link)</span></span>
+
+<span class="hljs-comment">/* q 为链表中某一个元素结构体的 ngx_queue_t 成员的指针，x 为插入元素结构体中 ngx_queue_t 成员的指针 */</span>
+<span class="hljs-function"><span class="hljs-title">ngx_queue_insert_after</span><span class="hljs-params">(q, x)</span></span>
+
+</code></pre>
+<p>下面是队列链表操作源码的实现：</p>
+<h4 data-line="79" class="line"><a id="_79"></a>初始化链表</h4>
+<pre><code><span class="hljs-comment">/* 初始化队列，即节点指针都指向自己，表示为空队列  */</span>
+<span class="hljs-comment">#define ngx_queue_init(q)                                                     \</span>
+    <span class="hljs-function"><span class="hljs-params">(q)</span>-&gt;</span>prev = q;                                                            <span class="hljs-string">\</span>
+    <span class="hljs-function"><span class="hljs-params">(q)</span>-&gt;</span>next = q
+
+<span class="hljs-comment">/* 判断队列是否为空 */</span>
+<span class="hljs-comment">#define ngx_queue_empty(h)                                                    \</span>
+    <span class="hljs-function"><span class="hljs-params">(h == (h)-&gt;prev)</span>
+</span></code></pre>
+<h4 data-line="92" class="line"><a id="_92"></a>获取指定的队列链表中的节点</h4>
+<pre><code><span class="hljs-comment">/* 获取队列头节点 */</span>
+<span class="hljs-comment">#define ngx_queue_head(h)                                                     \</span>
+    <span class="hljs-function"><span class="hljs-params">(h)</span>-&gt;</span>next
+
+<span class="hljs-comment">/* 获取队列尾节点 */</span>
+<span class="hljs-comment">#define ngx_queue_last(h)                                                     \</span>
+    <span class="hljs-function"><span class="hljs-params">(h)</span>-&gt;</span>prev
+
+<span class="hljs-comment">#define ngx_queue_sentinel(h)                                                 \</span>
+    (h)
+
+<span class="hljs-comment">/* 获取队列指定节点的下一个节点 */</span>
+<span class="hljs-comment">#define ngx_queue_next(q)                                                     \</span>
+    <span class="hljs-function"><span class="hljs-params">(q)</span>-&gt;</span>next
+
+<span class="hljs-comment">/* 获取队列指定节点的前一个节点 */</span>
+<span class="hljs-comment">#define ngx_queue_prev(q)                                                     \</span>
+    <span class="hljs-function"><span class="hljs-params">(q)</span>-&gt;</span>prev
+</code></pre>
+<h4 data-line="115" class="line"><a id="_115"></a>插入节点</h4>
+<p>在头节点之后插入新节点：</p>
+<pre><code><span class="hljs-comment">/* 在队列头节点的下一节点插入新节点，其中h为头节点，x为新节点 */</span>
+<span class="hljs-comment">#define ngx_queue_insert_head(h, x)                                           \</span>
+    <span class="hljs-function"><span class="hljs-params">(x)</span>-&gt;</span><span class="hljs-function"><span class="hljs-title">next</span> = <span class="hljs-params">(h)</span>-&gt;</span>next;                                                    <span class="hljs-string">\</span>
+    <span class="hljs-function"><span class="hljs-params">(x)</span>-&gt;</span>next-&gt;prev = x;                                                      <span class="hljs-string">\</span>
+    <span class="hljs-function"><span class="hljs-params">(x)</span>-&gt;</span>prev = h;                                                            <span class="hljs-string">\</span>
+    <span class="hljs-function"><span class="hljs-params">(h)</span>-&gt;</span>next = x
+
+</code></pre>
+<p>插入节点比较简单，只是修改指针的指向即可。下图是插入节点的过程：注意：虚线表示断开连接，实线表示原始连接，破折线表示重新连接，图中的数字与源码步骤相对应。</p>
+<p><img alt="" src="./Nginx 队列双向链表结构 ngx_queue_t · 理解 Nginx 源码 · 看云_files/2016-09-01_57c7edcf81b92.jpg"></p>
+<p>在尾节点之后插入节点</p>
+<pre><code><span class="hljs-comment">/* 在队列尾节点之后插入新节点，其中h为尾节点，x为新节点 */</span>
+<span class="hljs-comment">#define ngx_queue_insert_tail(h, x)                                           \</span>
+    <span class="hljs-function"><span class="hljs-params">(x)</span>-&gt;</span><span class="hljs-function"><span class="hljs-title">prev</span> = <span class="hljs-params">(h)</span>-&gt;</span>prev;                                                    <span class="hljs-string">\</span>
+    <span class="hljs-function"><span class="hljs-params">(x)</span>-&gt;</span>prev-&gt;next = x;                                                      <span class="hljs-string">\</span>
+    <span class="hljs-function"><span class="hljs-params">(x)</span>-&gt;</span>next = h;                                                            <span class="hljs-string">\</span>
+    <span class="hljs-function"><span class="hljs-params">(h)</span>-&gt;</span>prev = x
+</code></pre>
+<p>下图是插入节点的过程：</p>
+<p><img alt="" src="./Nginx 队列双向链表结构 ngx_queue_t · 理解 Nginx 源码 · 看云_files/2016-09-01_57c7edcf972f4.jpg"></p>
+<h4 data-line="149" class="line"><a id="_149"></a>删除节点</h4>
+<p>删除指定的节点，删除节点只是修改相邻节点指针的指向，并没有实际将该节点的内存释放，内存释放必须由我们进行处理。</p>
+<pre><code><span class="hljs-comment">#if (NGX_DEBUG)</span>
+
+<span class="hljs-comment">#define ngx_queue_remove(x)                                                   \</span>
+    <span class="hljs-function"><span class="hljs-params">(x)</span>-&gt;</span>next-&gt;<span class="hljs-function"><span class="hljs-title">prev</span> = <span class="hljs-params">(x)</span>-&gt;</span>prev;                                              <span class="hljs-string">\</span>
+    <span class="hljs-function"><span class="hljs-params">(x)</span>-&gt;</span>prev-&gt;<span class="hljs-function"><span class="hljs-title">next</span> = <span class="hljs-params">(x)</span>-&gt;</span>next;                                              <span class="hljs-string">\</span>
+    <span class="hljs-function"><span class="hljs-params">(x)</span>-&gt;</span>prev = NULL;                                                         <span class="hljs-string">\</span>
+    <span class="hljs-function"><span class="hljs-params">(x)</span>-&gt;</span>next = NULL
+
+<span class="hljs-comment">#else</span>
+<span class="hljs-comment">/* 删除队列指定的节点 */</span>
+<span class="hljs-comment">#define ngx_queue_remove(x)                                                   \</span>
+    <span class="hljs-function"><span class="hljs-params">(x)</span>-&gt;</span>next-&gt;<span class="hljs-function"><span class="hljs-title">prev</span> = <span class="hljs-params">(x)</span>-&gt;</span>prev;                                              <span class="hljs-string">\</span>
+    <span class="hljs-function"><span class="hljs-params">(x)</span>-&gt;</span>prev-&gt;<span class="hljs-function"><span class="hljs-title">next</span> = <span class="hljs-params">(x)</span>-&gt;</span>next
+
+<span class="hljs-comment">#endif</span>
+</code></pre>
+<p>删除节点过程如下图所示：</p>
+<p><img alt="" src="./Nginx 队列双向链表结构 ngx_queue_t · 理解 Nginx 源码 · 看云_files/2016-09-01_57c7edcfabe0e.jpg"></p>
+<h4 data-line="175" class="line"><a id="_175"></a>拆分链表</h4>
+<pre><code><span class="hljs-comment">/* 拆分队列链表，使其称为两个独立的队列链表；
+ * 其中h是原始队列的头节点，q是原始队列中的一个元素节点，n是新的节点，
+ * 拆分后，原始队列以q为分界，头节点h到q之前的节点作为一个队列（不包括q节点），
+ * 另一个队列是以n为头节点，以节点q及其之后的节点作为新的队列链表；
+ */</span>
+<span class="hljs-comment">#define ngx_queue_split(h, q, n)                                              \</span>
+    <span class="hljs-function"><span class="hljs-params">(n)</span>-&gt;</span><span class="hljs-function"><span class="hljs-title">prev</span> = <span class="hljs-params">(h)</span>-&gt;</span>prev;                                                    <span class="hljs-string">\</span>
+    <span class="hljs-function"><span class="hljs-params">(n)</span>-&gt;</span>prev-&gt;next = n;                                                      <span class="hljs-string">\</span>
+    <span class="hljs-function"><span class="hljs-params">(n)</span>-&gt;</span>next = q;                                                            <span class="hljs-string">\</span>
+    <span class="hljs-function"><span class="hljs-params">(h)</span>-&gt;</span><span class="hljs-function"><span class="hljs-title">prev</span> = <span class="hljs-params">(q)</span>-&gt;</span>prev;                                                    <span class="hljs-string">\</span>
+    <span class="hljs-function"><span class="hljs-params">(h)</span>-&gt;</span>prev-&gt;next = h;                                                      <span class="hljs-string">\</span>
+    <span class="hljs-function"><span class="hljs-params">(q)</span>-&gt;</span>prev = n;
+</code></pre>
+<p>该宏有 3 个参数，h 为队列头(即链表头指针)，将该队列从 q 节点将队列(链表)拆分为两个队列(链表)，q 之后的节点组成的新队列的头节点为 n 。链表拆分过程如下图所示：</p>
+<p><img alt="" src="./Nginx 队列双向链表结构 ngx_queue_t · 理解 Nginx 源码 · 看云_files/2016-09-01_57c7edcfbec8d.jpg"></p>
+<h4 data-line="196" class="line"><a id="_196"></a>合并链表</h4>
+<pre><code><span class="hljs-comment">/* 合并两个队列链表，把n队列链表连接到h队列链表的尾部 */</span>
+<span class="hljs-comment">#define ngx_queue_add(h, n)                                                   \</span>
+    <span class="hljs-function"><span class="hljs-params">(h)</span>-&gt;</span>prev-&gt;<span class="hljs-function"><span class="hljs-title">next</span> = <span class="hljs-params">(n)</span>-&gt;</span>next;                                              <span class="hljs-string">\</span>
+    <span class="hljs-function"><span class="hljs-params">(n)</span>-&gt;</span>next-&gt;<span class="hljs-function"><span class="hljs-title">prev</span> = <span class="hljs-params">(h)</span>-&gt;</span>prev;                                              <span class="hljs-string">\</span>
+    <span class="hljs-function"><span class="hljs-params">(h)</span>-&gt;</span><span class="hljs-function"><span class="hljs-title">prev</span> = <span class="hljs-params">(n)</span>-&gt;</span>prev;                                                    <span class="hljs-string">\</span>
+    <span class="hljs-function"><span class="hljs-params">(h)</span>-&gt;</span>prev-&gt;next = h;                                                      <span class="hljs-string">\</span>
+    <span class="hljs-function"><span class="hljs-params">(n)</span>-&gt;</span><span class="hljs-function"><span class="hljs-title">prev</span> = <span class="hljs-params">(n)</span>-&gt;</span>next = n;<span class="hljs-comment">/* 这是我个人增加的语句，若加上该语句，就不会出现头节点n会指向队列链表的节点 */</span>
+
+</code></pre>
+<p>其中，h、n分别为两个队列的指针，即头节点指针，该操作将n队列链接在h队列之后。具体操作如下图所示：</p>
+<p><img alt="" src="./Nginx 队列双向链表结构 ngx_queue_t · 理解 Nginx 源码 · 看云_files/2016-09-01_57c7edcfda59b.jpg"></p>
+<h4 data-line="219" class="line"><a id="_219"></a>获取中间节点</h4>
+<pre><code><span class="hljs-comment">/* 返回队列链表中心元素 */</span>
+<span class="hljs-keyword">ngx_queue_t</span> *
+ngx_queue_middle(<span class="hljs-keyword">ngx_queue_t</span> *<span class="hljs-built_in">queue</span>)
+{
+    <span class="hljs-keyword">ngx_queue_t</span>  *middle, *next;
+
+    <span class="hljs-comment">/* 获取队列链表头节点 */</span>
+    middle = ngx_queue_head(<span class="hljs-built_in">queue</span>);
+
+    <span class="hljs-comment">/* 若队列链表的头节点就是尾节点，表示该队列链表只有一个元素 */</span>
+    <span class="hljs-keyword">if</span> (middle == ngx_queue_last(<span class="hljs-built_in">queue</span>)) {
+        <span class="hljs-keyword">return</span> middle;
+    }
+
+    <span class="hljs-comment">/* next作为临时指针，首先指向队列链表的头节点 */</span>
+    next = ngx_queue_head(<span class="hljs-built_in">queue</span>);
+
+    <span class="hljs-keyword">for</span> ( ;; ) {
+        <span class="hljs-comment">/* 若队列链表不止一个元素，则等价于middle = middle-&gt;next */</span>
+        middle = ngx_queue_next(middle);
+
+        next = ngx_queue_next(next);
+
+        <span class="hljs-comment">/* 队列链表有偶数个元素 */</span>
+        <span class="hljs-keyword">if</span> (next == ngx_queue_last(<span class="hljs-built_in">queue</span>)) {
+            <span class="hljs-keyword">return</span> middle;
+        }
+
+        next = ngx_queue_next(next);
+
+        <span class="hljs-comment">/* 队列链表有奇数个元素 */</span>
+        <span class="hljs-keyword">if</span> (next == ngx_queue_last(<span class="hljs-built_in">queue</span>)) {
+            <span class="hljs-keyword">return</span> middle;
+        }
+    }
+}
+</code></pre>
+<h4 data-line="260" class="line"><a id="_260"></a>链表排序</h4>
+<p>队列链表排序采用的是稳定的简单插入排序方法，即从第一个节点开始遍历，依次将当前节点(q)插入前面已经排好序的队列(链表)中，下面程序中，前面已经排好序的队列的尾节点为prev。操作如下：</p>
+<pre><code><span class="hljs-comment">/* the stable insertion sort */</span>
+
+<span class="hljs-comment">/* 队列链表排序 */</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span>
+<span class="hljs-title">ngx_queue_sort</span>(<span class="hljs-params">ngx_queue_t *queue,
+    ngx_int_t (*cmp</span>)(<span class="hljs-params"><span class="hljs-keyword">const</span> ngx_queue_t *, <span class="hljs-keyword">const</span> ngx_queue_t *</span>))
+</span>{
+    ngx_queue_t  *q, *prev, *next;
+
+    q = ngx_queue_head(queue);
+
+    <span class="hljs-comment">/* 若队列链表只有一个元素，则直接返回 */</span>
+    <span class="hljs-keyword">if</span> (q == ngx_queue_last(queue)) {
+        <span class="hljs-keyword">return</span>;
+    }
+
+    <span class="hljs-comment">/* 遍历整个队列链表 */</span>
+    <span class="hljs-keyword">for</span> (q = ngx_queue_next(q); q != ngx_queue_sentinel(queue); q = next) {
+
+        prev = ngx_queue_prev(q);
+        next = ngx_queue_next(q);
+
+        <span class="hljs-comment">/* 首先把元素节点q独立出来 */</span>
+        ngx_queue_remove(q);
+
+        <span class="hljs-comment">/* 找到适合q插入的位置 */</span>
+        <span class="hljs-keyword">do</span> {
+            <span class="hljs-keyword">if</span> (cmp(prev, q) &lt;= <span class="hljs-number">0</span>) {
+                <span class="hljs-keyword">break</span>;
+            }
+
+            prev = ngx_queue_prev(prev);
+
+        } <span class="hljs-keyword">while</span> (prev != ngx_queue_sentinel(queue));
+
+        <span class="hljs-comment">/* 插入元素节点q */</span>
+        ngx_queue_insert_after(prev, q);
+    }
+}
+</code></pre>
+<h4 data-line="306" class="line"><a id="_306"></a>获取队列中节点数据地址</h4>
+<p>由队列基本结构和以上操作可知，nginx 的队列操作只对链表指针进行简单的修改指向操作，并不负责节点数据空间的分配。因此，用户在使用nginx队列时，要自己定义数据结构并分配空间，且在其中包含一个 ngx_queue_t 的指针或者对象，当需要获取队列节点数据时，使用ngx_queue_data宏，其定义如下：</p>
+<pre><code>/* 返回q在所属结构类型的地址，<span class="hljs-keyword">type</span>是链表元素的结构类型 */
+#define ngx_queue_data(q, <span class="hljs-keyword">type</span>, link)                                         \
+    (<span class="hljs-keyword">type</span> *) ((u_char *) q - offsetof(type, link))
+/*
+
+</code></pre>
+<p>测试程序：</p>
+<pre><code><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">"ngx_queue.h"</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">"ngx_conf_file.h"</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">"ngx_config.h"</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">"ngx_palloc.h"</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">"nginx.h"</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">"ngx_core.h"</span></span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> MAX     10</span>
+<span class="hljs-keyword">typedef</span> <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">Score</span>
+{</span>
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> score;
+    <span class="hljs-keyword">ngx_queue_t</span> Que;
+}ngx_queue_score;
+<span class="hljs-keyword">volatile</span> <span class="hljs-keyword">ngx_cycle_t</span>  *ngx_cycle;
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">ngx_log_error_core</span><span class="hljs-params">(<span class="hljs-keyword">ngx_uint_t</span> level, <span class="hljs-keyword">ngx_log_t</span> *<span class="hljs-built_in">log</span>, <span class="hljs-keyword">ngx_err_t</span> err,  
+            <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *fmt, ...)</span>
+</span>{
+}
+
+<span class="hljs-keyword">ngx_int_t</span> CMP(<span class="hljs-keyword">const</span> <span class="hljs-keyword">ngx_queue_t</span> *x, <span class="hljs-keyword">const</span> <span class="hljs-keyword">ngx_queue_t</span> *y)
+{
+    ngx_queue_score *xinfo = ngx_queue_data(x, ngx_queue_score, Que);
+    ngx_queue_score *yinfo = ngx_queue_data(y, ngx_queue_score, Que);
+
+    <span class="hljs-keyword">return</span>(xinfo-&gt;score &gt; yinfo-&gt;score);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">print_ngx_queue</span><span class="hljs-params">(<span class="hljs-keyword">ngx_queue_t</span> *<span class="hljs-built_in">queue</span>)</span>
+</span>{
+    <span class="hljs-keyword">ngx_queue_t</span> *q = ngx_queue_head(<span class="hljs-built_in">queue</span>);
+
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"score: "</span>);
+    <span class="hljs-keyword">for</span>( ; q != ngx_queue_sentinel(<span class="hljs-built_in">queue</span>); q = ngx_queue_next(q))
+    {
+        ngx_queue_score *ptr = ngx_queue_data(q, ngx_queue_score, Que);
+        <span class="hljs-keyword">if</span>(ptr != <span class="hljs-literal">NULL</span>)
+            <span class="hljs-built_in">printf</span>(<span class="hljs-string">" %d\t"</span>, ptr-&gt;score);
+    }
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"\n"</span>);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>
+</span>{
+    <span class="hljs-keyword">ngx_pool_t</span> *pool;
+    <span class="hljs-keyword">ngx_queue_t</span> *<span class="hljs-built_in">queue</span>;
+    ngx_queue_score *Qscore;
+
+    pool = ngx_create_pool(<span class="hljs-number">1024</span>, <span class="hljs-literal">NULL</span>);
+
+    <span class="hljs-built_in">queue</span> = ngx_palloc(pool, <span class="hljs-keyword">sizeof</span>(<span class="hljs-keyword">ngx_queue_t</span>));
+    ngx_queue_init(<span class="hljs-built_in">queue</span>);
+
+    <span class="hljs-keyword">int</span> i;
+    <span class="hljs-keyword">for</span>(i = <span class="hljs-number">1</span>; i &lt; MAX; i++)
+    {
+        Qscore = (ngx_queue_score*)ngx_palloc(pool, <span class="hljs-keyword">sizeof</span>(ngx_queue_score));
+        Qscore-&gt;score = i;
+        ngx_queue_init(&amp;Qscore-&gt;Que);
+
+        <span class="hljs-keyword">if</span>(i%<span class="hljs-number">2</span>)
+        {
+            ngx_queue_insert_tail(<span class="hljs-built_in">queue</span>, &amp;Qscore-&gt;Que);
+        }
+        <span class="hljs-keyword">else</span>
+        {
+            ngx_queue_insert_head(<span class="hljs-built_in">queue</span>, &amp;Qscore-&gt;Que);
+        }
+    }
+
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"Before sort: "</span>);
+    print_ngx_queue(<span class="hljs-built_in">queue</span>);
+
+    ngx_queue_sort(<span class="hljs-built_in">queue</span>, CMP);
+
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"After sort: "</span>);
+    print_ngx_queue(<span class="hljs-built_in">queue</span>);
+
+    ngx_destroy_pool(pool);
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+
+}
+
+</code></pre>
+<p>输出结果：</p>
+<pre><code>$./queue_test 
+Before <span class="hljs-string">sort:</span> <span class="hljs-string">score:</span>  <span class="hljs-number">8</span>	 <span class="hljs-number">6</span>	 <span class="hljs-number">4</span>	 <span class="hljs-number">2</span>	 <span class="hljs-number">1</span>	 <span class="hljs-number">3</span>	 <span class="hljs-number">5</span>	 <span class="hljs-number">7</span>	 <span class="hljs-number">9</span>	
+After <span class="hljs-string">sort:</span> <span class="hljs-string">score:</span>  <span class="hljs-number">1</span>	 <span class="hljs-number">2</span>	 <span class="hljs-number">3</span>	 <span class="hljs-number">4</span>	 <span class="hljs-number">5</span>	 <span class="hljs-number">6</span>	 <span class="hljs-number">7</span>	 <span class="hljs-number">8</span>	 <span class="hljs-number">9</span>	
+
+</code></pre>
+<h3 data-line="419" class="line"><a id="_419"></a>总结</h3>
+<p>在 Nginx 的队列链表中，其维护的是指向链表节点的指针，并没有实际的数据区，所有对实际数据的操作需要我们自行操作，队列链表实质是双向循环链表，其操作是双向链表的基本操作。</p>
+</div><div class="article-navigation"><span class="prev">上一篇：<a href="https://www.kancloud.cn/digest/understandingnginx/202591">Nginx 链表结构 ngx_list_t</a></span><span class="next">下一篇：<a href="https://www.kancloud.cn/digest/understandingnginx/202593">Nginx 哈希表结构 ngx_hash_t</a></span></div></div></div></div></div></div></div></div>
+<script type="application/payload+json">
+    {
+        "config":{"plugins":["highlight"],"id":12585,"name":"digest\/understandingnginx","title":"\u7406\u89e3 Nginx \u6e90\u7801","sha":"b61facaf64b58feea5073fdb88c876960ef22bbf","price":0},
+        "catalog":[{"id":202586,"pid":0,"name":"default.md","title":"\u524d\u8a00","index":0},{"id":202587,"pid":0,"name":"42363661.md","title":"Nginx \u914d\u7f6e\u6587\u4ef6","index":1},{"id":202588,"pid":0,"name":"42365605.md","title":"Nginx \u5185\u5b58\u6c60\u7ba1\u7406","index":2},{"id":202589,"pid":0,"name":"42387959.md","title":"Nginx \u57fa\u672c\u6570\u636e\u7ed3\u6784","index":3},{"id":202590,"pid":0,"name":"42390621.md","title":"Nginx \u6570\u7ec4\u7ed3\u6784 ngx_array_t","index":4},{"id":202591,"pid":0,"name":"42399319.md","title":"Nginx \u94fe\u8868\u7ed3\u6784 ngx_list_t","index":5},{"id":202592,"pid":0,"name":"42453757.md","title":"Nginx \u961f\u5217\u53cc\u5411\u94fe\u8868\u7ed3\u6784 ngx_queue_t","index":6},{"id":202593,"pid":0,"name":"42467903.md","title":"Nginx \u54c8\u5e0c\u8868\u7ed3\u6784 ngx_hash_t","index":7},{"id":202594,"pid":0,"name":"42496567.md","title":"Nginx \u7ea2\u9ed1\u6811\u7ed3\u6784 ngx_rbtree_t","index":8},{"id":202595,"pid":0,"name":"42528951.md","title":"Nginx \u6a21\u5757\u5f00\u53d1","index":9},{"id":202596,"pid":0,"name":"42611315.md","title":"Nginx \u542f\u52a8\u521d\u59cb\u5316\u8fc7\u7a0b","index":10},{"id":202597,"pid":0,"name":"42615433.md","title":"Nginx \u914d\u7f6e\u89e3\u6790","index":11},{"id":202598,"pid":0,"name":"42680343.md","title":"Nginx \u4e2d\u7684 upstream \u4e0e subrequest \u673a\u5236","index":12},{"id":202599,"pid":0,"name":"42742097.md","title":"Nginx \u6e90\u7801\u7ed3\u6784\u5206\u6790","index":13},{"id":202600,"pid":0,"name":"42805757.md","title":"Nginx \u4e8b\u4ef6\u6a21\u5757","index":14},{"id":202601,"pid":0,"name":"42836089.md","title":"Nginx \u7684 epoll \u4e8b\u4ef6\u9a71\u52a8\u6a21\u5757","index":15},{"id":202602,"pid":0,"name":"42842079.md","title":"Nginx \u5b9a\u65f6\u5668\u4e8b\u4ef6","index":16},{"id":202603,"pid":0,"name":"42877115.md","title":"Nginx \u4e8b\u4ef6\u9a71\u52a8\u6a21\u5757\u8fde\u63a5\u5904\u7406","index":17},{"id":202604,"pid":0,"name":"43022787.md","title":"Nginx \u4e2d HTTP \u6a21\u5757\u521d\u59cb\u5316","index":18},{"id":202605,"pid":0,"name":"43308361.md","title":"Nginx \u4e2d\u5904\u7406 HTTP \u8bf7\u6c42","index":19},{"id":202606,"pid":0,"name":"43524135.md","title":"Nginx \u4e2d upstream \u673a\u5236\u7684\u5b9e\u73b0","index":20},{"id":202607,"pid":0,"name":"43569433.md","title":"Nginx \u4e2d upstream \u673a\u5236\u7684\u8d1f\u8f7d\u5747\u8861","index":21}],
+        "article":{"id":202589,"book_id":12585,"pid":0,"name":"42387959.md","title":"Nginx \u57fa\u672c\u6570\u636e\u7ed3\u6784","sha":"68a65c5999e12e95e76fc13d6ebc1b6233374661","content":"### \u6982\u8ff0\n\n \u00a0 \u00a0 \u00a0 \u5728\u5b66\u4e60 Nginx \u4e4b\u524d\u9996\u5148\u4e86\u89e3\u5176\u57fa\u672c\u7684\u6570\u636e\u7ed3\u6784\u662f\u975e\u5e38\u91cd\u8981\u7684\uff0c\u8fd9\u662f\u5165\u95e8\u5fc5\u987b\u4e86\u89e3\u7684\u4e00\u4e2a\u6b65\u9aa4\u3002\u672c\u8282\u53ea\u662f\u7b80\u5355\u4ecb\u7ecd\u4e86 Nginx \u5bf9\u57fa\u672c\u6570\u636e\u7684\u4e00\u79cd\u5c01\u88c5\uff0c\u5305\u62ec \u57fa\u672c\u6574\u578b\u6570\u636e\u7c7b\u578b\u3001\u5b57\u7b26\u4e32\u6570\u636e\u7c7b\u578b\u3001\u7f13\u51b2\u533a\u7c7b\u578b\u4ee5\u53ca chain \u6570\u636e\u7c7b\u578b\u3002\n\n### \u57fa\u672c\u6570\u636e\u7c7b\u578b\n\n#### \u6574\u578b\u6570\u636e\n\n~~~\n\/* \u57fa\u672c\u6570\u636e\u7ed3\u6784 *\/\n\n\/* Nginx \u7b80\u5355\u6570\u636e\u7c7b\u578b *\/\n\/* \u5728\u6587\u4ef6 src\/core\/ngx_config.h \u5b9a\u4e49\u4e86\u57fa\u672c\u7684\u6570\u636e\u6620\u5c04 *\/\n\ntypedef intptr_t        ngx_int_t;\ntypedef uintptr_t       ngx_uint_t;\ntypedef intptr_t        ngx_flag_t;\n\/* \u5176\u4e2d intptr_t uintptr_t \u5b9a\u4e49\u5728\u6587\u4ef6 \/usr\/include\/stdint.h \u6587\u4ef6\u4e2d*\/\n\n\/* Types for `void *' pointers.  *\/\n#if __WORDSIZE == 64\n# ifndef __intptr_t_defined\ntypedef long int\t\tintptr_t;\n#  define __intptr_t_defined\n# endif\ntypedef unsigned long int\tuintptr_t;\n#else\n# ifndef __intptr_t_defined\ntypedef int\t\t\tintptr_t;\n#  define __intptr_t_defined\n# endif\ntypedef unsigned int\t\tuintptr_t;\n\n\/* \u56e0\u6b64\uff0cNginx \u7684\u7b80\u5355\u6570\u636e\u7c7b\u578b\u7684\u64cd\u4f5c\u548c\u6574\u578b\u6216\u6307\u9488\u7c7b\u578b\u7c7b\u4f3c *\/\n\n~~~\n  \n\n#### \u5b57\u7b26\u4e32\u7c7b\u578b\n\n~~~\n\/* Nginx \u5b57\u7b26\u4e32\u6570\u636e\u7c7b\u578b *\/\n\/* Nginx \u5b57\u7b26\u4e32\u7c7b\u578b\u662f\u5bf9 C \u8bed\u8a00\u5b57\u7b26\u4e32\u7c7b\u578b\u7684\u7b80\u5355\u5c01\u88c5\uff0c\n * \u5176\u5b9a\u4e49\u5728 core\/ngx_string.h \u6216 core\/ngx_string.c \u4e2d\n * \u5b9a\u4e49\u4e86 ngx_str_t, ngx_keyval_t, ngx_variable_value_t\n *\/\n\n\/* ngx_str_t \u5728 u_char \u7684\u57fa\u7840\u4e0a\u589e\u52a0\u4e86\u5b57\u7b26\u4e32\u957f\u5ea6\u7684\u4fe1\u606f\uff0c\u5373len\u53d8\u91cf *\/\ntypedef struct {\n    size_t      len;    \/* \u5b57\u7b26\u4e32\u7684\u957f\u5ea6 *\/\n    u_char     *data;   \/* \u6307\u5411\u5b57\u7b26\u4e32\u7684\u7b2c\u4e00\u4e2a\u5b57\u7b26 *\/\n} ngx_str_t;\n\ntypedef struct {\n    ngx_str_t   key;\n    ngx_str_t   value;\n} ngx_keyval_t;\n\ntypedef struct {\n    unsigned    len:28;\n\n    unsigned    valid:1;\n    unsigned    no_cacheable:1;\n    unsigned    not_found:1;\n    unsigned    escape:1;\n\n    u_char     *data;\n} ngx_variable_value_t;\n\/* Nginx \u5b57\u7b26\u4e32\u7684\u521d\u59cb\u5316\u4f7f\u7528 ngx_string \u6216 ngx_null_string \uff0c\u8fd9\u4e24\u4e2a\u5b8f\u5b9a\u4e49\u5982\u4e0b *\/\n\n#define ngx_string(str) {sizeof(str)-1, (u_char *) str}\n#define ngx_null_string {0, NULL}\n\n\/* \u82e5\u5df2\u7ecf\u5b9a\u4e49\u4e86 Nginx \u5b57\u7b26\u4e32\u53d8\u91cf\u4e4b\u540e\u518d\u8d4b\u503c\uff0c\u5219\u5fc5\u987b\u4f7f\u7528 ngx_str_set, ngx_str_null \u5b8f\u5b9a\u4e49*\/\n\n#define ngx_str_set(str, text)\n    (str)->len = sizeof(text)-1; (str)->data = (u_char *)text\n\n#define ngx_str_null(str)   (str)->len = 0; (str)->data = NULL\n\n\/* \u4f8b\u5982\uff1a*\/\n\/* \u6b63\u786e\u5199\u6cd5*\/\nngx_str_t str1 = ngx_string(\"hello nginx\");\nngx_str_t str2 = ngx_null_string;\n\n\/* \u9519\u8bef\u5199\u6cd5*\/\nngx_str_t str1, str2;\nstr1 = ngx_string(\"hello nginx\");   \/* \u7f16\u8bd1\u51fa\u9519 *\/\nstr2 = ngx_null_string;             \/* \u7f16\u8bd1\u51fa\u9519 *\/\n\n\/* \u6b63\u786e\u5199\u6cd5*\/\nngx_str_t str1, str2;\nngx_str_set(&str1, \"hello nginx\");\nngx_str_null(&str2);\n\/* \u6ce8\u610f\uff1angx_string \u548c ngx_str_set \u5b57\u7b26\u4e32\u53c2\u6570\u5fc5\u987b\u662f\u5e38\u91cf\u5b57\u7b26\u4e32\uff0c\u4e0d\u80fd\u662f\u53d8\u91cf\u5b57\u7b26\u4e32 *\/\n\n~~~\n  \n\n#### \u5185\u5b58\u6c60\u7c7b\u578b\n\n\u5185\u5b58\u6c60\u7c7b\u578b\u5373\u662f ngx_pool_t \uff0c\u6709\u5173\u5185\u5b58\u6c60\u7684\u8bb2\u89e3\u53ef\u53c2\u8003\u524d\u6587\u300a[Nginx \u5185\u5b58\u6c60\u7ba1\u7406](http:\/\/blog.csdn.net\/chenhanzhun\/article\/details\/42365605)\u300b\n\n~~~\n\/* \u5185\u5b58\u6c60\u7ed3\u6784 *\/\n\/* \u6587\u4ef6 core\/ngx_palloc.h *\/\ntypedef struct {\/* \u5185\u5b58\u6c60\u6570\u636e\u7ed3\u6784\u6a21\u5757 *\/\n    u_char               *last; \/* \u5f53\u524d\u5185\u5b58\u5206\u914d\u7684\u7ed3\u675f\u4f4d\u7f6e\uff0c\u5373\u4e0b\u4e00\u6bb5\u53ef\u5206\u914d\u5185\u5b58\u7684\u8d77\u59cb\u4f4d\u7f6e *\/\n    u_char               *end;  \/* \u5185\u5b58\u6c60\u7684\u7ed3\u675f\u4f4d\u7f6e *\/\n    ngx_pool_t           *next; \/* \u6307\u5411\u4e0b\u4e00\u4e2a\u5185\u5b58\u6c60 *\/\n    ngx_uint_t            failed;\/* \u8bb0\u5f55\u5185\u5b58\u6c60\u5185\u5b58\u5206\u914d\u5931\u8d25\u7684\u6b21\u6570 *\/\n} ngx_pool_data_t;  \/* \u7ef4\u62a4\u5185\u5b58\u6c60\u7684\u6570\u636e\u5757 *\/\n\nstruct ngx_pool_s {\/* \u5185\u5b58\u6c60\u7684\u7ba1\u7406\u6a21\u5757\uff0c\u5373\u5185\u5b58\u6c60\u5934\u90e8\u7ed3\u6784 *\/\n    ngx_pool_data_t       d;    \/* \u5185\u5b58\u6c60\u7684\u6570\u636e\u5757 *\/\n    size_t                max;  \/* \u5185\u5b58\u6c60\u6570\u636e\u5757\u7684\u6700\u5927\u503c *\/\n    ngx_pool_t           *current;\/* \u6307\u5411\u5f53\u524d\u5185\u5b58\u6c60 *\/\n    ngx_chain_t          *chain;\/* \u6307\u5411\u4e00\u4e2a ngx_chain_t \u7ed3\u6784 *\/\n    ngx_pool_large_t     *large;\/* \u5927\u5757\u5185\u5b58\u94fe\u8868\uff0c\u5373\u5206\u914d\u7a7a\u95f4\u8d85\u8fc7 max \u7684\u5185\u5b58 *\/\n    ngx_pool_cleanup_t   *cleanup;\/* \u6790\u6784\u51fd\u6570\uff0c\u91ca\u653e\u5185\u5b58\u6c60 *\/\n    ngx_log_t            *log;\/* \u5185\u5b58\u5206\u914d\u76f8\u5173\u7684\u65e5\u5fd7\u4fe1\u606f *\/\n};\n\/* \u6587\u4ef6 core\/ngx_core.h *\/\ntypedef struct ngx_pool_s   ngx_pool_t;\ntypedef struct ngx_chain_s  ngx_chain_t;\n\n~~~\n  \n\n#### \u7f13\u51b2\u533a\u6570\u636e\u7c7b\u578b\n\n\u7f13\u51b2\u533a ngx_buf_t \u7684\u5b9a\u4e49\u5982\u4e0b\uff1a  \n\n~~~\n\/* \u7f13\u51b2\u533a\u7ed3\u6784 *\/\ntypedef void *            ngx_buf_tag_t;\n\ntypedef struct ngx_buf_s  ngx_buf_t;\n\nstruct ngx_buf_s {\n    u_char          *pos;   \/* \u7f13\u51b2\u533a\u6570\u636e\u5728\u5185\u5b58\u7684\u8d77\u59cb\u4f4d\u7f6e *\/\n    u_char          *last;  \/* \u7f13\u51b2\u533a\u6570\u636e\u5728\u5185\u5b58\u7684\u7ed3\u675f\u4f4d\u7f6e *\/\n    \/* \u8fd9\u4e24\u4e2a\u53c2\u6570\u662f\u5904\u7406\u6587\u4ef6\u65f6\u4f7f\u7528\uff0c\u7c7b\u4f3c\u4e8e\u7f13\u51b2\u533a\u7684pos, last *\/\n    off_t            file_pos;\n    off_t            file_last;\n\n    \/* \u7531\u4e8e\u5b9e\u9645\u6570\u636e\u53ef\u80fd\u88ab\u5305\u542b\u5728\u591a\u4e2a\u7f13\u51b2\u533a\u4e2d\uff0c\u5219\u7f13\u51b2\u533a\u7684start\u548cend\u6307\u5411\n     * \u8fd9\u5757\u5185\u5b58\u7684\u5f00\u59cb\u5730\u5740\u548c\u7ed3\u675f\u5730\u5740\uff0c\n     * \u800cpos\u548clast\u662f\u6307\u5411\u672c\u7f13\u51b2\u533a\u5b9e\u9645\u5305\u542b\u7684\u6570\u636e\u7684\u5f00\u59cb\u548c\u7ed3\u5c3e\n     *\/\n    u_char          *start;         \/* start of buffer *\/\n    u_char          *end;           \/* end of buffer *\/\n    ngx_buf_tag_t    tag;\n    ngx_file_t      *file;          \/* \u6307\u5411buffer\u5bf9\u5e94\u7684\u6587\u4ef6\u5bf9\u8c61 *\/\n    \/* \u5f53\u524d\u7f13\u51b2\u533a\u7684\u4e00\u4e2a\u5f71\u5b50\u7f13\u51b2\u533a\uff0c\u5373\u5f53\u4e00\u4e2a\u7f13\u51b2\u533a\u590d\u5236\u53e6\u4e00\u4e2a\u7f13\u51b2\u533a\u7684\u6570\u636e\uff0c\n     * \u5c31\u4f1a\u53d1\u751f\u76f8\u4e92\u6307\u5411\u5bf9\u65b9\u7684shadow\u6307\u9488\n     *\/\n    ngx_buf_t       *shadow;\n\n    \/* \u4e3a1\u65f6\uff0c\u8868\u793a\u8be5buf\u6240\u5305\u542b\u7684\u5185\u5bb9\u5728\u7528\u6237\u521b\u5efa\u7684\u5185\u5b58\u5757\u4e2d\n     * \u53ef\u4ee5\u88abfilter\u5904\u7406\u53d8\u66f4\n     *\/\n    \/* the buf's content could be changed *\/\n    unsigned         temporary:1;\n\n    \/* \u4e3a1\u65f6\uff0c\u8868\u793a\u8be5buf\u6240\u5305\u542b\u7684\u5185\u5bb9\u5728\u5185\u5b58\u4e2d\uff0c\u4e0d\u80fd\u88abfilter\u5904\u7406\u53d8\u66f4 *\/\n    \/*\n     * the buf's content is in a memory cache or in a read only memory\n     * and must not be changed\n     *\/\n    unsigned         memory:1;\n\n    \/* \u4e3a1\u65f6\uff0c\u8868\u793a\u8be5buf\u6240\u5305\u542b\u7684\u5185\u5bb9\u5728\u5185\u5b58\u4e2d\uff0c\n     * \u53ef\u901a\u8fc7mmap\u628a\u6587\u4ef6\u6620\u5c04\u5230\u5185\u5b58\u4e2d\uff0c\u4e0d\u80fd\u88abfilter\u5904\u7406\u53d8\u66f4 *\/\n    \/* the buf's content is mmap()ed and must not be changed *\/\n    unsigned         mmap:1;\n\n    \/* \u53ef\u56de\u6536\uff0c\u5373\u8fd9\u4e9bbuf\u53ef\u88ab\u91ca\u653e *\/\n    unsigned         recycled:1;\n    unsigned         in_file:1; \/* \u8868\u793abuf\u6240\u5305\u542b\u7684\u5185\u5bb9\u5728\u6587\u4ef6\u4e2d *\/\n    unsigned         flush:1;   \/* \u5237\u65b0\u7f13\u51b2\u533a *\/\n    unsigned         sync:1;    \/* \u540c\u6b65\u65b9\u5f0f *\/\n    unsigned         last_buf:1;\/* \u5f53\u524d\u5f85\u5904\u7406\u7684\u662f\u6700\u540e\u4e00\u5757\u7f13\u51b2\u533a *\/\n    unsigned         last_in_chain:1;\/* \u5728\u5f53\u524d\u7684chain\u91cc\u9762\uff0c\u8be5buf\u662f\u6700\u540e\u4e00\u4e2a\uff0c\u4f46\u4e0d\u4e00\u5b9a\u662flast_buf *\/\n\n    unsigned         last_shadow:1;\n    unsigned         temp_file:1;\n\n    \/* STUB *\/ int   num;\n};\n\n~~~\n  \n\n#### chain \u6570\u636e\u7c7b\u578b\n\nngx_chain_t \u6570\u636e\u7c7b\u578b\u662f\u4e0e\u7f13\u51b2\u533a\u7c7b\u578b ngx_buf_t \u76f8\u5173\u7684\u94fe\u8868\u7ed3\u6784\uff0c\u5b9a\u4e49\u5982\u4e0b\uff1a\n\n~~~\nstruct ngx_chain_s {\n    ngx_buf_t    *buf;  \/* \u6307\u5411\u5f53\u524d\u7f13\u51b2\u533a *\/\n    ngx_chain_t  *next; \/* \u6307\u5411\u4e0b\u4e00\u4e2achain\uff0c\u5f62\u6210chain\u94fe\u8868 *\/\n};\ntypedef struct {\n\n~~~\n  \n\u94fe\u8868\u56fe\u5982\u4e0b\uff1a\n![](https:\/\/box.kancloud.cn\/2016-09-01_57c7edcf34cf2.jpg)\n  \n\n  \n\n\u53c2\u8003\u8d44\u6599\uff1a\n\n\u300a\u6df1\u5165\u7406\u89e3 Nginx \u300b\n\n\u300a[Nginx \u4ece\u5165\u95e8\u5230\u7cbe\u901a](http:\/\/tengine.taobao.org\/book\/chapter_02.html#id3)\u300b\n\n\u300a[Nginx \u4ee3\u7801\u7814\u7a76](https:\/\/code.google.com\/p\/nginxsrp\/wiki\/NginxCodeReview#ngx\u7684\u5185\u5b58\u6c60)\u300b","sort":4,"comment":0,"is_probation":0,"create_time":{"date":"2016-09-01 16:58:53.000000","timezone_type":3,"timezone":"PRC"},"update_time":{"date":"2016-09-01 16:58:53.000000","timezone_type":3,"timezone":"PRC"}},
+        "options":{"plugins_host":"https:\/\/plugins.kancloud.cn\/","context":"website","base":"\/digest\/understandingnginx\/","features":["search","internal_link"]},
+        "style":""
+    }
+</script>
+<script type="text/javascript" src="./Nginx 队列双向链表结构 ngx_queue_t · 理解 Nginx 源码 · 看云_files/reader.js.下载"></script>
+<script type="text/javascript">
+    kancloud.bootstrap();
+</script>
+    <!-- Google Analytics -->
+    <script>
+        window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments)
+        };
+        ga.l      = +new Date;
+        ga('create', 'UA-85687835-1', 'auto', 'web');
+        ga('set', 'transport', 'beacon');
+        
+                ga('web.send', 'pageview', {
+            dimension1:12585
+        });
+            </script>
+    <script async="" src="./Nginx 队列双向链表结构 ngx_queue_t · 理解 Nginx 源码 · 看云_files/analytics.js.下载"></script>
+    <!-- End Google Analytics -->
+
+</body></html>

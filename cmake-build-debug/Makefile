@@ -717,33 +717,6 @@ src/core/ngx_parse.c.s:
 	$(MAKE) -f CMakeFiles/nginx_learning.dir/build.make CMakeFiles/nginx_learning.dir/src/core/ngx_parse.c.s
 .PHONY : src/core/ngx_parse.c.s
 
-src/core/ngx_pool_test.o: src/core/ngx_pool_test.c.o
-
-.PHONY : src/core/ngx_pool_test.o
-
-# target to build an object file
-src/core/ngx_pool_test.c.o:
-	$(MAKE) -f CMakeFiles/nginx_learning.dir/build.make CMakeFiles/nginx_learning.dir/src/core/ngx_pool_test.c.o
-.PHONY : src/core/ngx_pool_test.c.o
-
-src/core/ngx_pool_test.i: src/core/ngx_pool_test.c.i
-
-.PHONY : src/core/ngx_pool_test.i
-
-# target to preprocess a source file
-src/core/ngx_pool_test.c.i:
-	$(MAKE) -f CMakeFiles/nginx_learning.dir/build.make CMakeFiles/nginx_learning.dir/src/core/ngx_pool_test.c.i
-.PHONY : src/core/ngx_pool_test.c.i
-
-src/core/ngx_pool_test.s: src/core/ngx_pool_test.c.s
-
-.PHONY : src/core/ngx_pool_test.s
-
-# target to generate assembly for a file
-src/core/ngx_pool_test.c.s:
-	$(MAKE) -f CMakeFiles/nginx_learning.dir/build.make CMakeFiles/nginx_learning.dir/src/core/ngx_pool_test.c.s
-.PHONY : src/core/ngx_pool_test.c.s
-
 src/core/ngx_queue.o: src/core/ngx_queue.c.o
 
 .PHONY : src/core/ngx_queue.o
@@ -770,6 +743,33 @@ src/core/ngx_queue.s: src/core/ngx_queue.c.s
 src/core/ngx_queue.c.s:
 	$(MAKE) -f CMakeFiles/nginx_learning.dir/build.make CMakeFiles/nginx_learning.dir/src/core/ngx_queue.c.s
 .PHONY : src/core/ngx_queue.c.s
+
+src/core/ngx_queue_test.o: src/core/ngx_queue_test.c.o
+
+.PHONY : src/core/ngx_queue_test.o
+
+# target to build an object file
+src/core/ngx_queue_test.c.o:
+	$(MAKE) -f CMakeFiles/nginx_learning.dir/build.make CMakeFiles/nginx_learning.dir/src/core/ngx_queue_test.c.o
+.PHONY : src/core/ngx_queue_test.c.o
+
+src/core/ngx_queue_test.i: src/core/ngx_queue_test.c.i
+
+.PHONY : src/core/ngx_queue_test.i
+
+# target to preprocess a source file
+src/core/ngx_queue_test.c.i:
+	$(MAKE) -f CMakeFiles/nginx_learning.dir/build.make CMakeFiles/nginx_learning.dir/src/core/ngx_queue_test.c.i
+.PHONY : src/core/ngx_queue_test.c.i
+
+src/core/ngx_queue_test.s: src/core/ngx_queue_test.c.s
+
+.PHONY : src/core/ngx_queue_test.s
+
+# target to generate assembly for a file
+src/core/ngx_queue_test.c.s:
+	$(MAKE) -f CMakeFiles/nginx_learning.dir/build.make CMakeFiles/nginx_learning.dir/src/core/ngx_queue_test.c.s
+.PHONY : src/core/ngx_queue_test.c.s
 
 src/core/ngx_radix_tree.o: src/core/ngx_radix_tree.c.o
 
@@ -4545,12 +4545,12 @@ help:
 	@echo "... src/core/ngx_parse.o"
 	@echo "... src/core/ngx_parse.i"
 	@echo "... src/core/ngx_parse.s"
-	@echo "... src/core/ngx_pool_test.o"
-	@echo "... src/core/ngx_pool_test.i"
-	@echo "... src/core/ngx_pool_test.s"
 	@echo "... src/core/ngx_queue.o"
 	@echo "... src/core/ngx_queue.i"
 	@echo "... src/core/ngx_queue.s"
+	@echo "... src/core/ngx_queue_test.o"
+	@echo "... src/core/ngx_queue_test.i"
+	@echo "... src/core/ngx_queue_test.s"
 	@echo "... src/core/ngx_radix_tree.o"
 	@echo "... src/core/ngx_radix_tree.i"
 	@echo "... src/core/ngx_radix_tree.s"

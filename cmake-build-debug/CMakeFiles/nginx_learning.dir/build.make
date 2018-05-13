@@ -585,33 +585,9 @@ CMakeFiles/nginx_learning.dir/src/core/ngx_parse.c.o.provides: CMakeFiles/nginx_
 CMakeFiles/nginx_learning.dir/src/core/ngx_parse.c.o.provides.build: CMakeFiles/nginx_learning.dir/src/core/ngx_parse.c.o
 
 
-CMakeFiles/nginx_learning.dir/src/core/ngx_pool_test.c.o: CMakeFiles/nginx_learning.dir/flags.make
-CMakeFiles/nginx_learning.dir/src/core/ngx_pool_test.c.o: ../src/core/ngx_pool_test.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/hgfs/workspace/nginx_learning/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/nginx_learning.dir/src/core/ngx_pool_test.c.o"
-	/opt/rh/devtoolset-4/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/core/ngx_pool_test.c.o   -c /mnt/hgfs/workspace/nginx_learning/src/core/ngx_pool_test.c
-
-CMakeFiles/nginx_learning.dir/src/core/ngx_pool_test.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/nginx_learning.dir/src/core/ngx_pool_test.c.i"
-	/opt/rh/devtoolset-4/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/hgfs/workspace/nginx_learning/src/core/ngx_pool_test.c > CMakeFiles/nginx_learning.dir/src/core/ngx_pool_test.c.i
-
-CMakeFiles/nginx_learning.dir/src/core/ngx_pool_test.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/nginx_learning.dir/src/core/ngx_pool_test.c.s"
-	/opt/rh/devtoolset-4/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/hgfs/workspace/nginx_learning/src/core/ngx_pool_test.c -o CMakeFiles/nginx_learning.dir/src/core/ngx_pool_test.c.s
-
-CMakeFiles/nginx_learning.dir/src/core/ngx_pool_test.c.o.requires:
-
-.PHONY : CMakeFiles/nginx_learning.dir/src/core/ngx_pool_test.c.o.requires
-
-CMakeFiles/nginx_learning.dir/src/core/ngx_pool_test.c.o.provides: CMakeFiles/nginx_learning.dir/src/core/ngx_pool_test.c.o.requires
-	$(MAKE) -f CMakeFiles/nginx_learning.dir/build.make CMakeFiles/nginx_learning.dir/src/core/ngx_pool_test.c.o.provides.build
-.PHONY : CMakeFiles/nginx_learning.dir/src/core/ngx_pool_test.c.o.provides
-
-CMakeFiles/nginx_learning.dir/src/core/ngx_pool_test.c.o.provides.build: CMakeFiles/nginx_learning.dir/src/core/ngx_pool_test.c.o
-
-
 CMakeFiles/nginx_learning.dir/src/core/ngx_queue.c.o: CMakeFiles/nginx_learning.dir/flags.make
 CMakeFiles/nginx_learning.dir/src/core/ngx_queue.c.o: ../src/core/ngx_queue.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/hgfs/workspace/nginx_learning/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/nginx_learning.dir/src/core/ngx_queue.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/hgfs/workspace/nginx_learning/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/nginx_learning.dir/src/core/ngx_queue.c.o"
 	/opt/rh/devtoolset-4/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/core/ngx_queue.c.o   -c /mnt/hgfs/workspace/nginx_learning/src/core/ngx_queue.c
 
 CMakeFiles/nginx_learning.dir/src/core/ngx_queue.c.i: cmake_force
@@ -631,6 +607,30 @@ CMakeFiles/nginx_learning.dir/src/core/ngx_queue.c.o.provides: CMakeFiles/nginx_
 .PHONY : CMakeFiles/nginx_learning.dir/src/core/ngx_queue.c.o.provides
 
 CMakeFiles/nginx_learning.dir/src/core/ngx_queue.c.o.provides.build: CMakeFiles/nginx_learning.dir/src/core/ngx_queue.c.o
+
+
+CMakeFiles/nginx_learning.dir/src/core/ngx_queue_test.c.o: CMakeFiles/nginx_learning.dir/flags.make
+CMakeFiles/nginx_learning.dir/src/core/ngx_queue_test.c.o: ../src/core/ngx_queue_test.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/hgfs/workspace/nginx_learning/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/nginx_learning.dir/src/core/ngx_queue_test.c.o"
+	/opt/rh/devtoolset-4/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/nginx_learning.dir/src/core/ngx_queue_test.c.o   -c /mnt/hgfs/workspace/nginx_learning/src/core/ngx_queue_test.c
+
+CMakeFiles/nginx_learning.dir/src/core/ngx_queue_test.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/nginx_learning.dir/src/core/ngx_queue_test.c.i"
+	/opt/rh/devtoolset-4/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/hgfs/workspace/nginx_learning/src/core/ngx_queue_test.c > CMakeFiles/nginx_learning.dir/src/core/ngx_queue_test.c.i
+
+CMakeFiles/nginx_learning.dir/src/core/ngx_queue_test.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/nginx_learning.dir/src/core/ngx_queue_test.c.s"
+	/opt/rh/devtoolset-4/root/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/hgfs/workspace/nginx_learning/src/core/ngx_queue_test.c -o CMakeFiles/nginx_learning.dir/src/core/ngx_queue_test.c.s
+
+CMakeFiles/nginx_learning.dir/src/core/ngx_queue_test.c.o.requires:
+
+.PHONY : CMakeFiles/nginx_learning.dir/src/core/ngx_queue_test.c.o.requires
+
+CMakeFiles/nginx_learning.dir/src/core/ngx_queue_test.c.o.provides: CMakeFiles/nginx_learning.dir/src/core/ngx_queue_test.c.o.requires
+	$(MAKE) -f CMakeFiles/nginx_learning.dir/build.make CMakeFiles/nginx_learning.dir/src/core/ngx_queue_test.c.o.provides.build
+.PHONY : CMakeFiles/nginx_learning.dir/src/core/ngx_queue_test.c.o.provides
+
+CMakeFiles/nginx_learning.dir/src/core/ngx_queue_test.c.o.provides.build: CMakeFiles/nginx_learning.dir/src/core/ngx_queue_test.c.o
 
 
 CMakeFiles/nginx_learning.dir/src/core/ngx_radix_tree.c.o: CMakeFiles/nginx_learning.dir/flags.make
@@ -3945,8 +3945,8 @@ nginx_learning_OBJECTS = \
 "CMakeFiles/nginx_learning.dir/src/core/ngx_output_chain.c.o" \
 "CMakeFiles/nginx_learning.dir/src/core/ngx_palloc.c.o" \
 "CMakeFiles/nginx_learning.dir/src/core/ngx_parse.c.o" \
-"CMakeFiles/nginx_learning.dir/src/core/ngx_pool_test.c.o" \
 "CMakeFiles/nginx_learning.dir/src/core/ngx_queue.c.o" \
+"CMakeFiles/nginx_learning.dir/src/core/ngx_queue_test.c.o" \
 "CMakeFiles/nginx_learning.dir/src/core/ngx_radix_tree.c.o" \
 "CMakeFiles/nginx_learning.dir/src/core/ngx_rbtree.c.o" \
 "CMakeFiles/nginx_learning.dir/src/core/ngx_regex.c.o" \
@@ -4110,8 +4110,8 @@ nginx_learning: CMakeFiles/nginx_learning.dir/src/core/ngx_open_file_cache.c.o
 nginx_learning: CMakeFiles/nginx_learning.dir/src/core/ngx_output_chain.c.o
 nginx_learning: CMakeFiles/nginx_learning.dir/src/core/ngx_palloc.c.o
 nginx_learning: CMakeFiles/nginx_learning.dir/src/core/ngx_parse.c.o
-nginx_learning: CMakeFiles/nginx_learning.dir/src/core/ngx_pool_test.c.o
 nginx_learning: CMakeFiles/nginx_learning.dir/src/core/ngx_queue.c.o
+nginx_learning: CMakeFiles/nginx_learning.dir/src/core/ngx_queue_test.c.o
 nginx_learning: CMakeFiles/nginx_learning.dir/src/core/ngx_radix_tree.c.o
 nginx_learning: CMakeFiles/nginx_learning.dir/src/core/ngx_rbtree.c.o
 nginx_learning: CMakeFiles/nginx_learning.dir/src/core/ngx_regex.c.o
@@ -4281,8 +4281,8 @@ CMakeFiles/nginx_learning.dir/requires: CMakeFiles/nginx_learning.dir/src/core/n
 CMakeFiles/nginx_learning.dir/requires: CMakeFiles/nginx_learning.dir/src/core/ngx_output_chain.c.o.requires
 CMakeFiles/nginx_learning.dir/requires: CMakeFiles/nginx_learning.dir/src/core/ngx_palloc.c.o.requires
 CMakeFiles/nginx_learning.dir/requires: CMakeFiles/nginx_learning.dir/src/core/ngx_parse.c.o.requires
-CMakeFiles/nginx_learning.dir/requires: CMakeFiles/nginx_learning.dir/src/core/ngx_pool_test.c.o.requires
 CMakeFiles/nginx_learning.dir/requires: CMakeFiles/nginx_learning.dir/src/core/ngx_queue.c.o.requires
+CMakeFiles/nginx_learning.dir/requires: CMakeFiles/nginx_learning.dir/src/core/ngx_queue_test.c.o.requires
 CMakeFiles/nginx_learning.dir/requires: CMakeFiles/nginx_learning.dir/src/core/ngx_radix_tree.c.o.requires
 CMakeFiles/nginx_learning.dir/requires: CMakeFiles/nginx_learning.dir/src/core/ngx_rbtree.c.o.requires
 CMakeFiles/nginx_learning.dir/requires: CMakeFiles/nginx_learning.dir/src/core/ngx_regex.c.o.requires

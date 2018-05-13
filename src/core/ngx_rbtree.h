@@ -20,17 +20,18 @@ typedef ngx_int_t   ngx_rbtree_key_int_t;
 typedef struct ngx_rbtree_node_s  ngx_rbtree_node_t;
 
 struct ngx_rbtree_node_s {
-    ngx_rbtree_key_t       key;
+    /* key成员是每个红黑树节点的关键字，它必须是整型。红黑树的排序主要依据key成员 */
+    ngx_rbtree_key_t       key; //无符号整型的关键字  参考ngx_http_file_cache_exists  其实就是ngx_http_cache_t->key的前4字节
     ngx_rbtree_node_t     *left;
     ngx_rbtree_node_t     *right;
     ngx_rbtree_node_t     *parent;
-    u_char                 color;
-    u_char                 data;
+    u_char                 color; //节点的颜色，0表示黑色，l表示红色
+    u_char                 data;//仅1个字节的节点数据。由于表示的空间太小，所以一般很少使用
 };
 
 
 typedef struct ngx_rbtree_s  ngx_rbtree_t;
-
+//node插入root的方法  执行地方在ngx_rbtree_insert
 typedef void (*ngx_rbtree_insert_pt) (ngx_rbtree_node_t *root,
     ngx_rbtree_node_t *node, ngx_rbtree_node_t *sentinel);
 

@@ -9,6 +9,7 @@
 #include <ngx_core.h>
 #include <ngx_http.h>
 #include <ngx_md5.h>
+#include "ngx_http_cache.h"
 
 
 static ngx_int_t ngx_http_file_cache_read(ngx_http_request_t *r,

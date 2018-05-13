@@ -216,13 +216,13 @@
 		<Unit filename="/mnt/hgfs/workspace/nginx_learning/src/core/ngx_parse.h">
 			<Option target="nginx_learning"/>
 		</Unit>
-		<Unit filename="/mnt/hgfs/workspace/nginx_learning/src/core/ngx_pool_test.c">
-			<Option target="nginx_learning"/>
-		</Unit>
 		<Unit filename="/mnt/hgfs/workspace/nginx_learning/src/core/ngx_queue.c">
 			<Option target="nginx_learning"/>
 		</Unit>
 		<Unit filename="/mnt/hgfs/workspace/nginx_learning/src/core/ngx_queue.h">
+			<Option target="nginx_learning"/>
+		</Unit>
+		<Unit filename="/mnt/hgfs/workspace/nginx_learning/src/core/ngx_queue_test.c">
 			<Option target="nginx_learning"/>
 		</Unit>
 		<Unit filename="/mnt/hgfs/workspace/nginx_learning/src/core/ngx_radix_tree.c">

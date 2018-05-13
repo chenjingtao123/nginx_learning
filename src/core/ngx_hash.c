@@ -737,7 +737,62 @@ ngx_hash_keys_array_init(ngx_hash_keys_arrays_t *ha, ngx_uint_t type)
     return NGX_OK;
 }
 
+/*
+把key value添加到ha对应的array变量数组中
+*/ //ngx_hash_add_key是将带或不带通配符的key转换后存放在ngx_hash_keys_arrays_t对应的
+/*
+哈希通配符的查找:
+Nginx哈希支持三种类型的通配:
+"*.example.com", ".example.com", and "www.example.*"
+对这些字符串进行哈希前进行了预处理(ngx_hash_add_key):
+"*.example.com", 经过预处理后变成了: "com.example.\0"
+".example.com"  经过预处理后变成了: "com.example\0"
+"www.example.*" 经过预处理后变成了:  "www.example\0"
+通配符hash表的实现原理 ： 当构造此类型的hash表的时候，实际上是构造了一个hash表的一个“链表”，是通过hash表中的key“链接”起来的。
+比如：对于“*.example.com”将会构造出2个hash表，第一个hash表中有一个key为com的表项，该表项的value包含有指向第二个hash表的指针，
+而第二个hash表中有一个表项abc，该表项的value包含有指*.example.com对应的value的指针。那么查询的时候，比如查询www.example.com的时候，
+先查com，通过查com可以找到第二级的hash表，在第二级hash表中，再查找example，依次类推，直到在某一级的hash表中查到的表项对应的value对
+应一个真正的值而非一个指向下一级hash表的指针的时候，查询过程结束。而查找到哪里是由value地址的最低两bit表示: (这也是在申请内存时要
+求4字节对齐的原因, 最后两bit是0, 可以被修改来表示下述情况)
+头部通配情况:
+        / *
+         * the 2 low bits of value have the special meaning:
+         *     00 - value is data pointer for both "example.com"
+         *          and "*.example.com";
+         *     01 - value is data pointer for "*.example.com" only;
+         *     10 - value is pointer to wildcard hash allowing
+         *          both "example.com" and "*.example.com";
+         *     11 - value is pointer to wildcard hash allowing
+         *          "*.example.com" only.
+         * /
+尾部通配情况:
+        / *
+         * the 2 low bits of value have the special meaning:
+         *     00 - value is data pointer;
+         *     11 - value is pointer to wildcard hash allowing "example.*".
+         * /
+*/
+/*
+ngx_hash_add_key是将带或不带通配符的key转换后存放在上述结构中的，其过程是:
+    先看传入的第三个参数标志标明的key是不是NGX_HASH_WILDCARD_KEY，
+    如果不是，则在ha->keys_hash中检查是否冲突，冲突就返回NGX_BUSY，否则，就将这一项插入到ha->keys中。
+    如果是，就判断通配符类型，支持的统配符有三种”*.example.com”, “.example.com”, and “www.example.*“，
+    然后将第一种转换为"com.example.“并插入到ha->dns_wc_head中，将第三种转换为"www.example"并插入到ha->dns_wc_tail中，
+    对第二种比较特殊，因为它等价于”*.example.com”+“example.com”,所以会一份转换为"com.example.“插入到ha->dns_wc_head，
+    一份为"example.com"插入到ha->keys中。当然插入前都会检查是否冲突。
+*/ //ngx_hash_keys_array_init一般和ngx_hash_add_key配合使用，前者表示初始化ngx_hash_keys_arrays_t数组空间，后者用来存储对应的key到数组中的对应hash和数组中
 
+/*
+    赋值见ngx_hash_add_key
+
+    原始key                  存放到hash桶(keys_hash或dns_wc_head_hash                 存放到数组中(keys或dns_wc_head或
+                                    或dns_wc_tail_hash)                                     dns_wc_tail)
+
+ www.example.com                 www.example.com(存入keys_hash)                        www.example.com (存入keys数组成员ngx_hash_key_t对应的key中)
+  .example.com             example.com(存到keys_hash，同时存入dns_wc_tail_hash)        com.example  (存入dns_wc_head数组成员ngx_hash_key_t对应的key中)
+ www.example.*                     www.example. (存入dns_wc_tail_hash)                 www.example  (存入dns_wc_tail数组成员ngx_hash_key_t对应的key中)
+ *.example.com                     example.com  (存入dns_wc_head_hash)                 com.example. (存入dns_wc_head数组成员ngx_hash_key_t对应的key中)
+*/
 ngx_int_t
 ngx_hash_add_key(ngx_hash_keys_arrays_t *ha, ngx_str_t *key, void *value,
     ngx_uint_t flags)
