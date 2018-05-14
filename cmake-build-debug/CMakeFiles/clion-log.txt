@@ -1,4 +1,0 @@
-/opt/clion/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /mnt/hgfs/workspace/nginx_learning
--- Configuring done
--- Generating done
--- Build files have been written to: /mnt/hgfs/workspace/nginx_learning/cmake-build-debug
