@@ -14,21 +14,21 @@
 
 
 struct ngx_file_s {
-    ngx_fd_t                   fd;
-    ngx_str_t                  name;
-    ngx_file_info_t            info;
+    ngx_fd_t                   fd;//文件对象描述符
+    ngx_str_t                  name;//文件名称
+    ngx_file_info_t            info;//文件属性
 
-    off_t                      offset;
-    off_t                      sys_offset;
+    off_t                      offset;//文件偏移量
+    off_t                      sys_offset;//文件偏移量
 
-    ngx_log_t                 *log;
+    ngx_log_t                 *log;//日志文件
 
 #if (NGX_HAVE_FILE_AIO)
     ngx_event_aio_t           *aio;
 #endif
 
-    unsigned                   valid_info:1;
-    unsigned                   directio:1;
+    unsigned                   valid_info:1;//暂时未用
+    unsigned                   directio:1;//与配置文件中的directio对应,在发送文件时可以设置为1
 };
 
 

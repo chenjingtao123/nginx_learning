@@ -26,7 +26,7 @@ struct ngx_buf_s {
     u_char          *start;         /* start of buffer */
     u_char          *end;           /* end of buffer */
     ngx_buf_tag_t    tag;
-    ngx_file_t      *file;
+    ngx_file_t      *file;//the file which be sended
     ngx_buf_t       *shadow;
 
 
@@ -43,7 +43,7 @@ struct ngx_buf_s {
     unsigned         mmap:1;
 
     unsigned         recycled:1;
-    unsigned         in_file:1;
+    unsigned         in_file:1;//send file
     unsigned         flush:1;
     unsigned         sync:1;
     unsigned         last_buf:1;
