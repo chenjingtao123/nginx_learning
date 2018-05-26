@@ -41,6 +41,7 @@ ngx_strerror(ngx_err_t err, u_char *errstr, size_t size)
 }
 
 
+//初始化所有系统错误提示语存放到容器中
 ngx_uint_t
 ngx_strerror_init(void)
 {
@@ -62,6 +63,9 @@ ngx_strerror_init(void)
     }
 
     for (err = 0; err < NGX_SYS_NERR; err++) {
+        /**
+         * 返回errnum的值所对应的错误提示信息，例如errnum等于12的话，它就会返回"Cannot allocate memory"。
+         */
         msg = strerror(err);
         len = ngx_strlen(msg);
 

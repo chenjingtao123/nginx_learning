@@ -207,11 +207,12 @@ main(int argc, char *const *argv)
 #if (NGX_FREEBSD)
     ngx_debug_init();
 #endif
-
+    //初始化所有系统错误提示语存放到容器中
     if (ngx_strerror_init() != NGX_OK) {
         return 1;
     }
 
+    //获取参数和配置参数，比如命令是nginx -v 那么ngx_show_version就设置为1
     if (ngx_get_options(argc, argv) != NGX_OK) {
         return 1;
     }
@@ -268,14 +269,18 @@ main(int argc, char *const *argv)
 
     /* TODO */ ngx_max_sockets = -1;
 
-    ngx_time_init();
+    ngx_time_init();//初始化nginx环境的当前时间
 
 #if (NGX_PCRE)
     ngx_regex_init();
 #endif
 
     ngx_pid = ngx_getpid();
-
+    /*
+    主进程启动的时候，此时还没有读取配置文件，即没有指定日志打印在哪里。nginx这时候虽然可以将一些出错内容或者结果输到标准输出，但是如果要记录一些系统初始化情况，
+socket监听状况，还是需要写到日志文件中去的。在nginx的main函数中，首先会调用ngx_log_init 函数，默认日志文件为：安装路径/logs/error.log，如果这个文件没有权限访问的话，
+会直接报错退出。在mian函数结尾处，在ngx_master_process_cycle函数调用之前，会close掉这个日志文件。
+     */
     log = ngx_log_init(ngx_prefix);
     if (log == NULL) {
         return 1;
@@ -299,15 +304,15 @@ main(int argc, char *const *argv)
     if (init_cycle.pool == NULL) {
         return 1;
     }
-
+    //保存main方法的参数信息
     if (ngx_save_argv(&init_cycle, argc, argv) != NGX_OK) {
         return 1;
     }
-
+    //报存当前工作目录
     if (ngx_process_options(&init_cycle) != NGX_OK) {
         return 1;
     }
-
+    //获取系统页大小  缓存行大小等
     if (ngx_os_init(log) != NGX_OK) {
         return 1;
     }
