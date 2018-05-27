@@ -320,7 +320,7 @@ socket监听状况，还是需要写到日志文件中去的。在nginx的main�
     /*
      * ngx_crc32_table_init() requires ngx_cacheline_size set in ngx_os_init()
      */
-
+    //循环冗余校验
     if (ngx_crc32_table_init() != NGX_OK) {
         return 1;
     }
@@ -352,7 +352,7 @@ socket监听状况，还是需要写到日志文件中去的。在nginx的main�
 
         return 0;
     }
-
+    //加了-S参数
     if (ngx_signal) {
         return ngx_signal_process(cycle, ngx_signal);
     }
