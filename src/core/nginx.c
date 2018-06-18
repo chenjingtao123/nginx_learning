@@ -419,7 +419,18 @@ socket监听状况，还是需要写到日志文件中去的。在nginx的main�
     return 0;
 }
 
-
+/*
+在执行不重启服务升级Nginx的操作时，老的Nginx进程会通过环境变量“NGINX”来传递需要打开的监听端口，
+新的Nginx进程会通过ngx_add_inherited_sockets方法来使用已经打开的TCP监听端口,不采用这种方式的话会报错，说该端口已经bind
+ngx_add_inherited_sockets 函数通过环境变量NGINX完成socket的继承，继承来的socket将会放到init_cycle的listening数组中。在NGINX环
+境变量中，每个socket中间用冒号或分号隔开。完成继承同时设置全局变量ngx_inherited为1
+*/
+/*
+Nginx在不重启服务升级时，也就是我们说过的平滑升级时，它会不重启master进程而启动新版本的Nginx程序。这样，旧版本的
+master进程会通过execve系统调用来启动新版本的master进程（先fork出子进程再调用exec来运行新程序），这时旧版本的master
+进程必须要通过一种方式告诉新版本的master进程这是在平滑升级，并且传递一些必要的信息。Nginx是通过环境变量来传递这些
+信息的，新版本的master进程通过ngx_add_inherited_sockets方法由环境变量里读取平滑升级信息，并对旧版本Nginx服务监听的句柄做继承处理。
+*/
 static ngx_int_t
 ngx_add_inherited_sockets(ngx_cycle_t *cycle)
 {
@@ -571,7 +582,16 @@ tz_found:
     return env;
 }
 
-
+/*
+由于Nginx只有一个可执行程序，当该可执行程序更新时，就创建一个子进程来执行新的二进制文件。同时要注意的是
+老进程通过环境变量将所有的侦听描述字传递给新进程，又因为文件描述字可以跨execve系统调用保留(关于跨exec函
+数保留文件描述字，可参考《Unix系统环境高级编程》第二版8.10节：exec函数集)，所以在新进程中这些侦听描述字
+可以接受新的连接请求。新进程获取环境变量中的描述字的实现在nginx.c的函数ngx_add_inherited_sockets中
+该函数的执行流程如下：
+1）构造启动新进程需要的环境变量。该环境变量的内容包括当前进程的环境变量以及当前进程的所有侦听socket描述字。
+2）给当前进程的pid文件添上后缀名oldbin。
+3）fork一个子进程并触发系统调用execve，该系统调用使用更新后的二进制文件路径作为参数。
+*/
 ngx_pid_t
 ngx_exec_new_binary(ngx_cycle_t *cycle, char *const *argv)
 {
