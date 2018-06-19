@@ -34,26 +34,41 @@ static char *ngx_event_debug_connection(ngx_conf_t *cf, ngx_command_t *cmd,
 static void *ngx_event_create_conf(ngx_cycle_t *cycle);
 static char *ngx_event_init_conf(ngx_cycle_t *cycle, void *conf);
 
+/*
+nginx提供参数timer_resolution，设置缓存时间更新的间隔；
+配置该项后，nginx将使用中断机制，而非使用定时器红黑树中的最小时间为epoll_wait的超时时间，即此时定时器将定期被中断。
+timer_resolution指令的使用将会设置epoll_wait超时时间为-1，这表示epoll_wait将永远阻塞直至读写事件发生或信号中断。
+如果配置文件中使用了timer_ resolution配置项，也就是ngx_timer_resolution值大于0，则说明用；户希望服务器时间精确度为ngx_timer_resolution毫秒
+*/ //ngx_timer_signal_handler定时器超时通过该值设置       如果设置了这个，则epoll_wait的返回是由定时器中断引起
+//定时器设置在ngx_event_process_init，定时器生效在ngx_process_events_and_timers -> ngx_process_events
+//从timer_resolution全局配置中解析到的参数,表示多少ms执行定时器中断，然后epoll_wail会返回跟新内存时间
+static ngx_uint_t     ngx_timer_resolution;//不配置timer_resolution参数，该值为0   参考ngx_process_events_and_timers  单位是ms
+sig_atomic_t          ngx_event_timer_alarm;//ngx_event_timer_alarm只是个全局变量，当它设为l时，表示需要更新时间。
 
-static ngx_uint_t     ngx_timer_resolution;
-sig_atomic_t          ngx_event_timer_alarm;
+static ngx_uint_t     ngx_event_max_module;//gx_event_max_module是编译进Nginx的所有事件模块的总个数。
 
-static ngx_uint_t     ngx_event_max_module;
+ngx_uint_t            ngx_event_flags;//位图表示，见NGX_USE_FD_EVENT等  初始化见ngx_epoll_init
+ngx_event_actions_t   ngx_event_actions; //ngx_event_actions = ngx_epoll_module_ctx.actions;
 
-ngx_uint_t            ngx_event_flags;
-ngx_event_actions_t   ngx_event_actions;
-
-
+//原子变量类型的ngx_connection_counter将统计所有建立过的连接数（包括主动发起的连接） 是总的连接数，不是某个进程的，是所有进程的，因为他们是共享内存的
 static ngx_atomic_t   connection_counter = 1;
 ngx_atomic_t         *ngx_connection_counter = &connection_counter;
 
 
-ngx_atomic_t         *ngx_accept_mutex_ptr;
-ngx_shmtx_t           ngx_accept_mutex;
+ngx_atomic_t         *ngx_accept_mutex_ptr;//指向共享的内存空间，见ngx_event_module_init
+//ngx_accept_mutex为共享内存互斥锁  //获取到该锁的进程才会接受客户端的accept请求
+ngx_shmtx_t           ngx_accept_mutex;//共享内存的空间  在建连接的时候，为了避免惊群，在accept的时候，只有获取到该原子锁，才把accept添加到epoll事件中，见ngx_trylock_accept_mutex
+//ngx_use_accept_mutex表示是否需要通过对accept加锁来解决惊群问题。当nginx worker进程数>1时且配置文件中打开accept_mutex时，这个标志置为1
+//具体实现:在创建子线程的时候，在执行ngx_event_process_init时并没有添加到epoll读事件中，worker抢到accept互斥体后，再放入epoll
+//ccf->master && ccf->worker_processes > 1 && ecf->accept_mutex 条件满足才会置该标记为1
 ngx_uint_t            ngx_use_accept_mutex;
 ngx_uint_t            ngx_accept_events;
-ngx_uint_t            ngx_accept_mutex_held;
-ngx_msec_t            ngx_accept_mutex_delay;
+ngx_uint_t            ngx_accept_mutex_held;//1表示当前获取了ngx_accept_mutex锁   0表示当前并没有获取到ngx_accept_mutex锁
+ngx_msec_t            ngx_accept_mutex_delay;//如果没获取到mutex锁，则延迟这么多毫秒重新获取。accept_mutex_delay配置，单位500ms
+/*
+ngx_accept_disabled表示此时满负荷，没必要再处理新连接了，我们在nginx.conf曾经配置了每一个nginx worker进程能够处理的最大连接数，
+当达到最大数的7/8时，ngx_accept_disabled为正，说明本nginx worker进程非常繁忙，将不再去处理新连接，这也是个简单的负载均衡
+*/
 ngx_int_t             ngx_accept_disabled;
 ngx_file_t            ngx_accept_mutex_lock_file;
 
@@ -117,7 +132,8 @@ static ngx_str_t  event_core_name = ngx_string("event_core");
 
 
 static ngx_command_t  ngx_event_core_commands[] = {
-
+        //每个worker进程可以同时处理的最大连接数
+        //连接池的大小，也就是每个worker进程中支持的TCP最大连接数，它与下面的connections配置项的意义是重复的，可参照9.3.3节理解连接池的概念
     { ngx_string("worker_connections"),
       NGX_EVENT_CONF|NGX_CONF_TAKE1,
       ngx_event_connections,
@@ -131,28 +147,34 @@ static ngx_command_t  ngx_event_core_commands[] = {
       0,
       0,
       NULL },
-
+        //设置事件模型。 use [kqueue | rtsig | epoll | dev/poll | select | poll | eventport] linux系统中只支持select poll epoll三种
+        //freebsd里的kqueue,LINUX中没有
+        //确定选择哪一个事件模块作为事件驱动机制
     { ngx_string("use"),
       NGX_EVENT_CONF|NGX_CONF_TAKE1,
       ngx_event_use,
       0,
       0,
       NULL },
-
+        //当事件模块通知有TCP连接时，尽可能在本次调度中对所有的客户端TCP连接请求都建立连接
+        //对应于事件定义的available字段。对于epoll事件驱动模式来说，意味着在接收到一个新连接事件时，调用accept以尽可能多地接收连接
     { ngx_string("multi_accept"),
       NGX_EVENT_CONF|NGX_CONF_FLAG,
       ngx_conf_set_flag_slot,
       0,
       offsetof(ngx_event_conf_t, multi_accept),
       NULL },
-
+        //accept_mutex on|off是否打开accept进程锁，是为了实现worker进程接收连接的负载均衡、打开后让多个worker进程轮流的序列号的接收TCP连接
+        //默认是打开的，如果关闭的话TCP连接会更快，但worker间的连接不会那么均匀。
     { ngx_string("accept_mutex"),
       NGX_EVENT_CONF|NGX_CONF_FLAG,
       ngx_conf_set_flag_slot,
       0,
       offsetof(ngx_event_conf_t, accept_mutex),
       NULL },
-
+        //accept_mutex_delay time，如果设置为accpt_mutex on，则worker同一时刻只有一个进程能个获取accept锁，这个accept锁不是阻塞的，如果娶不到会
+        //立即返回，然后等待time时间重新获取。
+        //启用accept_mutex负载均衡锁后，延迟accept_mutex_delay毫秒后再试图处理新连接事件
     { ngx_string("accept_mutex_delay"),
       NGX_EVENT_CONF|NGX_CONF_TAKE1,
       ngx_conf_set_msec_slot,
@@ -179,7 +201,11 @@ ngx_event_module_t  ngx_event_core_module_ctx = {
     { NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL }
 };
 
-
+/*
+Nginx定义了一系列（目前为9个）运行在不同操作系统、不同内核版本上的事件驱动模块，包括：ngx_epoll_module、ngx_kqueue_module、
+ngx_poll_module、ngx_select_module、ngx_devpoll_module、ngx_eventport_module、ngx_aio_module、ngx_rtsig_module
+和基于Windows的ngx_select_module模块。在ngx_event_core_module模块的初始化过程中，将会从以上9个模块中选取1个作为Nginx进程的事件驱动模块。
+*/
 ngx_module_t  ngx_event_core_module = {
     NGX_MODULE_V1,
     &ngx_event_core_module_ctx,            /* module context */
@@ -195,13 +221,28 @@ ngx_module_t  ngx_event_core_module = {
     NGX_MODULE_V1_PADDING
 };
 
+//当一次处理客户端请求结束后，会把ngx_http_process_request_line添加到定时器中，如果等client_header_timeout还没有信的请求数据过来，
+//则会走到ngx_http_read_request_header中的ngx_http_finalize_request(r, NGX_HTTP_BAD_REQUEST);从而关闭连接
+
+/*
+在说nginx前，先来看看什么是“惊群”？简单说来，多线程/多进程（linux下线程进程也没多大区别）等待同一个socket事件，当这个事件发生时，
+这些线程/进程被同时唤醒，就是惊群。可以想见，效率很低下，许多进程被内核重新调度唤醒，同时去响应这一个事件，当然只有一个进程能处理
+事件成功，其他的进程在处理该事件失败后重新休眠（也有其他选择）。这种性能浪费现象就是惊群。
+nginx就是这样，master进程监听端口号（例如80），所有的nginx worker进程开始用epoll_wait来处理新事件（linux下），如果不加任何保护，一个
+新连接来临时，会有多个worker进程在epoll_wait后被唤醒，然后发现自己accept失败。现在，我们可以看看nginx是怎么处理这个惊群问题了。
+*/
 
 void
 ngx_process_events_and_timers(ngx_cycle_t *cycle)
 {
     ngx_uint_t  flags;
     ngx_msec_t  timer, delta;
+    /*nginx提供参数timer_resolution，设置缓存时间更新的间隔；
+   配置该项后，nginx将使用中断机制，而非使用定时器红黑树中的最小时间为epoll_wait的超时时间，即此时定时器将定期被中断。
+   timer_resolution指令的使用将会设置epoll_wait超时时间为-1，这表示epoll_wait将永远阻塞直至读写事件发生或信号中断。
 
+   1.设置timer_resolution时，flags=0，只有当ngx_event_timer_alarm=1时epoll_wait()返回时才执行ngx_time_update（更新后会把ngx_event_timer_alarm置零）
+   2.没有设置timer_resolution，flags = NGX_UPDATE_TIME，timer为定时器红黑树中最小定时时间，将作为epoll_wait的超时时间(timeout) */
     if (ngx_timer_resolution) {
         timer = NGX_TIMER_INFINITE;
         flags = 0;
@@ -218,20 +259,49 @@ ngx_process_events_and_timers(ngx_cycle_t *cycle)
 
 #endif
     }
-
+    //ngx_use_accept_mutex表示是否需要通过对accept加锁来解决惊群问题。当nginx worker进程数>1时且配置文件中打开accept_mutex时，这个标志置为1
     if (ngx_use_accept_mutex) {
+        /*
+              ngx_accept_disabled表示此时满负荷，没必要再处理新连接了，我们在nginx.conf曾经配置了每一个nginx worker进程能够处理的最大连接数，
+          当达到最大数的7/8时，ngx_accept_disabled为正，说明本nginx worker进程非常繁忙，将不再去处理新连接，这也是个简单的负载均衡
+              在当前使用的连接到达总连接数的7/8时，就不会再处理新连接了，同时，在每次调用process_events时都会将ngx_accept_disabled减1，
+          直到ngx_accept_disabled降到总连接数的7/8以下时，才会调用ngx_trylock_accept_mutex试图去处理新连接事件。
+          */
         if (ngx_accept_disabled > 0) {
             ngx_accept_disabled--;
 
         } else {
+            /*
+                如果ngx_trylock_accept_mutex方法没有获取到锁，接下来调用事件驱动模块的process_events方法时只能处理已有的连接上的事件；
+                如果获取到了锁，调用process_events方法时就会既处理已有连接上的事件，也处理新连接的事件。
+
+               如何用锁来避免惊群?
+                  尝试锁accept mutex，只有成功获取锁的进程，才会将listen
+                  套接字放入epoll中。因此，这就保证了只有一个进程拥有
+                  监听套接口，故所有进程阻塞在epoll_wait时，不会出现惊群现象。
+                  这里的ngx_trylock_accept_mutex函数中，如果顺利的获取了锁，那么它会将监听端口注册到当前worker进程的epoll当中
+              获得accept锁，多个worker仅有一个可以得到这把锁。获得锁不是阻塞过程，都是立刻返回，获取成功的话ngx_accept_mutex_held被置为1。
+              拿到锁，意味着监听句柄被放到本进程的epoll中了，如果没有拿到锁，则监听句柄会被从epoll中取出。
+             */
+            /*
+               如果ngx_use_accept_mutex为0也就是未开启accept_mutex锁，则在ngx_worker_process_init->ngx_event_process_init 中把accept连接读事件统计到epoll中
+               否则在ngx_process_events_and_timers->ngx_process_events_and_timers->ngx_trylock_accept_mutex中把accept连接读事件统计到epoll中
+               */
             if (ngx_trylock_accept_mutex(cycle) == NGX_ERROR) {
                 return;
             }
-
+            /*
+                拿到锁的话，置flag为NGX_POST_EVENTS，这意味着ngx_process_events函数中，任何事件都将延后处理，会把accept事件都放到
+                ngx_posted_accept_events链表中，epollin|epollout事件都放到ngx_posted_events链表中
+               */
             if (ngx_accept_mutex_held) {
                 flags |= NGX_POST_EVENTS;
 
             } else {
+                /*
+                    拿不到锁，也就不会处理监听的句柄，这个timer实际是传给epoll_wait的超时时间，修改为最大ngx_accept_mutex_delay意味
+                    着epoll_wait更短的超时返回，以免新连接长时间没有得到处理
+                    */
                 if (timer == NGX_TIMER_INFINITE
                     || timer > ngx_accept_mutex_delay)
                 {
@@ -242,7 +312,15 @@ ngx_process_events_and_timers(ngx_cycle_t *cycle)
     }
 
     delta = ngx_current_msec;
+    /*
+1.ngx_event_s可以是普通的epoll读写事件(参考ngx_event_connect_peer->ngx_add_conn或者ngx_add_event)，通过读写事件触发
+2.也可以是普通定时器事件(参考ngx_cache_manager_process_handler->ngx_add_timer(ngx_event_add_timer))，通过ngx_process_events_and_timers中的
+epoll_wait返回，可以是读写事件触发返回，也可能是因为没获取到共享锁，从而等待0.5s返回重新获取锁来跟新事件并执行超时事件来跟新事件并且判断定
+时器链表中的超时事件，超时则执行从而指向event的handler，然后进一步指向对应r或者u的->write_event_handler  read_event_handler
+3.也可以是利用定时器expirt实现的读写事件(参考ngx_http_set_write_handler->ngx_add_timer(ngx_event_add_timer)),触发过程见2，只是在handler中不会执行write_event_handler  read_event_handler
+*/
 
+    //linux下，普通网络套接字调用ngx_epoll_process_events函数开始处理，异步文件i/o设置事件的回调方法为ngx_epoll_eventfd_handler
     (void) ngx_process_events(cycle, timer, flags);
 
     delta = ngx_current_msec - delta;
